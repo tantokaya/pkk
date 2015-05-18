@@ -23,7 +23,7 @@
     </div>
     <div id="right-center-header">
         <div id="menu-right-center-header">
-            <a href="">Tentang Kami</a> | <a href="">Hubungi Kami</a> | <a href="">Forum</a> | <a href="">Galeri</a> | <a href="">FB</a> | <a href="">Twitter</a>
+            <!--<a href="">Tentang Kami</a> | <a href="">Hubungi Kami</a> | <a href="">Forum</a> | <a href="">Galeri</a> | <a href="">FB</a> | <a href="">Twitter</a>-->
         </div>
         <div id="w2b-searchbox">
             <form id="w2b-searchform" action="pencarian" method="POST">
