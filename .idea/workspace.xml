@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d87b0b32-4ae9-46f4-b6a9-0917ec70bdff" name="Default" comment="apdate label lupa password">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/login_adm.php" afterPath="$PROJECT_DIR$/application/views/admin/login_adm.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="pkk.iws" />
@@ -58,7 +59,7 @@
       <file leaf-file-name="login_adm.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/admin/login_adm.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="29" selection-start="2007" selection-end="2007" vertical-scroll-proportion="0.17465754" vertical-offset="714" max-vertical-offset="1343">
+            <state line="59" column="42" selection-start="2469" selection-end="2469" vertical-scroll-proportion="0.494863" vertical-offset="714" max-vertical-offset="1343">
               <folding />
             </state>
           </provider>
@@ -423,9 +424,9 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="apdate label lupa password" />
     <MESSAGE value="update label lupa password" />
-    <option name="LAST_COMMIT_MESSAGE" value="update label lupa password" />
+    <MESSAGE value="apdate label lupa password" />
+    <option name="LAST_COMMIT_MESSAGE" value="apdate label lupa password" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -540,7 +541,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/login_adm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="29" selection-start="2007" selection-end="2007" vertical-scroll-proportion="0.17465754" vertical-offset="714" max-vertical-offset="1343">
+        <state line="59" column="42" selection-start="2469" selection-end="2469" vertical-scroll-proportion="0.494863" vertical-offset="714" max-vertical-offset="1343">
           <folding />
         </state>
       </provider>
