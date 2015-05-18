@@ -295,7 +295,7 @@
                     <tr>
                         <td>Deskripsi</td>
                         <td>:</td>
-                        <td><textarea id="desc" rows="5" class="input-block-level" disabled></textarea></td>
+                        <td><textarea id="desc" rows="5" cols="50"  disabled></textarea></td>
                     </tr>
                     <tr>
                         <td>Nama Pembuat</td>
@@ -345,8 +345,6 @@
 <!-- AdminLTE App -->
 <script src="<?php echo base_url();?>asset/admin/js/AdminLTE/app.js" type="text/javascript"></script>
 
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<!--<script src="--><?php //echo base_url();?><!--asset/admin/js/AdminLTE/dashboard.js" type="text/javascript"></script>-->
 
 <!-- Calendar -->
 <script type="text/javascript" src="<?php echo base_url(); ?>asset/admin/js/moment.js"></script>
