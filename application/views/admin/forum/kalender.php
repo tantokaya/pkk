@@ -26,6 +26,65 @@
     </div><!-- /.col -->
 </div><!-- /.row -->
 
+<!-- add new calendar event modal -->
+<!-- START MODAL EVENT DETAIL -->
+<div id="eventDetailModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <h3 id="modalTitle" class="modal-title"></h3>
+            </div>
+            <div id="modalBody" class="modal-body">
+                <table class="table table-hover table-nomargin table-striped">
+                    <tr>
+                        <td>Tanggal Mulai</td>
+                        <td>:</td>
+                        <td id="start"></td>
+                    </tr>
+                    <tr>
+                        <td>Tanggal Akhir</td>
+                        <td>:</td>
+                        <td id="end"></td>
+                    </tr>
+                    <tr>
+                        <td>Lokasi</td>
+                        <td>:</td>
+                        <td id="location"></td>
+                    </tr>
+                    <tr>
+                        <td>Mitra</td>
+                        <td>:</td>
+                        <td id="mitra"></td>
+                    </tr>
+                    <tr>
+                        <td>Deskripsi</td>
+                        <td>:</td>
+                        <td><textarea id="desc" rows="5" cols="50"  disabled></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>Nama Pembuat</td>
+                        <td>:</td>
+                        <td id="nama"></td>
+                    </tr>
+                    <tr>
+                        <td>Telepon</td>
+                        <td>:</td>
+                        <td id="tlp"></td>
+                    </tr>
+                </table>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END MODAL EVENT DETAIL -->
+
+
 <!-- jQuery 2.0.2 -->
 <script src="<?php echo base_url();?>asset/admin/js/jquery.min.js"></script>
 <!-- jQuery UI 1.10.3 -->

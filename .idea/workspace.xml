@@ -26,10 +26,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="dashboard_adm.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="dashboard_adm.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/admin/dashboard_adm.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="297" column="64" selection-start="11152" selection-end="11152" vertical-scroll-proportion="0.37478107" vertical-offset="4835" max-vertical-offset="6987">
+            <state line="320" column="0" selection-start="9669" selection-end="11821" vertical-scroll-proportion="-44.846153" vertical-offset="4274" max-vertical-offset="6987">
               <folding />
             </state>
           </provider>
@@ -44,10 +44,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="kalender.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="kalender.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/admin/forum/kalender.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="39.5" vertical-offset="1027" max-vertical-offset="1598">
+            <state line="85" column="0" selection-start="3421" selection-end="3421" vertical-scroll-proportion="0.9404553" vertical-offset="908" max-vertical-offset="2601">
               <folding />
             </state>
           </provider>
@@ -69,6 +69,7 @@
         <option value="$PROJECT_DIR$/application/views/admin/home_adm.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/application/views/admin/dashboard_adm.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/forum/kalender.php" />
       </list>
     </option>
   </component>
@@ -380,16 +381,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/forum/kalender.php">
+    <entry file="file://$PROJECT_DIR$/application/views/admin/dashboard_adm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="39.5" vertical-offset="1027" max-vertical-offset="1598">
+        <state line="320" column="0" selection-start="9669" selection-end="11821" vertical-scroll-proportion="-44.846153" vertical-offset="4274" max-vertical-offset="6987">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/dashboard_adm.php">
+    <entry file="file://$PROJECT_DIR$/application/views/admin/forum/kalender.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="297" column="64" selection-start="11152" selection-end="11152" vertical-scroll-proportion="0.37478107" vertical-offset="4835" max-vertical-offset="6987">
+        <state line="85" column="0" selection-start="3421" selection-end="3421" vertical-scroll-proportion="0.9404553" vertical-offset="908" max-vertical-offset="2601">
           <folding />
         </state>
       </provider>
