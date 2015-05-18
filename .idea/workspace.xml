@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d87b0b32-4ae9-46f4-b6a9-0917ec70bdff" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="d87b0b32-4ae9-46f4-b6a9-0917ec70bdff" name="Default" comment="" />
     <ignored path="pkk.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -58,7 +56,7 @@
       <file leaf-file-name="login_adm.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/admin/login_adm.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="44" selection-start="2471" selection-end="2471" vertical-scroll-proportion="0.494863" vertical-offset="714" max-vertical-offset="1343">
+            <state line="59" column="40" selection-start="2467" selection-end="2467" vertical-scroll-proportion="0.494863" vertical-offset="714" max-vertical-offset="1343">
               <folding />
             </state>
           </provider>
@@ -326,7 +324,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="options.lastSelected" value="settings.github" />
+    <property name="options.lastSelected" value="preferences.pluginManager" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -397,12 +395,16 @@
       <created>1431964649132</created>
       <updated>1431964649132</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="test lupa password">
+      <created>1431965749523</created>
+      <updated>1431965749523</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32861635" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -445,7 +447,8 @@
     <MESSAGE value="apdate label lupa password" />
     <MESSAGE value="kembalikan label lupa password" />
     <MESSAGE value="test label lupa password" />
-    <option name="LAST_COMMIT_MESSAGE" value="test label lupa password" />
+    <MESSAGE value="test lupa password" />
+    <option name="LAST_COMMIT_MESSAGE" value="test lupa password" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -560,7 +563,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/login_adm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="44" selection-start="2471" selection-end="2471" vertical-scroll-proportion="0.494863" vertical-offset="714" max-vertical-offset="1343">
+        <state line="59" column="40" selection-start="2467" selection-end="2467" vertical-scroll-proportion="0.494863" vertical-offset="714" max-vertical-offset="1343">
           <folding />
         </state>
       </provider>
