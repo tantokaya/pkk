@@ -38,11 +38,5 @@
                 </section><!-- /.content -->
             </aside><!-- /.right-side -->
         </div><!-- ./wrapper -->
-
-        <!-- add new calendar event modal -->
-
-
-
-
     </body>
 </html>
