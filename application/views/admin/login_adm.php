@@ -57,7 +57,7 @@
             <?php echo form_button($submit,'Login');?>
                 <i class="fa fa-lock"></i> Sign me in</button>
 
-            <p><a href="#">Lupa password ?</a></p>
+            <p><a href="#">Lupa password </a></p>
         </div>
     <?php echo form_close(); ?>
 
