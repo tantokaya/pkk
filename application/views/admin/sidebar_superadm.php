@@ -28,8 +28,8 @@
             </a>
         </li>
         <li class="treeview <?php if($judul == 'add_tag'||$judul == 'list_tag'||$judul == 'add_sensor'||$judul == 'list_sensor'
-        ||$judul == 'add_kategori'||$judul == 'list_kategori'||$judul == 'add_komentar'||$judul == 'list_komentar'
-        ||$judul == 'add_post'||$judul == 'list_post') echo 'active'; ?>">
+            ||$judul == 'add_kategori'||$judul == 'list_kategori'||$judul == 'add_komentar'||$judul == 'list_komentar'
+            ||$judul == 'add_post'||$judul == 'list_post') echo 'active'; ?>">
             <a href="#">
                 <i class="glyphicon glyphicon-pushpin"></i> <span>Post</span>
                 <i class="fa fa-angle-left pull-right"></i>
@@ -44,8 +44,8 @@
             </ul>
         </li>
         <li class="treeview <?php if($judul == 'add_album'||$judul == 'list_album'||$judul == 'add_gfoto'||$judul == 'list_gfoto'||
-        $judul == 'add_slide'||$judul == 'list_slide'||$judul == 'add_baner'||$judul=='list_baner'
-        ||$judul=='add_gfoto'||$judul=='list_gfoto'||$judul=='edit_gfoto') echo 'active'; ?>">
+            $judul == 'add_slide'||$judul == 'list_slide'||$judul == 'add_baner'||$judul=='list_baner'
+            ||$judul=='add_gfoto'||$judul=='list_gfoto'||$judul=='edit_gfoto') echo 'active'; ?>">
             <a href="#">
                 <i class="fa fa-picture-o"></i> <span>Media</span>
                 <i class="fa fa-angle-left pull-right"></i>
@@ -56,6 +56,27 @@
                 <li><a href="<?php echo base_url();?>slide"><i class="fa fa-angle-double-right"></i> Slide</a></li>
                 <li><a href="<?php echo base_url();?>baner"><i class="fa fa-angle-double-right"></i> Baner Iklan</a></li>
                 <li><a href="<?php echo base_url();?>download"><i class="fa fa-angle-double-right"></i> Download</a></li>
+            </ul>
+        </li>
+        <li class="treeview <?php if($judul == 'add_hot'||$judul == 'list_hot') echo 'active'; ?>">
+            <a href="#">
+                <i class="glyphicon glyphicon-tags"></i> <span>Interaksi</span>
+                <i class="fa fa-angle-left pull-right"></i>
+            </a>
+            <ul class="treeview-menu">
+                <li><a href="<?php echo base_url();?>pooling"><i class="fa fa-angle-double-right"></i> Pooling</a></li>
+                <li><a href="<?php echo base_url();?>hot"><i class="fa fa-angle-double-right"></i> Hot News</a></li>
+            </ul>
+        </li>
+        <li class="treeview <?php if($judul == 'list_halaman' || $judul == 'add_halaman' ||$judul=='edit_halaman'||
+            $judul == 'list_sub_halaman' || $judul == 'add_sub_halaman'||$judul=='edit_sub_halaman') echo 'active'; ?> ">
+            <a href="#">
+                <i class="glyphicon glyphicon-book"></i> <span>Halaman</span>
+                <i class="fa fa-angle-left pull-right"></i>
+            </a>
+            <ul class="treeview-menu">
+                <li><a href="<?php echo base_url();?>halaman"><i class="fa fa-angle-double-right"></i> Daftar Halaman</a></li>
+                <li><a href="<?php echo base_url();?>sub_halaman"><i class="fa fa-angle-double-right"></i> Daftar Sub Halaman</a></li>
             </ul>
         </li>
         <li class="treeview <?php if($judul == 'list_agenda' || $judul == 'add_agenda' || $judul == 'edit_agenda') echo 'active';?>">
@@ -70,8 +91,8 @@
             </ul>
         </li>
         <li class="treeview <?php if($judul == 'list_topik' || $judul == 'tambah_topik'||$judul=='list_forum'
-        ||$judul=='forum_perkenalan'||$judul=='forum_pengumuman'||$judul=='forum_saran'||$judul=='forum_pojok'
-        ||$judul=='detail_topik') echo 'active' ?>">
+            ||$judul=='forum_perkenalan'||$judul=='forum_pengumuman'||$judul=='forum_saran'||$judul=='forum_pojok'
+            ||$judul=='detail_topik') echo 'active' ?>">
             <a href="#">
                 <i class="glyphicon glyphicon-bullhorn"></i> <span>Forum</span>
                 <i class="fa fa-angle-left pull-right"></i>
@@ -88,6 +109,7 @@
                 <i class="fa fa-angle-left pull-right"></i>
             </a>
             <ul class="treeview-menu">
+                <li><a href="<?php echo base_url();?>panel"><i class="fa fa-angle-double-right"></i> Panel Aplikasi</a></li>
                 <li><a href="<?php echo base_url();?>widget"><i class="fa fa-angle-double-right"></i> Widget</a></li>
                 <li><a href="<?php echo base_url();?>pengguna"><i class="fa fa-angle-double-right"></i> Pengguna</a></li>
             </ul>

@@ -15,10 +15,10 @@
                 <!-- sidebar: style can be found in sidebar.less -->
                 <?php
                 if($this->session->userdata('id_level')=='01'){
-                    echo $this->load->view('admin/sidebar_adm');
+                    echo $this->load->view('admin/sidebar_superadm');
                 }elseif($this->session->userdata('id_level')=='02'){
                     echo $this->load->view('admin/sidebar_adm');
-                }else{
+                }elseif($this->session->userdata('id_level')=='03'){
                     echo $this->load->view('admin/sidebar_user');
                 }
                 ?>
