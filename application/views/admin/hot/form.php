@@ -1,6 +1,6 @@
 <div class="row">
     <!-- left column -->
-    <div class="col-md-6">
+    <div class="col-md-8">
         <!-- general form elements -->
         <div class="box box-primary">
             <div class="box-header">
@@ -10,9 +10,9 @@
             <form name="form" id="form"  action="<?php echo base_url(); ?>hot/simpan" method="post">
                 <div class="box-body">
                     <div class="form-group">
-                        <label>Judul Hot News</label>
+                        <label>Judul Hot News <span class="required">*</span> </label>
                         <input type="hidden" name="kode" id="kode" style="width: 190px;" class="form-control" value="<?php echo $kode; ?>">
-                        <input type="text" name="judul" id="judul" placeholder="Judul.." class="form-control" value="<?php echo $judul; ?>" autofocus="true">
+                        <input type="text" name="judul" id="judul" placeholder="Judul.." class="form-control" value="<?php echo $judul; ?>" autofocus="true" required="true">
                     </div>
 
                 </div><!-- /.box-body -->
@@ -23,6 +23,7 @@
                 </div>
             </form>
         </div><!-- /.box -->
+
     </div>
 </div>
 

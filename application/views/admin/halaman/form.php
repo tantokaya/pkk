@@ -3,18 +3,17 @@
     <div class="col-md-8">
         <!-- general form elements -->
         <div class="box box-primary">
-            <div class="box-header">
+            <div class="box-border-purple">
                 <h3 class="box-title">Form Halaman Utama</h3>
             </div><!-- /.box-header -->
             <!-- form start -->
             <form name="form" id="form"  action="<?php echo base_url(); ?>halaman/simpan" method="post">
                 <div class="box-body">
                     <div class="form-group">
-                        <label>Nama Halaman</label>
+                        <label>Nama Halaman<span class="required">*</span> </label>
                         <input type="hidden" name="kode" id="kode" style="width: 190px;" class="form-control" value="<?php echo $kode; ?>">
-                        <input type="text" name="name" id="name" placeholder="Nama halaman.." style="width: 190px;" class="form-control" value="<?php echo $name; ?>" autofocus="true">
+                        <input type="text" name="name" id="name" placeholder="Nama halaman.." style="width: 210px;" class="form-control" value="<?php echo $name; ?>" autofocus="true" required="true">
                     </div>
-
                 </div><!-- /.box-body -->
 
                 <div class="box-footer">
@@ -32,3 +31,5 @@
 <script src="<?php echo base_url();?>asset/admin/js/bootstrap.min.js" type="text/javascript"></script>
 <!-- AdminLTE App -->
 <script src="<?php echo base_url();?>asset/admin/js/AdminLTE/app.js" type="text/javascript"></script>
+<!-- UNIFORM -->
+<script type="text/javascript" src="<?php echo base_url();?>asset/admin/js/uniform/jquery.uniform.min.js"></script>

@@ -11,7 +11,11 @@
             <div class="box-body">
                 <div class="form-group">
                     <label>Username</label>
-                    <input type="text" name="username" id="username" placeholder="Username.." style="width: 190px;" class="form-control" value="<?php echo $username; ?>">
+                    <?php if($this->uri->segment(2)=='tambah') { ?>
+                    <input type="text" name="username" id="username" placeholder="Username.." style="width: 190px;" class="form-control" value="" required="true">
+                    <?php } elseif($this->uri->segment(2)=='edit') { ?>
+                    <input type="text" name="username" id="username" placeholder="Username.." style="width: 190px;" class="form-control" value="<?php echo $username; ?>" required="true" readonly>
+                    <?php } ?>
                 </div>
                 <div class="form-group">
                     <label>Password</label>
