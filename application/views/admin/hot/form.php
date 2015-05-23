@@ -10,7 +10,7 @@
             <form name="form" id="form"  action="<?php echo base_url(); ?>hot/simpan" method="post">
                 <div class="box-body">
                     <div class="form-group">
-                        <label>Judul Hot News <span class="required">*</span> </label>
+                        <label>Isi Hot News <span class="required">*</span> </label>
                         <input type="hidden" name="kode" id="kode" style="width: 190px;" class="form-control" value="<?php echo $kode; ?>">
                         <input type="text" name="judul" id="judul" placeholder="Judul.." class="form-control" value="<?php echo $judul; ?>" autofocus="true" required="true">
                     </div>
