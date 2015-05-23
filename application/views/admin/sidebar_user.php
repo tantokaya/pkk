@@ -40,17 +40,6 @@
                 <li><a href="<?php echo base_url();?>tag"><i class="fa fa-angle-double-right"></i> Tag</a></li>
             </ul>
         </li>
-        <li class="treeview <?php if($judul == 'add_album'||$judul == 'list_album'||$judul == 'add_gfoto'||$judul == 'list_gfoto'||
-            $judul=='add_gfoto'||$judul=='list_gfoto'||$judul=='edit_gfoto') echo 'active'; ?>">
-            <a href="#">
-                <i class="fa fa-picture-o"></i> <span>Media</span>
-                <i class="fa fa-angle-left pull-right"></i>
-            </a>
-            <ul class="treeview-menu">
-                <li><a href="<?php echo base_url();?>album"><i class="fa fa-angle-double-right"></i> Album</a></li>
-                <li><a href="<?php echo base_url();?>galeri_foto"><i class="fa fa-angle-double-right"></i> Galeri Foto</a></li>
-            </ul>
-        </li>
         <li class="treeview <?php if($judul == 'list_agenda' || $judul == 'add_agenda' || $judul == 'edit_agenda') echo 'active';?>">
             <a href="#">
                 <i class="fa fa-tasks"></i> <span>Kegiatan</span>

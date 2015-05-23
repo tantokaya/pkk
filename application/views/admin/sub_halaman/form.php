@@ -38,7 +38,6 @@
                         <textarea id='editor1' style='width: 800px; height: 350px;' name="isi"  ><?php echo $isi; ?></textarea>
                     </div>
 
-
                 </div><!-- /.box-body -->
 
                 <div class="box-footer">
