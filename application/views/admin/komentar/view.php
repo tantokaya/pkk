@@ -45,9 +45,9 @@
             </tr>
             </tfoot>
         </table>
-        <div class="box-footer">
+        <!--<div class="box-footer">
             <a href="<?php echo base_url();?>komentar/tambah" ><button type="submit" class="btn btn-warning"><i class="fa fa-plus-circle"></i> &nbsp;Tambah</button></a>
-        </div>
+        </div>-->
     </div><!-- /.box-body -->
 </div><!-- /.box -->
 <!-- jQuery 2.0.2 -->

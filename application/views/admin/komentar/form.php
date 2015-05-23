@@ -12,15 +12,15 @@
                     <div class="form-group">
                         <label>Nama Komentator</label>
                         <input type="hidden" name="kode" id="kode" style="width: 190px;" class="form-control" value="<?php echo $kode; ?>">
-                        <input type="text" name="name" id="name" placeholder=".." style="width: 190px;" class="form-control" value="<?php echo $name; ?>" autofocus>
+                        <input type="text" name="name" id="name" placeholder=".." style="width: 190px;" class="form-control" value="<?php echo $name; ?>" readonly>
                     </div>
                     <div class="form-group">
                         <label>Web</label>
-                        <input type="text" name="web" id="web"  style="width: 350px;" class="form-control" value="<?php echo $web; ?>" >
+                        <input type="text" name="web" id="web"  style="width: 350px;" class="form-control" value="<?php echo $web; ?>" readonly>
                     </div>
                     <div class="form-group">
                         <label>Isi</label>
-                        <textarea id="editor1" name="isi" rows="10" cols="80"><?php echo $isi; ?></textarea>
+                        <textarea id="editor1" name="isi" rows="10" cols="80" autofocus><?php echo $isi; ?></textarea>
                     </div>
                     
                     <div class="form-group">
@@ -46,6 +46,7 @@
 
                 <div class="box-footer">
                     <button type="submit" id="simpan" class="btn btn-primary"><i class="glyphicon glyphicon-floppy-disk"></i> Simpan</button>
+                    <button type="button"  class="btn btn-success" onclick=self.history.back()><i class="glyphicon glyphicon-arrow-left"></i> Kembali</button>
                 </div>
             </form>
         </div><!-- /.box -->
