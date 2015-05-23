@@ -81,8 +81,9 @@ class Slide extends CI_Controller {
 
                 if ( ! $this->upload->do_upload())
                 {
-                    $error = array('error' => $this->upload->display_errors());
-                    print_r($error); exit();
+                    /*$error = array('error' => $this->upload->display_errors());
+                    print_r($error); exit();*/
+                    redirect('slide');
                 }
                 else
                 {

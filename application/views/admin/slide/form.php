@@ -21,7 +21,7 @@
                     <div class="form-group">
                         <label>Gambar Slide <span class="required">*</span></label>
                         <input type="file" name='userfile' value="<?php echo $image; ?>" required="true">
-                        <p class="help-block">Upload Gambar Slide disini.</p>
+                        <p class="help-block">*) File Upload Hanya dapat berupa : gif, jpg, png.</p>
                     </div>
 
 
