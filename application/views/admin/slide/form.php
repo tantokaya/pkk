@@ -10,17 +10,17 @@
             <form name="form" id="form" enctype="multipart/form-data" action="<?php echo base_url(); ?>slide/simpan" method="post">
                 <div class="box-body">
                     <div class="form-group">
-                        <label>Judul Slide</label>
+                        <label>Judul Slide <span class="required">*</span> </label>
                         <input type="hidden" name="kode" id="kode" style="width: 190px;" class="form-control" value="<?php echo $kode; ?>">
-                        <input type="text" name="judul" id="judul" placeholder="Judul Album.." class="form-control" value="<?php echo $judul; ?>" autofocus="true">
+                        <input type="text" name="judul" id="judul" placeholder="Judul Album.." class="form-control" value="<?php echo $judul; ?>" required="true" autofocus="true">
                     </div>
                     <div class="form-group">
-                        <label>Isi</label>
-                        <textarea name="isi" id="isi" rows="3" class="form-control" style="width: 450px;"><?php echo $isi; ?></textarea>
+                        <label>Isi <span class="required">*</span></label>
+                        <textarea name="isi" id="isi" rows="3" class="form-control" style="width: 450px;" required="true"><?php echo $isi; ?></textarea>
                     </div>
                     <div class="form-group">
-                        <label>Gambar Slide</label>
-                        <input type="file" name='userfile' value="<?php echo $image; ?>">
+                        <label>Gambar Slide <span class="required">*</span></label>
+                        <input type="file" name='userfile' value="<?php echo $image; ?>" required="true">
                         <p class="help-block">Upload Gambar Slide disini.</p>
                     </div>
 
