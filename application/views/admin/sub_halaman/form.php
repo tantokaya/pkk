@@ -10,13 +10,13 @@
             <form name="form" id="form"  action="<?php echo base_url(); ?>sub_halaman/simpan" method="post">
                 <div class="box-body">
                     <div class="form-group">
-                        <label>Sub Menu</label>
+                        <label>Sub Menu <span class="required">*</span></label>
                         <input type="hidden" name="kode" id="kode" style="width: 190px;" class="form-control" value="<?php echo $kode; ?>">
-                        <input type="text" name="name" id="name" placeholder="Nama halaman.." class="form-control" value="<?php echo $name; ?>" autofocus="true">
+                        <input type="text" name="name" id="name" placeholder="Nama halaman.." class="form-control" value="<?php echo $name; ?>" required="true" autofocus="true">
                     </div>
                     <div class="form-group">
-                        <label>Menu Utama</label>
-                        <select name="halaman" id="halaman" class="form-control" style="width: 200px;" required>
+                        <label>Menu Utama <span class="required">*</span></label>
+                        <select name="halaman" id="halaman" class="form-control" style="width: 200px;" required="true">
                             <?php
                             if(empty($halaman)){
                                 ?>
