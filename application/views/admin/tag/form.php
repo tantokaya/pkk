@@ -10,9 +10,9 @@
             <form name="form" id="form"  action="<?php echo base_url(); ?>tag/simpan" method="post">
                 <div class="box-body">
                     <div class="form-group">
-                        <label>Nama Tag</label>
+                        <label>Nama Tag <span class="required">*</span></label>
                         <input type="hidden" name="kode" id="kode" style="width: 190px;" class="form-control" value="<?php echo $kode; ?>">
-                        <input type="text" name="name" id="name" placeholder="Nama Kategori.." style="width: 190px;" class="form-control" value="<?php echo $name; ?>" autofocus="true">
+                        <input type="text" name="name" id="name" placeholder="Nama Kategori.." style="width: 190px;" class="form-control" value="<?php echo $name; ?>" required="true" autofocus="true">
                     </div>
 
                 </div><!-- /.box-body -->
