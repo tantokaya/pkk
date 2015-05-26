@@ -44,6 +44,14 @@ class Home extends CI_Controller {
 
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
 
+            // handle polling data
+            $d['polling'] = $this->polling_model->get_polling_data('tbl_polling');
+            $vote1 = $this->polling_model->get_jml_vote(1);
+            $vote2 = $this->polling_model->get_jml_vote(2);
+            $vote3 = $this->polling_model->get_jml_vote(3);
+            $vote4 = $this->polling_model->get_jml_vote(4);
+            $d['total_vote'] = $vote1 + $vote2 + $vote3 + $vote4;
+
             $d['content']= $this->load->view('content',$d,true);
             $this->load->view('home',$d);
 
@@ -57,7 +65,21 @@ class Home extends CI_Controller {
         }
     }
 
+    public function save_polling(){
+        $vote = $this->input->post('vote');
+        $ip = $_SERVER['REMOTE_ADDR'];
 
+        $voted = $this->session->userdata('hasvoted');
+
+        if(empty($voted)){
+            $sip = $this->session->set_userdata('hasvoted',"polling");
+            $update = $this->db->query("UPDATE tbl_polling SET vote{$vote} = vote{$vote} + 1");
+            $this->session->set_flashdata("pesan", "<div class=\"cleaner_h10\"></div><div style=\"color: blue;\">Terimakasih atas vote anda !!</div>");
+        }else{
+            $this->session->set_flashdata("pesan", "<div class=\"cleaner_h10\"></div><div style=\"color: red;\">Anda sudah pernah vote !!</div>");
+        }
+        redirect("home");
+    }
 }
 
 /* End of file index.php */

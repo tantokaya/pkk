@@ -160,17 +160,18 @@
 <div id="sub-left-center-content">
     <div id="single-sub-left-center-content">
         <div id="title-sub-small">Jajak Pendapat</div>
+        <?=$this->session->flashdata('pesan')?>
         <div class="cleaner_h10"></div>
-        <strong>Menurut anda, rubrik atau kategori apa yang perlu ditambahkan di Web Puskom Kreatif ?</strong>
+        <strong><?= $polling->pertanyaan; ?></strong>
         <div class="cleaner_h5"></div>
-        <form method="post" action="">
-            <input type="radio" name="isi" />Pariwisata Daerah<div class="cleaner_h5"></div>
-            <input type="radio" name="isi" />Wisata Kuliner<div class="cleaner_h5"></div>
-            <input type="radio" name="isi" />Kesehatan<div class="cleaner_h5"></div>
-            <input type="radio" name="isi" />Sexs Education<div class="cleaner_h5"></div>
-            <input type="radio" name="isi" />Teknologi<div class="cleaner_h5"></div>
+        <form method="post" action="<?php echo base_url('home/save_polling'); ?>">
+            <input type="radio" name="vote" value="1" /><?= $polling->jawaban1; ?><div class="cleaner_h5"></div>
+            <input type="radio" name="vote" value="2" /><?= $polling->jawaban2; ?><div class="cleaner_h5"></div>
+            <input type="radio" name="vote" value="3" /><?= $polling->jawaban3; ?><div class="cleaner_h5"></div>
+            <input type="radio" name="vote" value="4" /><?= $polling->jawaban4; ?><div class="cleaner_h5"></div>
             <input type="image" src="<?php echo base_url();?>asset/images/kirim.png" /> <input type="image" src="<?php echo base_url();?>asset/images/lihat.png" />
         </form>
+        <div class="cleaner_h10"></div><div>Jumlah voting : <?= $total_vote; ?></div><div class="cleaner_h10"></div>
     </div>
 </div>
 <div class="cleaner_h5"></div>
