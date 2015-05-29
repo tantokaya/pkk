@@ -10,50 +10,57 @@ class Home extends CI_Controller {
 
     function __construct(){
         parent::__construct();
+        $this->load->model('polling_model');
         $this->load->helper('permalink_helper');
     }
 
 
     public function index()
     {
-            $d['title']                 = $this->config->item('nama_aplikasi');
-            $d['title_aplikasi']        = "Pusat Komunitas Kreatif UMKM";
-            $d['keywords']              = "Puskomkreatif, UKM, Usaha";
-            $d['descriptions']          = "Pusat Komunitas Kreatif Indonesia";
+        $d['title']                 = $this->config->item('nama_aplikasi');
+        $d['title_aplikasi']        = "Pusat Komunitas Kreatif UMKM";
+        $d['keywords']              = "Puskomkreatif, UKM, Usaha";
+        $d['descriptions']          = "Pusat Komunitas Kreatif Indonesia";
 
-            $d['all_hot']	            = $this->app_model->get_all_hot();
-            $d['all_new_post']	        = $this->app_model->get_all_new_post();
-	        $d['all_post_by_kategori']	= $this->app_model->get_all_post_by_kategori();
-            $d['all_new_post_baca']	    = $this->app_model->get_all_new_post_baca();
-            $d['all_slide']	            = $this->app_model->get_all_slide();
-            $d['all_post_by_w_1_1']	    = $this->widget_model->get_all_post_by_w_1_1();
-            $d['all_post_by_w_1_2']	    = $this->widget_model->get_all_post_by_w_1_2();
-            $d['all_post_by_wkanan_1_1']= $this->widget_model->get_all_post_by_wkanan_1_1();
-            $d['all_post_by_wkanan_1_2']= $this->widget_model->get_all_post_by_wkanan_1_2();
-            $d['all_post_by_wkanan_2_1']= $this->widget_model->get_all_post_by_wkanan_2_1();
-            $d['all_post_by_wkanan_2_2']= $this->widget_model->get_all_post_by_wkanan_2_2();
-            $d['all_post_by_wkanan_3_1']= $this->widget_model->get_all_post_by_wkanan_3_1();
-            $d['all_post_by_wkanan_3_2']= $this->widget_model->get_all_post_by_wkanan_3_2();
-            $d['all_post_by_wkanan_4_1']= $this->widget_model->get_all_post_by_wkanan_4_1();
-            $d['all_post_by_wkanan_4_2']= $this->widget_model->get_all_post_by_wkanan_4_2();
+        $d['all_hot']	            = $this->app_model->get_all_hot();
+        $d['all_new_post']	        = $this->app_model->get_all_new_post();
+        $d['all_post_by_kategori']	= $this->app_model->get_all_post_by_kategori();
+        $d['all_new_post_baca']	    = $this->app_model->get_all_new_post_baca();
+        $d['all_slide']	            = $this->app_model->get_all_slide();
+        $d['all_post_by_w_1_1']	    = $this->widget_model->get_all_post_by_w_1_1();
+        $d['all_post_by_w_1_2']	    = $this->widget_model->get_all_post_by_w_1_2();
+        $d['all_post_by_wkanan_1_1']= $this->widget_model->get_all_post_by_wkanan_1_1();
+        $d['all_post_by_wkanan_1_2']= $this->widget_model->get_all_post_by_wkanan_1_2();
+        $d['all_post_by_wkanan_2_1']= $this->widget_model->get_all_post_by_wkanan_2_1();
+        $d['all_post_by_wkanan_2_2']= $this->widget_model->get_all_post_by_wkanan_2_2();
+        $d['all_post_by_wkanan_3_1']= $this->widget_model->get_all_post_by_wkanan_3_1();
+        $d['all_post_by_wkanan_3_2']= $this->widget_model->get_all_post_by_wkanan_3_2();
+        $d['all_post_by_wkanan_4_1']= $this->widget_model->get_all_post_by_wkanan_4_1();
+        $d['all_post_by_wkanan_4_2']= $this->widget_model->get_all_post_by_wkanan_4_2();
 
-            $d['jumlah_pengunjung'] = $this->statistik_model->pengunjung();
+        $d['jumlah_pengunjung'] = $this->statistik_model->pengunjung();
 
-            $text = "SELECT * FROM tbl_kategori ORDER BY kategori ASC";
-            $d['l_kategori'] = $this->app_model->manualQuery($text);
+        $text = "SELECT * FROM tbl_kategori ORDER BY kategori ASC";
+        $d['l_kategori'] = $this->app_model->manualQuery($text);
 
-            $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+        $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
 
-            // handle polling data
-            $d['polling'] = $this->polling_model->get_polling_data('tbl_polling');
-            $vote1 = $this->polling_model->get_jml_vote(1);
-            $vote2 = $this->polling_model->get_jml_vote(2);
-            $vote3 = $this->polling_model->get_jml_vote(3);
-            $vote4 = $this->polling_model->get_jml_vote(4);
-            $d['total_vote'] = $vote1 + $vote2 + $vote3 + $vote4;
+        // handle polling data
+        $d['polling'] = $this->polling_model->get_polling_data('tbl_polling');
+        $vote = 0;
+        for($i=1;$i<=5;$i++){
+            $hitung = $this->db->query("SELECT vote{$i} as vote FROM tbl_polling");
+            $result = $hitung->row_array();
 
-            $d['content']= $this->load->view('content',$d,true);
-            $this->load->view('home',$d);
+            $vote = $vote + $result['vote'];
+
+        }
+
+        $d['total_vote'] = $vote;
+
+
+        $d['content']= $this->load->view('content',$d,true);
+        $this->load->view('home',$d);
 
     }
     public function generate_event()
@@ -80,6 +87,7 @@ class Home extends CI_Controller {
         }
         redirect("home");
     }
+
 }
 
 /* End of file index.php */

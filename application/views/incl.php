@@ -8,6 +8,7 @@
 <script language="javascript" src="<?php echo base_url();?>asset/js/site.js"></script>
 <script src="<?php echo base_url();?>asset/js/s3Slider.js" type="text/javascript"></script>
 <link href="<?php echo base_url();?>asset/css/style.css" rel="stylesheet" type="text/css" />
+
 <?php
    if($this->uri->segment(2)== ''){
 ?>

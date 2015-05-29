@@ -47,13 +47,6 @@ class Polling_Model extends CI_Model {
         return $query->row();
     }
 
-    function get_jml_vote($i){
-        $this->db->select('vote'.$i);
-        $this->db->from('tbl_polling');
-        $query = $this->db->get();
-        return $query->row();
-    }
-
 }
 /* End of file polling_model.php */
 /* Location: ./application/models/polling_model.php */
