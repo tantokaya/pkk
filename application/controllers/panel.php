@@ -99,14 +99,18 @@ class Panel extends CI_Controller {
             if($data->num_rows() > 0){
                 foreach($data->result() as $db){
                     $d['kode']      = $db->panel_id;
-                    $d['name']      = $db->panel_name;
-                    $d['isi']	    = $db->panel_isi;
+                    $d['copyright'] = $db->panel_copyright;
+                    $d['alamat']	= $db->panel_alamat;
+                    $d['facebook']	= $db->panel_facebook;
+                    $d['twitter']	= $db->panel_twitter;
                     $d['image']	    = $db->panel_image;
                 }
             }else{
-                $d['name']	    = '';
-                $d['isi']	    = '';
-                $d['image']	    = '';
+                $d['copyright']	    = '';
+                $d['alamat']	    = '';
+                $d['facebook']	    = '';
+                $d['twitter']	    = '';
+                $d['image']	        = '';
             }
 
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();

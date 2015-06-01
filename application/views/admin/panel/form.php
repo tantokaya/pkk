@@ -5,29 +5,33 @@
         <!-- general form elements -->
         <div class="box box-primary">
             <div class="box-header">
-                <h3 class="box-title">Form Galeri Foto /Gambar</h3>
+                <h3 class="box-title">Form Panel</h3>
             </div><!-- /.box-header -->
             <!-- form start -->
             <form name="form" id="form" enctype="multipart/form-data" action="<?php echo base_url(); ?>panel/simpan" method="post">
                 <div class="box-body">
                     <div class="form-group">
-                        <label>Nama Panel</label>
+                        <label>Copyright</label>
                         <input type="hidden" name="kode" id="kode" style="width: 190px;" class="form-control" value="<?php echo $kode; ?>">
-                        <input type="text" name="name" id="name" placeholder="..." class="form-control" value="<?php echo $name; ?>" readonly>
+                        <input type="text" name="copyright" id="copyright"  class="form-control" value="<?php echo $copyright; ?>" >
                     </div>
-                    <?php if($panelid=='1') { ?>
+                    <div class="form-group">
+                        <label>Facebook</label>
+                        <input type="text" name="facebook" id="facebook" class="form-control" value="<?php echo $facebook; ?>">
+                    </div>
+                    <div class="form-group">
+                        <label>Twitter</label>
+                        <input type="text" name="twitter" id="twitter" class="form-control" value="<?php echo $twitter; ?>">
+                    </div>
                     <div class="form-group">
                         <label>Logo</label>
                         <input type="file" name='userfile' value="<?php echo $image;  ?>">
                         <p class="help-block">Upload Image Logo disini.</p>
                     </div>
-                    <?php } ?>
-                    <?php if($panelid=='4'||$panelid=='3'||$panelid=='2') { ?>
                     <div class="form-group">
-                        <label>Isi</label>
-                        <textarea  name="isi" class="form-control"><?php echo $isi; ?></textarea>
+                        <label>Alamat</label>
+                        <textarea  name="alamat" class="form-control"><?php echo $alamat; ?></textarea>
                     </div>
-                    <?php } ?>
                 </div><!-- /.box-body -->
 
                 <div class="box-footer">

@@ -27,6 +27,7 @@ class Home extends CI_Controller {
         $d['all_post_by_kategori']	= $this->app_model->get_all_post_by_kategori();
         $d['all_new_post_baca']	    = $this->app_model->get_all_new_post_baca();
         $d['all_slide']	            = $this->app_model->get_all_slide();
+        $d['all_panel']             = $this->app_model->get_all_panel();
         $d['all_post_by_w_1_1']	    = $this->widget_model->get_all_post_by_w_1_1();
         $d['all_post_by_w_1_2']	    = $this->widget_model->get_all_post_by_w_1_2();
         $d['all_post_by_wkanan_1_1']= $this->widget_model->get_all_post_by_wkanan_1_1();

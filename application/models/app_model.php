@@ -582,6 +582,16 @@ class App_Model extends CI_Model {
         return $query->result_array();
     }
 
+    function get_all_panel()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_panel');
+
+        $query = $this->db->get();
+
+        return $query->result_array();
+    }
+
     function get_all_slide()
     {
         $this->db->select('*');

@@ -7,9 +7,9 @@
             <thead>
             <tr>
                 <th style="text-align: center; width: 30px;">No</th>
-                <th style="text-align: center; width: 70px;">Kode Panel</th>
-                <th style="text-align: center; width: 150px;">Isi Panel</th>
-                <th style="text-align: center; width: 150px;">Image Panel</th>
+                <th style="text-align: center; width: 70px;">Copyright</th>
+                <th style="text-align: center; width: 150px;">Alamat</th>
+                <th style="text-align: center; width: 150px;">Logo Website</th>
                 <th style="text-align: center; width: 50px;">Aksi</th>
             </tr>
             </thead>
@@ -20,11 +20,11 @@
                 ?>
                 <tr>
                     <td style="text-align: center"><?php echo $no; ?></td>
-                    <td><?php echo $db['panel_name']; ?></td>
-                    <td><?php echo $db['panel_isi']; ?></td>
+                    <td><?php echo $db['panel_copyright']; ?></td>
+                    <td><?php echo $db['panel_alamat']; ?></td>
                     <td style="text-align: center;">
                         <?php if($db['panel_image']!='') { ?>
-                            <img src="<?php echo base_url();?>uploads/panel/<?php echo $db['panel_image']; ?>" style="width: 80px; height: 80px;">
+                            <img src="<?php echo base_url();?>uploads/panel/<?php echo $db['panel_logo']; ?>" style="width: 80px; height: 80px;">
                         <?php } else { ?>
                             <img src="<?php echo base_url(); ?>asset/images/blank.jpg" style="width: 80px; height: 80px;">
                         <?php } ?>
@@ -43,9 +43,9 @@
             <tfoot>
             <tr>
                 <th style="text-align: center; width: 30px;">No</th>
-                <th style="text-align: center; width: 70px;">Kode Panel</th>
-                <th style="text-align: center; width: 150px;">Isi Panel</th>
-                <th style="text-align: center; width: 150px;">Image Panel</th>
+                <th style="text-align: center; width: 70px;">Copyright</th>
+                <th style="text-align: center; width: 150px;">Alamat</th>
+                <th style="text-align: center; width: 150px;">Logo Website</th>
                 <th style="text-align: center; width: 50px;">Aksi</th>
             </tr>
             </tfoot>

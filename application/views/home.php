@@ -56,8 +56,11 @@
 
 <div id="footer">
     <div id="center-footer">
-        Copyright @ 2015 Puskomkreatif. All Rights Reserved.<br />
-        BPPT-Ipteknet. Serpong, Tangerang-Selatan, Indonesia. Tel.-62 21 . Fax.-62 21 <br/>
+        <?php foreach($all_panel as $db):
+            echo $db['panel_copyright'];
+            echo '<br/>';
+            echo $db['panel_alamat'];
+        endforeach; ?>
         <br />
     </div>
 </div>
