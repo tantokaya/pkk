@@ -7,6 +7,14 @@ class Panel extends CI_Controller {
      * @web : http://www.risetkomputer.com
      * @keterangan : Controller untuk halaman awal ketika aplikasi  diakses
      **/
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->helper(array('form', 'url', 'html'));
+        $this->load->library(array('upload','image_lib'));
+    }
+
     public function index()
     {
         $cek = $this->session->userdata('logged_in');
@@ -34,21 +42,28 @@ class Panel extends CI_Controller {
         $cek = $this->session->userdata('logged_in');
         if(!empty($cek)){
 
-            $up['panel_isi']        = $this->input->post('isi');
+            $up['panel_alamat']        = $this->input->post('alamat');
+            $up['panel_copyright']     = $this->input->post('copyright');
+            $up['panel_facebook']      = $this->input->post('facebook');
+            $up['panel_twitter']       = $this->input->post('twitter');
 
             $id['panel_id']   =   $this->input->post('kode');
+
 
             // cek jika ada file yg diupload
             if (!empty($_FILES['userfile']['name'])) {
                 // upload
+
                 $config['upload_path'] = './uploads/panel/';
-                $config['allowed_types'] = 'gif|jpg|png|ico';
+                $config['allowed_types'] = 'gif|jpg|png';
+                $config['file_name'] = 'logo';
                 //$config['max_size']	= '1024';
-                //$config['max_width']  = '1024';
+                //$config['max_width']  = '4096';
                 //$config['max_height']  = '768';
 
                 $this->load->library('upload');
                 $this->upload->initialize($config);
+
 
                 if ( ! $this->upload->do_upload())
                 {
@@ -57,22 +72,48 @@ class Panel extends CI_Controller {
                 }
                 else
                 {
+                    //Image Resizing
+                    $data_upload = $this->upload->data();
+
+                    $file_name = $data_upload["file_name"];
+
+                    $this->load->library('image_lib');
+                    $config_resize['image_library'] = 'gd2';
+                    $config_resize['create_thumb'] = FALSE;
+                    $config_resize['maintain_ratio'] = FALSE;
+                    $config_resize['new_image'] = './uploads/panel/thumbs';
+                    $config_resize['master_dim'] = 'height';
+                    $config_resize['quality'] = "100%";
+                    $config_resize['source_image'] = './uploads/panel/'. $file_name;
+
+                    $config_resize['height'] = 120;
+                    $config_resize['width'] = 500;
+                    $this->image_lib->initialize($config_resize);
+                    $this->image_lib->resize();
+
                     $pp = array('upload_data' => $this->upload->data());
+
+
                 }
 
-                $up['panel_image'] = $pp['upload_data']['file_name'];
+                  $up['panel_image'] = $pp['upload_data']['file_name'];
+                }
 
-            }
+
 
             //print_r($up); exit();
 
 
             $data = $this->app_model->getSelectedData("tbl_panel",$id);
             if($data->num_rows()>0){
+                $result = $data->row_array();
+
                 $this->app_model->updateData("tbl_panel",$up,$id);
-                $old_dir = './uploads/panel/';
-                if(file_exists($old_dir . $result['image'])){
-                    unlink($old_dir . $result['image']);
+                $old_dir    = './uploads/panel/';
+                $old_thumbs    = './uploads/panel/thumbs/';
+                if(file_exists($old_dir . $result['panel_image'])){
+                    unlink($old_dir . $result['panel_image']);
+                    unlink($old_thumbs . $result['panel_image']);
                 }
             }else{
                 $this->app_model->insertData("tbl_panel",$up);

@@ -9,7 +9,7 @@
                 <th style="text-align: center; width: 30px;">No</th>
                 <th style="text-align: center; width: 70px;">Copyright</th>
                 <th style="text-align: center; width: 150px;">Alamat</th>
-                <th style="text-align: center; width: 150px;">Logo Website</th>
+                <th style="text-align: center; width: 150px;">Twitter</th>
                 <th style="text-align: center; width: 50px;">Aksi</th>
             </tr>
             </thead>
@@ -22,13 +22,7 @@
                     <td style="text-align: center"><?php echo $no; ?></td>
                     <td><?php echo $db['panel_copyright']; ?></td>
                     <td><?php echo $db['panel_alamat']; ?></td>
-                    <td style="text-align: center;">
-                        <?php if($db['panel_image']!='') { ?>
-                            <img src="<?php echo base_url();?>uploads/panel/<?php echo $db['panel_logo']; ?>" style="width: 80px; height: 80px;">
-                        <?php } else { ?>
-                            <img src="<?php echo base_url(); ?>asset/images/blank.jpg" style="width: 80px; height: 80px;">
-                        <?php } ?>
-                    </td>
+                    <td><?php echo $db['panel_twitter']; ?></td>
                     <td align="center">
                         <a href="<?php echo base_url();?>panel/edit/<?php echo $db['panel_id'];?>" title="Edit">
                             <button class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Ubah</button></a>
@@ -45,7 +39,7 @@
                 <th style="text-align: center; width: 30px;">No</th>
                 <th style="text-align: center; width: 70px;">Copyright</th>
                 <th style="text-align: center; width: 150px;">Alamat</th>
-                <th style="text-align: center; width: 150px;">Logo Website</th>
+                <th style="text-align: center; width: 150px;">Twitter</th>
                 <th style="text-align: center; width: 50px;">Aksi</th>
             </tr>
             </tfoot>

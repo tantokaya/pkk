@@ -19,7 +19,7 @@
 <div id="line-header">
 <div id="center-header">
     <div id="left-center-header">
-        <img src="<?php echo base_url();?>asset/images/logo-puskomkreatif.png" />
+        <img src="<?php echo base_url();?>uploads/panel/thumbs/logo.png" />
     </div>
     <div id="right-center-header">
         <div id="menu-right-center-header">
