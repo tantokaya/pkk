@@ -126,10 +126,14 @@ class Slide extends CI_Controller {
 
             $data = $this->app_model->getSelectedData("tbl_slide",$id);
             if($data->num_rows()>0){
+                $result = $data->row_array();
+                
                 $this->app_model->updateData("tbl_slide",$up,$id);
                 $old_dir = './uploads/slide/';
-                if(file_exists($old_dir . $result['foto'])){
-                    unlink($old_dir . $result['foto']);
+                $old_thumbs    = './uploads/slide/thumbs/';
+                if(file_exists($old_dir . $result['slide_image'])){
+                    unlink($old_dir . $result['slide_image']);
+                    unlink($old_thumbs . $result['slide_image']);
                 }
             }else{
                 $this->app_model->insertData("tbl_slide",$up);

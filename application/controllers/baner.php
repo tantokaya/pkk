@@ -7,6 +7,12 @@ class Baner extends CI_Controller {
      * @web : http://www.risetkomputer.com
      * @keterangan : Controller untuk halaman awal ketika aplikasi  diakses
      **/
+
+    function __construct(){
+        parent::__construct();
+        $this->load->helper('permalink_helper');
+    }
+
     public function index()
     {
         $cek = $this->session->userdata('logged_in');
@@ -33,6 +39,7 @@ class Baner extends CI_Controller {
 
         $cek = $this->session->userdata('logged_in');
         if(!empty($cek)){
+            $image_seo  = seo_title($this->input->post('judul'));
 
             $up['baner_name']   = $this->input->post('name');
             $up['publish']      = $this->input->post('status');
@@ -44,6 +51,7 @@ class Baner extends CI_Controller {
                 // upload
                 $config['upload_path'] = './uploads/baner/';
                 $config['allowed_types'] = 'gif|jpg|png';
+                $config['file_name']        = $image_seo;
                 //$config['max_size']	= '1024';
                 //$config['max_width']  = '1024';
                 //$config['max_height']  = '768';
@@ -53,11 +61,30 @@ class Baner extends CI_Controller {
 
                 if ( ! $this->upload->do_upload())
                 {
-                    $error = array('error' => $this->upload->display_errors());
-                    print_r($error); exit();
+                    //$error = array('error' => $this->upload->display_errors());
+                    //print_r($error); exit();
                 }
                 else
                 {
+                    //Image Resizing
+                    $data_upload = $this->upload->data();
+
+                    $file_name = $data_upload["file_name"];
+
+                    $this->load->library('image_lib');
+                    $config_resize['image_library'] = 'gd2';
+                    $config_resize['create_thumb'] = FALSE;
+                    $config_resize['maintain_ratio'] = TRUE;
+                    $config_resize['new_image'] = './uploads/baner/thumbs';
+                    $config_resize['master_dim'] = 'height';
+                    $config_resize['quality'] = "100%";
+                    $config_resize['source_image'] = './uploads/baner/'. $file_name;
+
+                    $config_resize['width'] = 1;
+                    $config_resize['height'] = 155;
+                    $this->image_lib->initialize($config_resize);
+                    $this->image_lib->resize();
+
                     $pp = array('upload_data' => $this->upload->data());
                 }
 
@@ -70,10 +97,14 @@ class Baner extends CI_Controller {
 
             $data = $this->app_model->getSelectedData("tbl_baner",$id);
             if($data->num_rows()>0){
+                $result = $data->row_array();
+
                 $this->app_model->updateData("tbl_baner",$up,$id);
                 $old_dir = './uploads/baner/';
-                if(file_exists($old_dir . $result['image'])){
-                    unlink($old_dir . $result['image']);
+                $old_thumbs    = './uploads/baner/thumbs/';
+                if(file_exists($old_dir . $result['baner_image'])){
+                    unlink($old_dir . $result['baner_image']);
+                    unlink($old_thumbs . $result['baner_image']);
                 }
             }else{
                 $this->app_model->insertData("tbl_baner",$up);

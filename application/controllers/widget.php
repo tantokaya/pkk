@@ -104,10 +104,14 @@ class Widget extends CI_Controller {
 
             $data = $this->app_model->getSelectedData("tbl_widget",$id);
             if($data->num_rows()>0){
+                $result = $data->row_array();
+
                 $this->app_model->updateData("tbl_widget",$up,$id);
                 $old_dir = './uploads/widget/';
-                if(file_exists($old_dir . $result['image'])){
-                    unlink($old_dir . $result['image']);
+                $old_thumbs    = './uploads/widget/thumbs/';
+                if(file_exists($old_dir . $result['widget_image'])){
+                    unlink($old_dir . $result['widget_image']);
+                    unlink($old_thumbs . $result['widget_image']);
                 }
             }else{
                 $this->app_model->insertData("tbl_widget",$up);
