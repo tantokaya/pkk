@@ -745,7 +745,7 @@ class App_Model extends CI_Model {
         return $hasil;
     }
 
-    public  function HitunJmlKomen(){
+    public  function HitungJmlKomen(){
         $t = "SELECT COUNT(komen_id) as total FROM tbl_komentar WHERE publish = 'N'";
         $d = $this->app_model->manualQuery($t);
         $r = $d->num_rows();
