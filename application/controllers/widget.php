@@ -42,6 +42,7 @@ class Widget extends CI_Controller {
         if(!empty($cek)){
             $tanggal = gmdate("Y-m-d", time()+60*60*7);
             $time = gmdate("H:i:s", time()+60*60*7);
+            $image_seo  = seo_title($this->input->post('judul'));
 
             $up['widget_tgl']     = $tanggal;
             $up['widget_time']    = $time;
@@ -57,7 +58,7 @@ class Widget extends CI_Controller {
                 // upload
                 $config['upload_path']      = './uploads/widget/';
                 $config['allowed_types']    = 'gif|jpg|png';
-                $config['file_name']        = $this->input->post('judul');;
+                $config['file_name']        = $image_seo;
                 //$config['max_size']	    = '1024';
                 //$config['max_width']      = '1024';
                 //$config['max_height']     = '768';
@@ -80,14 +81,14 @@ class Widget extends CI_Controller {
                     $this->load->library('image_lib');
                     $config_resize['image_library'] = 'gd2';
                     $config_resize['create_thumb'] = FALSE;
-                    $config_resize['maintain_ratio'] = FALSE;
+                    $config_resize['maintain_ratio'] = TRUE;
                     $config_resize['new_image'] = './uploads/widget/thumbs';
                     $config_resize['master_dim'] = 'height';
                     $config_resize['quality'] = "100%";
                     $config_resize['source_image'] = './uploads/widget/'. $file_name;
 
-                    $config_resize['width'] = 120;
-                    $config_resize['height'] = 90;
+                    $config_resize['width'] = 1;
+                    $config_resize['height'] = 240;
                     $this->image_lib->initialize($config_resize);
                     $this->image_lib->resize();
 
