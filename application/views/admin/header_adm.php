@@ -14,6 +14,29 @@
 <div class="navbar-right">
 <ul class="nav navbar-nav">
     <?php if($this->session->userdata('id_level')=='01'||$this->session->userdata('id_level')=='02') { ?>
+        <!-- Notifications: style can be found in dropdown.less -->
+        <li class="dropdown notifications-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-warning"></i>
+                <span class="label label-warning"><?php echo $this->app_model->HitunJmlKomen(); ?></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li class="header">Anda memiliki <?php echo $this->app_model->HitunJmlKomen(); ?> No Publish</li>
+                <li>
+                    <!-- inner menu: contains the actual data -->
+                    <ul class="menu">
+                        <?php foreach($all_new_komen_publish as $db): ?>
+                        <li>
+                            <a href="<?php echo base_url();?>komentar/edit/<?php echo $db['komen_id'];?>">
+                                <i class="ion ion-ios7-people info"></i> <?php echo $db['komen_name']; ?>
+                            </a>
+                        </li>
+                        <?php endforeach; ?>
+                    </ul>
+                </li>
+                <li class="footer"><a href="#">Lihat Semua</a></li>
+            </ul>
+        </li>
     <!-- Messages: style can be found in dropdown.less-->
     <?php if($this->app_model->HitungPostByJudul()!='0'){ ?>
     <li class="dropdown messages-menu">

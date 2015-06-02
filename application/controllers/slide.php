@@ -127,7 +127,7 @@ class Slide extends CI_Controller {
             $data = $this->app_model->getSelectedData("tbl_slide",$id);
             if($data->num_rows()>0){
                 $result = $data->row_array();
-                
+
                 $this->app_model->updateData("tbl_slide",$up,$id);
                 $old_dir = './uploads/slide/';
                 $old_thumbs    = './uploads/slide/thumbs/';

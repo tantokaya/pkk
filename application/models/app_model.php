@@ -745,6 +745,20 @@ class App_Model extends CI_Model {
         return $hasil;
     }
 
+    public  function HitunJmlKomen(){
+        $t = "SELECT COUNT(komen_id) as total FROM tbl_komentar WHERE publish = 'N'";
+        $d = $this->app_model->manualQuery($t);
+        $r = $d->num_rows();
+        if($r>0){
+            foreach($d->result() as $h){
+                $hasil = $h->total;
+            }
+        }else{
+            $hasil = '';
+        }
+        return $hasil;
+    }
+
     public  function HitungAllPostByJudul(){
 
         $t = "SELECT COUNT(post_id) as total FROM tbl_post";
@@ -783,6 +797,19 @@ class App_Model extends CI_Model {
         $this->db->join('tbl_admin','tbl_post.username = tbl_admin.username','left');
         $this->db->where('tbl_post.publish','N');
         $this->db->order_by('tbl_post.post_id','DESC');
+        $this->db->limit(5);
+
+        $query = $this->db->get();
+
+        return $query->result_array();
+    }
+
+    function get_all_new_komen_publish()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_komentar');
+        $this->db->where('publish','N');
+        $this->db->order_by('komen_id','DESC');
         $this->db->limit(5);
 
         $query = $this->db->get();
