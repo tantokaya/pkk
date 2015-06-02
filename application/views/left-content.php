@@ -87,7 +87,7 @@
             <div id="detail-content-time"><?php echo $hari.', '.$hasil;?> &nbsp;&nbsp;<?php echo $this->widget_model->CariWidgetByTimeKiri1_1();?></div>
             <h2><?php echo $this->widget_model->CariJudulIsiWidgetByKiriText1_1();?></h2>
         </a>
-        <img src="<?php echo base_url(); ?>uploads/widget/<?php echo $this->widget_model->CariImageWidgetByKiriText1_1(); ?>" width="120" height="90" />
+        <img src="<?php echo base_url(); ?>uploads/widget/thumbs/<?php echo $this->widget_model->CariImageWidgetByKiriText1_1(); ?>"  />
         <?php
         $isi = $this->widget_model->CariIsiWidgetByKiriText1_1();
         $isi = character_limiter($isi,150);
@@ -131,7 +131,7 @@
             <div id="detail-content-time"><?php echo $hari.', '.$hasil;?> &nbsp;&nbsp;<?php echo $this->widget_model->CariWidgetByTimeKiri1_2();?></div>
             <h2><?php echo $this->widget_model->CariJudulIsiWidgetByKiriText1_2();?></h2>
         </a>
-        <img src="<?php echo base_url(); ?>uploads/widget/<?php echo $this->widget_model->CariImageWidgetByKiriText1_2(); ?>" width="120" height="90" />
+        <img src="<?php echo base_url(); ?>uploads/widget/thumbs/<?php echo $this->widget_model->CariImageWidgetByKiriText1_2(); ?>" width="120" height="90" />
         <?php
         $isi = $this->widget_model->CariIsiWidgetByKiriText1_2();
         $isi = character_limiter($isi,150);
