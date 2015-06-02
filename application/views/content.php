@@ -19,7 +19,7 @@
         <ul id="sliderContent">
             <?php foreach($all_slide as $db): ?>
                 <li class="sliderImage">
-                    <img src="<?php echo base_url(); ?>uploads/slide/<?php echo $db['slide_image'];?>" width="610" height="270"/>
+                    <img src="<?php echo base_url(); ?>uploads/slide/thumbs/<?php echo $db['slide_image'];?>" width="610" height="270"/>
                     <span class="bottom"><strong><?php echo $db['slide_judul']; ?></strong><br/>
                     <?php echo $db['slide_isi']; ?></span>
                 </li>

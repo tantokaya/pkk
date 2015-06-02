@@ -7,6 +7,12 @@ class Slide extends CI_Controller {
      * @web : http://www.risetkomputer.com
      * @keterangan : Controller untuk halaman awal ketika aplikasi  diakses
      **/
+
+    function __construct(){
+        parent::__construct();
+        $this->load->helper('permalink_helper');
+    }
+
     public function index()
     {
         $cek = $this->session->userdata('logged_in');
@@ -58,6 +64,7 @@ class Slide extends CI_Controller {
             $tanggal = gmdate("Y-m-d", time()+60*60*7);
             $time = gmdate("H:i:s", time()+60*60*7);
             $nama = $this->app_model->CariUserPengguna();
+            $image_seo  = seo_title($this->input->post('judul'));
 
             $up['username']	     = $nama;
             $up['slide_date']    = $tanggal;
@@ -70,11 +77,12 @@ class Slide extends CI_Controller {
             // cek jika ada file yg diupload
             if (!empty($_FILES['userfile']['name'])) {
                 // upload
-                $config['upload_path'] = './uploads/slide/';
-                $config['allowed_types'] = 'gif|jpg|png';
-                //$config['max_size']	= '1024';
-                //$config['max_width']  = '1024';
-                //$config['max_height']  = '768';
+                $config['upload_path']      = './uploads/slide/';
+                $config['allowed_types']    = 'gif|jpg|png';
+                $config['file_name']        = $image_seo;
+                //$config['max_size']	    = '1024';
+                //$config['max_width']      = '1024';
+                //$config['max_height']     = '768';
 
                 $this->load->library('upload');
                 $this->upload->initialize($config);
@@ -83,10 +91,29 @@ class Slide extends CI_Controller {
                 {
                     /*$error = array('error' => $this->upload->display_errors());
                     print_r($error); exit();*/
-                    redirect('slide');
+                    //redirect('slide');
                 }
                 else
                 {
+                    //Image Resizing
+                    $data_upload = $this->upload->data();
+
+                    $file_name = $data_upload["file_name"];
+
+                    $this->load->library('image_lib');
+                    $config_resize['image_library'] = 'gd2';
+                    $config_resize['create_thumb'] = FALSE;
+                    $config_resize['maintain_ratio'] = TRUE;
+                    $config_resize['new_image'] = './uploads/slide/thumbs';
+                    $config_resize['master_dim'] = 'height';
+                    $config_resize['quality'] = "100%";
+                    $config_resize['source_image'] = './uploads/slide/'. $file_name;
+
+                    $config_resize['width'] = 1;
+                    $config_resize['height'] = 270;
+                    $this->image_lib->initialize($config_resize);
+                    $this->image_lib->resize();
+
                     $pp = array('upload_data' => $this->upload->data());
                 }
 
