@@ -1463,6 +1463,20 @@ class Widget_Model extends CI_Model {
         return $hasil;
     }
 
+    public function CariPublishPooling(){
+        $t = "SELECT * FROM tbl_polling";
+        $d = $this->app_model->manualQuery($t);
+        $r = $d->num_rows();
+        if($r>0){
+            foreach($d->result() as $h){
+                $hasil = $h->publish;
+            }
+        }else{
+            $hasil = '';
+        }
+        return $hasil;
+    }
+
     function get_all_panel()
     {
         $this->db->select('*');

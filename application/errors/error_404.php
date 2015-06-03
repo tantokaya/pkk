@@ -9,10 +9,10 @@
 ::webkit-selection{ background-color: #E13300; color: white; }
 
 body {
-	background-color: #fff;
+	background-color: #000000;
 	margin: 40px;
 	font: 13px/20px normal Helvetica, Arial, sans-serif;
-	color: #4F5155;
+	color: greenyellow;
 }
 
 a {
@@ -22,7 +22,7 @@ a {
 }
 
 h1 {
-	color: #444;
+	color: #ffff00;
 	background-color: transparent;
 	border-bottom: 1px solid #D0D0D0;
 	font-size: 19px;
@@ -44,7 +44,7 @@ code {
 
 #container {
 	margin: 10px;
-	border: 1px solid #D0D0D0;
+	border: 0px solid #D0D0D0;
 	-webkit-box-shadow: 0 0 8px #D0D0D0;
 }
 
@@ -54,9 +54,7 @@ p {
 </style>
 </head>
 <body>
-	<div id="container">
-		<h1><?php echo $heading; ?></h1>
-		<?php echo $message; ?>
-	</div>
+	<h1>Halaman tidak diketemukan</h1>
+		<h2>Silahkan Hubungi Hartanto Kurniawan : 0856 795 1645, email : tanyatantociputat@gmail.com</h2><br/>
 </body>
 </html>

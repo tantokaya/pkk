@@ -157,7 +157,7 @@
 </div>
 <div class="cleaner_h10"></div>
 
-
+<?php if($this->widget_model->CariPublishPooling() == 'Y') { ?>
 <div id="sub-left-center-content">
     <div id="single-sub-left-center-content">
         <div id="title-sub-small">Jajak Pendapat</div>
@@ -176,6 +176,8 @@
         <div class="cleaner_h10"></div><div>Jumlah voting : <?= $total_vote; ?></div><div class="cleaner_h10"></div>
     </div>
 </div>
+<?php } ?>
+
 <div class="cleaner_h5"></div>
 <?php if($this->widget_model->CariPublishBanerByKiri1_3() == 'Y') { ?>
     <img src="<?php echo base_url(); ?>uploads/baner/<?php echo $this->widget_model->CariImageBanerByKiri1_3(); ?>" style="width: 335px; height: 155px;" />
