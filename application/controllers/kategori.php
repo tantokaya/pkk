@@ -13,6 +13,7 @@ class Kategori extends CI_Controller {
         parent::__construct();
         $this->load->helper('permalink_helper');
         $this->load->library('pagination');
+        $this->load->model('polling_model');
     }
 
     public function index()
@@ -153,7 +154,7 @@ class Kategori extends CI_Controller {
         $d['links'] = $this->pagination->create_links();
         $d['all_post_in_kategori'] = $this->post_model->get_all_post_in_kategori($per_page, $offset);
 
-
+        $d['all_panel']             = $this->app_model->get_all_panel();
         $d['all_hot']	            = $this->app_model->get_all_hot();
         $d['all_new_post']	        = $this->app_model->get_all_new_post();
         $d['all_post_by_kategori']	= $this->app_model->get_all_post_by_kategori();
@@ -171,6 +172,19 @@ class Kategori extends CI_Controller {
         $d['all_new_post_baca']	    = $this->app_model->get_all_new_post_baca();
 
         $d['jumlah_pengunjung'] = $this->statistik_model->pengunjung();
+
+        // handle polling data
+        $d['polling'] = $this->polling_model->get_polling_data('tbl_polling');
+        $vote = 0;
+        for($i=1;$i<=5;$i++){
+            $hitung = $this->db->query("SELECT vote{$i} as vote FROM tbl_polling");
+            $result = $hitung->row_array();
+
+            $vote = $vote + $result['vote'];
+
+        }
+
+        $d['total_vote'] = $vote;
 
 
 

@@ -12,6 +12,7 @@ class News extends CI_Controller {
         parent::__construct();
         $this->load->helper('permalink_helper');
 		$this->load->helper('captcha');
+        $this->load->model('polling_model');
     }
 
     public function detail()
@@ -20,7 +21,7 @@ class News extends CI_Controller {
         $d['title_aplikasi']        = $this->config->item('nama_aplikasi');
         $d['keywords']              = $this->post_model->CariPostByKeywords();
         $d['descriptions']          = $this->post_model->CariPostByDescriptions();
-
+        $d['all_panel']             = $this->app_model->get_all_panel();
         $d['all_hot']	            = $this->app_model->get_all_hot();
         $d['all_new_post']	        = $this->app_model->get_all_new_post();
 	    $d['all_post_by_w_1_1']	    = $this->widget_model->get_all_post_by_w_1_1();
@@ -42,8 +43,19 @@ class News extends CI_Controller {
 		
         $this->session->set_userdata($data);
         $d['cap_img'] = $cap['image'];
-		
-		#echo '<pre>'; print_r($d); exit;
+
+        // handle polling data
+        $d['polling'] = $this->polling_model->get_polling_data('tbl_polling');
+        $vote = 0;
+        for($i=1;$i<=5;$i++){
+            $hitung = $this->db->query("SELECT vote{$i} as vote FROM tbl_polling");
+            $result = $hitung->row_array();
+
+            $vote = $vote + $result['vote'];
+
+        }
+
+        $d['total_vote'] = $vote;
 
         $d['content']= $this->load->view('berita',$d,true);
         $this->load->view('home',$d);

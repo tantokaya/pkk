@@ -165,7 +165,7 @@ color:#0066FF;
 #navigation ul li {
     float:left;
     position : relative;
-    font-size:13.5px;
+    font-size:13px;
     border-left:1px dotted #ccc;
     font-weight:bold;
 }

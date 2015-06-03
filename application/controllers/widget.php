@@ -11,6 +11,7 @@ class Widget extends CI_Controller {
     function __construct(){
         parent::__construct();
         $this->load->helper('permalink_helper');
+        $this->load->model('polling_model');
     }
 
     public function index()
@@ -165,6 +166,10 @@ class Widget extends CI_Controller {
 
     public function detail()
     {
+        $d['title']                 = $this->post_model->CariWidgetByTitle();
+        $d['title_aplikasi']        = $this->config->item('nama_aplikasi');
+        $d['keywords']              = $this->post_model->CariPostByKeywords();
+        $d['descriptions']          = $this->post_model->CariPostByDescriptions();
         $d['all_hot']	            = $this->app_model->get_all_hot();
         $d['all_new_post']	        = $this->app_model->get_all_new_post();
         $d['all_post_by_widget']    = $this->widget_model->get_all_post_by_widget();
@@ -172,7 +177,23 @@ class Widget extends CI_Controller {
         $d['all_post_by_w_1_1']	    = $this->widget_model->get_all_post_by_w_1_1();
         $d['all_post_by_w_1_2']	    = $this->widget_model->get_all_post_by_w_1_2();
 
+        $d['all_panel']             = $this->app_model->get_all_panel();
+
         $d['jumlah_pengunjung']     = $this->statistik_model->pengunjung();
+
+        // handle polling data
+        $d['polling'] = $this->polling_model->get_polling_data('tbl_polling');
+        $vote = 0;
+        for($i=1;$i<=5;$i++){
+            $hitung = $this->db->query("SELECT vote{$i} as vote FROM tbl_polling");
+            $result = $hitung->row_array();
+
+            $vote = $vote + $result['vote'];
+
+        }
+
+        $d['total_vote'] = $vote;
+
 
         $d['content']= $this->load->view('widget',$d,true);
         $this->load->view('home',$d);
