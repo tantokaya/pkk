@@ -193,6 +193,7 @@ color:#0066FF;
 #navigation ul li:hover ul {
     display:block;
     position: absolute;
+    z-index:9999;
 }
 
 #navigation ul li:hover ul li a {
@@ -202,6 +203,7 @@ color:#0066FF;
     width : 200px;
     height: 15px;
     border-bottom : 1px solid #ccc;
+
 }
 
 #navigation ul li:hover ul li a:hover {

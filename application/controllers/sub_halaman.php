@@ -39,6 +39,8 @@ class Sub_halaman extends CI_Controller {
             $d['kode']      = '';
             $d['name']      = '';
             $d['isi']       = '';
+            $d['link']      = '';
+            $d['status']    = '';
 
             $text = "SELECT * FROM tbl_halaman ORDER BY hal_name ASC";
             $d['l_halaman'] = $this->app_model->manualQuery($text);
@@ -62,6 +64,8 @@ class Sub_halaman extends CI_Controller {
             $up['sub_hal_name']     = $this->input->post('name');
             $up['sub_hal_isi']      = $this->input->post('isi');
             $up['hal_id']           = $this->input->post('halaman');
+            $up['link_url']         = $this->input->post('link');
+            $up['new_tab']          = $this->input->post('status');
 
             $id['sub_hal_id']       =   $this->input->post('kode');
 
@@ -96,11 +100,15 @@ class Sub_halaman extends CI_Controller {
                     $d['name']		= $db->sub_hal_name;
                     $d['isi']	    = $db->sub_hal_isi;
                     $d['halaman']	= $db->hal_id;
+                    $d['link']	    = $db->link_url;
+                    $d['status']	= $db->new_tab;
                 }
             }else{
                 $d['name']	    = '';
                 $d['isi']	    = '';
                 $d['halaman']   = '';
+                $d['link']   = '';
+                $d['status']   = '';
             }
 
             $text = "SELECT * FROM tbl_halaman ORDER BY hal_name ASC";

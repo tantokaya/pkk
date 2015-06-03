@@ -37,6 +37,20 @@
                         <label>Isi</label>
                         <textarea id='editor1' style='width: 800px; height: 350px;' name="isi"  ><?php echo $isi; ?></textarea>
                     </div>
+                    <div class="form-group">
+                        <label>Link URL</label>
+                        <input type="text" name="link" id="link" value="<?php echo $link; ?>" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Ke Tab Baru &nbsp;</label>
+                        <?php if($this->uri->segment(2)=='tambah') {?>
+                            <input type="radio" name="status" value="_blank" class="flat-red"/>Y
+                            <input type="radio" name="status" value="" class="flat-red"checked/>N
+                        <?php }else { ?>
+                            <input type="radio" name="status" <?php if($status !='') echo 'checked'; ?> value="_blank" class="flat-red"/>Y
+                            <input type="radio" name="status" value="" <?php if($status =='') echo 'checked'; ?> class="flat-red"/>N
+                        <?php } ?>
+                    </div>
 
                 </div><!-- /.box-body -->
 

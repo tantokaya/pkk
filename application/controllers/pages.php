@@ -61,15 +61,22 @@ class Pages extends CI_Controller {
                 echo "<a href='#'>$r[hal_name]</a>";
             }
 
-            $tampil_sub = mysql_query("SELECT * FROM tbl_sub_halaman LEFT JOIN tbl_halaman ON tbl_sub_halaman.hal_id = tbl_halaman.hal_id
+        $tampil_sub = mysql_query("SELECT * FROM tbl_sub_halaman LEFT JOIN tbl_halaman ON tbl_sub_halaman.hal_id = tbl_halaman.hal_id
         WHERE tbl_sub_halaman.hal_id = tbl_halaman.hal_id  AND tbl_sub_halaman.hal_id = $r[hal_id]");
             $jml = mysql_num_rows($tampil_sub);
             if($jml > 0) {
                 echo "<ul>";
                 while($w=mysql_fetch_array($tampil_sub)){
                     $link = set_permalink($w['sub_hal_id'],$w['sub_hal_name']);
+                    $url = $w['link_url'];
+                    $tab = $w['new_tab'];
                     echo "<li>";
-                    echo "<a href='".base_url()."pages/detail/".$link."'>$w[sub_hal_name]</a>";
+                    if($w['link_url'] != ''){
+                            $url = prep_url($url);
+                            echo "<a href='$url' target='$tab'>$w[sub_hal_name]</a>";
+                        } else {
+                            echo "<a href='".base_url()."pages/detail/".$link."'>$w[sub_hal_name]</a>";
+                    }
                     echo "</li>";
                 }
                 echo "</ul>";
