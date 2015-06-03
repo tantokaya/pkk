@@ -15,6 +15,12 @@
                         <input type="text" name="name" id="name" style="width: 190px;" class="form-control" value="<?php echo $name; ?>" readonly>
                     </div>
                     <div class="form-group">
+                        <label>Ukuran Width</label>
+                        <input type="text" name="width" id="width" style="width: 60px;" class="form-control" value="<?php echo $width; ?>" readonly>
+                        <label>Ukuran Height</label>
+                        <input type="text" name="height" id="height" style="width: 60px;" class="form-control" value="<?php echo $height; ?>" readonly>
+                    </div>
+                    <div class="form-group">
                         <label>Image Baner</label>
                         <input type="file" name='userfile' value="<?php echo $image; ?>">
                         <p class="help-block">Upload Image Baner disini.</p>

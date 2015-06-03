@@ -21,7 +21,7 @@
                 <tr>
                     <td style="text-align: center"><?php echo $no; ?></td>
                     <td><?php echo $db['baner_name']; ?></td>
-                    <td style="text-align: center;"><img src="<?php echo base_url(); ?>uploads/baner/<?php echo $db['baner_image']; ?>" style="width: 50%; height: 50%;"></td>
+                    <td style="text-align: center;"><img src="<?php echo base_url(); ?>uploads/baner/thumbs/<?php echo $db['baner_image']; ?>" style="width: 50%; height: 50%;"></td>
                     <td style="text-align: center;"><?php echo $db['publish']; ?></td>
                     <td align="center">
                         <a href="<?php echo base_url();?>baner/edit/<?php echo $db['baner_id'];?>" title="Edit">

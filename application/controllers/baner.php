@@ -40,7 +40,7 @@ class Baner extends CI_Controller {
 
         $cek = $this->session->userdata('logged_in');
         if(!empty($cek)){
-            $image_seo  = seo_title($this->input->post('judul'));
+            $image_seo  = seo_title($this->input->post('name'));
 
             $up['baner_name']   = $this->input->post('name');
             $up['publish']      = $this->input->post('status');
@@ -50,12 +50,12 @@ class Baner extends CI_Controller {
             // cek jika ada file yg diupload
             if (!empty($_FILES['userfile']['name'])) {
                 // upload
-                $config['upload_path'] = './uploads/baner/';
-                $config['allowed_types'] = 'gif|jpg|png';
-                $config['file_name']        = $image_seo;
-                //$config['max_size']	= '1024';
+                $config['upload_path']  = './uploads/baner/';
+                $config['allowed_types']= 'gif|jpg|png';
+                $config['file_name']    = $image_seo;
+                //$config['max_size']   = '1024';
                 //$config['max_width']  = '1024';
-                //$config['max_height']  = '768';
+                //$config['max_height'] = '768';
 
                 $this->load->library('upload');
                 $this->upload->initialize($config);
@@ -75,14 +75,14 @@ class Baner extends CI_Controller {
                     $this->load->library('image_lib');
                     $config_resize['image_library'] = 'gd2';
                     $config_resize['create_thumb'] = FALSE;
-                    $config_resize['maintain_ratio'] = TRUE;
+                    $config_resize['maintain_ratio'] = FALSE;
                     $config_resize['new_image'] = './uploads/baner/thumbs';
                     $config_resize['master_dim'] = 'height';
                     $config_resize['quality'] = "100%";
                     $config_resize['source_image'] = './uploads/baner/'. $file_name;
 
-                    $config_resize['width'] = 1;
-                    $config_resize['height'] = 155;
+                    $config_resize['width'] = $this->input->post('width');
+                    $config_resize['height'] = $this->input->post('height');
                     $this->image_lib->initialize($config_resize);
                     $this->image_lib->resize();
 
@@ -134,11 +134,15 @@ class Baner extends CI_Controller {
                     $d['kode']      = $db->baner_id;
                     $d['name']      = $db->baner_name;
                     $d['image']	    = $db->baner_image;
+                    $d['width']	    = $db->baner_width;
+                    $d['height']	= $db->baner_height;
                     $d['status']	= $db->publish;
                 }
             }else{
                 $d['name']	    = '';
                 $d['image']	    = '';
+                $d['width']	    = '';
+                $d['height']	= '';
                 $d['status']	= '';
             }
 

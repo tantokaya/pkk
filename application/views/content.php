@@ -11,7 +11,7 @@
 
     <div class="cleaner_h5"></div>
     <?php if($this->widget_model->CariPublishBanerByKanan1_1() == 'Y') { ?>
-    <img src="<?php echo base_url(); ?>uploads/baner/<?php echo $this->widget_model->CariImageBanerByKanan1_1(); ?>" style="width: 610px; height: 60px;" />
+    <img src="<?php echo base_url(); ?>uploads/baner/thumbs/<?php echo $this->widget_model->CariImageBanerByKanan1_1(); ?>" style="width: 610px; height: 60px;" />
     <?php } ?>
     <div class="cleaner_h5"></div>
 
@@ -99,7 +99,7 @@
 
     <div class="cleaner_h5"></div>
     <?php if($this->widget_model->CariPublishBanerByKanan1_2() == 'Y') { ?>
-    <img src="<?php echo base_url(); ?>uploads/baner/<?php echo $this->widget_model->CariImageBanerByKanan1_2(); ?>" style="width: 610px; height: 60px;" />
+    <img src="<?php echo base_url(); ?>uploads/baner/thumbs/<?php echo $this->widget_model->CariImageBanerByKanan1_2(); ?>" style="width: 610px; height: 60px;" />
     <?php }  ?>
     <div class="cleaner_h5"></div>
 
@@ -243,7 +243,7 @@
 
     <div class="cleaner_h5"></div>
     <?php if($this->widget_model->CariPublishBanerByKanan1_3() == 'Y') { ?>
-    <img src="<?php echo base_url(); ?>uploads/baner/<?php echo $this->widget_model->CariImageBanerByKanan1_3(); ?>" style="width: 610px; height: 60px;" />
+    <img src="<?php echo base_url(); ?>uploads/baner/thumbs/<?php echo $this->widget_model->CariImageBanerByKanan1_3(); ?>" style="width: 610px; height: 60px;" />
     <?php } ?>
     <div class="cleaner_h5"></div>
 
@@ -321,7 +321,7 @@
 
     <div class="cleaner_h5"></div>
     <?php if($this->widget_model->CariPublishBanerByKanan1_4() == 'Y') { ?>
-    <img src="<?php echo base_url(); ?>uploads/baner/<?php echo $this->widget_model->CariImageBanerByKanan1_4(); ?>" style="width: 610px; height: 60px;" />
+    <img src="<?php echo base_url(); ?>uploads/baner/thumbs/<?php echo $this->widget_model->CariImageBanerByKanan1_4(); ?>" style="width: 610px; height: 60px;" />
     <?php } ?>
     <div class="cleaner_h40"></div>
 
