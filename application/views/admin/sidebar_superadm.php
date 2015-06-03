@@ -53,7 +53,6 @@
                 <li><a href="<?php echo base_url();?>galeri_foto"><i class="fa fa-angle-double-right"></i> Galeri Foto</a></li>-->
                 <li><a href="<?php echo base_url();?>slide"><i class="fa fa-angle-double-right"></i> Slide</a></li>
                 <li><a href="<?php echo base_url();?>baner"><i class="fa fa-angle-double-right"></i> Baner Iklan</a></li>
-                <li><a href="<?php echo base_url();?>download"><i class="fa fa-angle-double-right"></i> Download</a></li>
             </ul>
         </li>
         <li class="treeview <?php if($judul == 'add_hot'||$judul == 'list_hot') echo 'active'; ?>">
