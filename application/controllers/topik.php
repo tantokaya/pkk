@@ -28,6 +28,7 @@ class Topik extends CI_Controller {
 
             $d['all_topik']	        = $this->app_model->get_all_topik();
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
             $d['content']= $this->load->view('admin/topik/view',$d,true);
             $this->load->view('admin/home_adm',$d);
@@ -52,6 +53,7 @@ class Topik extends CI_Controller {
             $d['foto']      = '';
 
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
             $d['content']= $this->load->view('admin/topik/form',$d,true);
             $this->load->view('admin/home_adm',$d);
@@ -145,6 +147,7 @@ class Topik extends CI_Controller {
                 $d['username']	    = '';
             }
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
             #echo '<pre>'; print_r($d); exit;
 
@@ -177,6 +180,7 @@ class Topik extends CI_Controller {
             }
 
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
             $d['content']= $this->load->view('admin/forum/topik_post_reply',$d,true);
             $this->load->view('admin/home_adm',$d);

@@ -61,6 +61,7 @@ class Adpus extends CI_Controller {
             $d['jml_topik_pojok'] = $this->app_model->JmlTopikPojok();
 
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
             $d['content']= $this->load->view('admin/dashboard_adm',$d,true);
             $this->load->view('admin/home_adm',$d);

@@ -18,6 +18,7 @@ class Hot extends CI_Controller {
 
             $d['all_hot']	    = $this->app_model->get_all_hot();
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
             $d['content']= $this->load->view('admin/hot/view',$d,true);
             $this->load->view('admin/home_adm',$d);
@@ -39,6 +40,7 @@ class Hot extends CI_Controller {
             $d['judul']     = '';
 
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
             $d['content']= $this->load->view('admin/hot/form',$d,true);
             $this->load->view('admin/home_adm',$d);
@@ -99,6 +101,7 @@ class Hot extends CI_Controller {
             }
 
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
             $d['content'] = $this->load->view('admin/hot/form', $d, true);
             $this->load->view('admin/home_adm',$d);

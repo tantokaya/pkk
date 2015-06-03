@@ -24,6 +24,7 @@ class Baner extends CI_Controller {
 
             $d['all_baner']	    = $this->widget_model->get_all_baner();
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
             $d['content']= $this->load->view('admin/baner/view',$d,true);
             $this->load->view('admin/home_adm',$d);
@@ -142,6 +143,7 @@ class Baner extends CI_Controller {
             }
 
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
             $d['content'] = $this->load->view('admin/baner/form', $d, true);
             $this->load->view('admin/home_adm',$d);

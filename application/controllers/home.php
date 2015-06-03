@@ -45,6 +45,7 @@ class Home extends CI_Controller {
         $d['l_kategori'] = $this->app_model->manualQuery($text);
 
         $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+        $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
         // handle polling data
         $d['polling'] = $this->polling_model->get_polling_data('tbl_polling');

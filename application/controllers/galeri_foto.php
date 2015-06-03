@@ -18,6 +18,7 @@ class Galeri_foto extends CI_Controller {
 
             $d['all_galeri']	    = $this->app_model->get_all_galeri_foto();
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
             $d['content']= $this->load->view('admin/gfoto/view',$d,true);
             $this->load->view('admin/home_adm',$d);
@@ -44,6 +45,7 @@ class Galeri_foto extends CI_Controller {
             $text = "SELECT * FROM tbl_album ORDER BY album_name ASC";
             $d['l_album'] = $this->app_model->manualQuery($text);
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
             $d['content']= $this->load->view('admin/gfoto/form',$d,true);
             $this->load->view('admin/home_adm',$d);
@@ -146,6 +148,7 @@ class Galeri_foto extends CI_Controller {
             $d['l_album'] = $this->app_model->manualQuery($text);
 
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
             $d['content'] = $this->load->view('admin/gfoto/form', $d, true);
             $this->load->view('admin/home_adm',$d);

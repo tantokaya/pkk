@@ -18,6 +18,7 @@ class Sub_halaman extends CI_Controller {
 
             $d['all_sub_halaman']	    = $this->app_model->get_all_sub_halaman();
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
             $d['content']= $this->load->view('admin/sub_halaman/view',$d,true);
             $this->load->view('admin/home_adm',$d);
@@ -43,6 +44,7 @@ class Sub_halaman extends CI_Controller {
             $d['l_halaman'] = $this->app_model->manualQuery($text);
 
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
             $d['content']= $this->load->view('admin/sub_halaman/form',$d,true);
             $this->load->view('admin/home_adm',$d);
@@ -105,6 +107,7 @@ class Sub_halaman extends CI_Controller {
             $d['l_halaman'] = $this->app_model->manualQuery($text);
 
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
             $d['content'] = $this->load->view('admin/sub_halaman/form', $d, true);
             $this->load->view('admin/home_adm',$d);

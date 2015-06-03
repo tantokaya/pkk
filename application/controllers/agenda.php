@@ -27,6 +27,7 @@ class Agenda extends CI_Controller {
 
             $d['all_agenda']	    = $this->app_model->get_all_agenda();
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
             $d['content']= $this->load->view('admin/agenda/view',$d,true);
             $this->load->view('admin/home_adm',$d);
@@ -57,6 +58,7 @@ class Agenda extends CI_Controller {
             $text = "SELECT * FROM tbl_mitra";
             $d['l_mitra'] = $this->app_model->manualQuery($text);
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
             $d['content']= $this->load->view('admin/agenda/form',$d,true);
             $this->load->view('admin/home_adm',$d);
@@ -182,6 +184,7 @@ class Agenda extends CI_Controller {
             $d['l_pengguna'] = $this->app_model->manualQuery($text);
 
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
             $d['content']= $this->load->view('admin/agenda/form',$d,true);
             $this->load->view('admin/home_adm',$d);

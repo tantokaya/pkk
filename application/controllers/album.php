@@ -18,6 +18,7 @@ class Album extends CI_Controller {
 
             $d['all_album']	    = $this->app_model->get_all_album();
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
             $d['content']= $this->load->view('admin/album/view',$d,true);
             $this->load->view('admin/home_adm',$d);
@@ -41,6 +42,7 @@ class Album extends CI_Controller {
             $d['foto']      = '';
 
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
             $d['content']= $this->load->view('admin/album/form',$d,true);
             $this->load->view('admin/home_adm',$d);
@@ -137,6 +139,7 @@ class Album extends CI_Controller {
             }
 
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
             $d['content'] = $this->load->view('admin/album/form', $d, true);
             $this->load->view('admin/home_adm',$d);

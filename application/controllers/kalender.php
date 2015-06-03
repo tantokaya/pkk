@@ -18,6 +18,7 @@ class Kalender extends CI_Controller {
             $d['judul_keterangan']  = "Tampilan Kalender Agenda";
 
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
             $d['content']= $this->load->view('admin/forum/kalender',$d,true);
             $this->load->view('admin/home_adm',$d);

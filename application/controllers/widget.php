@@ -24,6 +24,7 @@ class Widget extends CI_Controller {
 
             $d['all_widget']	    = $this->widget_model->get_all_widget();
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
 
             $d['content']= $this->load->view('admin/widget/view',$d,true);
@@ -153,6 +154,7 @@ class Widget extends CI_Controller {
             }
 
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
             $d['content'] = $this->load->view('admin/widget/form', $d, true);
             $this->load->view('admin/home_adm',$d);
@@ -170,7 +172,7 @@ class Widget extends CI_Controller {
         $d['all_post_by_w_1_1']	    = $this->widget_model->get_all_post_by_w_1_1();
         $d['all_post_by_w_1_2']	    = $this->widget_model->get_all_post_by_w_1_2();
 
-        $d['jumlah_pengunjung'] = $this->statistik_model->pengunjung();
+        $d['jumlah_pengunjung']     = $this->statistik_model->pengunjung();
 
         $d['content']= $this->load->view('widget',$d,true);
         $this->load->view('home',$d);

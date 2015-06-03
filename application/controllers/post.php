@@ -24,6 +24,7 @@ class Post extends CI_Controller {
 
             $d['all_post']	    = $this->app_model->get_all_post();
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
             $d['content']= $this->load->view('admin/post/view',$d,true);
             $this->load->view('admin/home_adm',$d);
@@ -55,6 +56,7 @@ class Post extends CI_Controller {
             $d['l_kategori'] = $this->app_model->manualQuery($text);
 
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
             $d['content']= $this->load->view('admin/post/form',$d,true);
             $this->load->view('admin/home_adm',$d);
@@ -198,6 +200,7 @@ class Post extends CI_Controller {
             $d['l_kategori'] = $this->app_model->manualQuery($text);
 
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
             $d['content'] = $this->load->view('admin/post/form', $d, true);
             $this->load->view('admin/home_adm',$d);

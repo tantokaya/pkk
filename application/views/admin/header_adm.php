@@ -21,7 +21,7 @@
                 <span class="label label-warning"><?php echo $this->app_model->HitungJmlKomen(); ?></span>
             </a>
             <ul class="dropdown-menu">
-                <li class="header">Anda memiliki <?php echo $this->app_model->HitungJmlKomen(); ?> No Publish</li>
+                <li class="header">Anda memiliki <?php echo $this->app_model->HitungJmlKomen(); ?> Komentar No Publish</li>
                 <li>
                     <!-- inner menu: contains the actual data -->
                     <ul class="menu">

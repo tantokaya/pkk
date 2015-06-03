@@ -18,6 +18,7 @@ class Halaman extends CI_Controller {
 
             $d['all_halaman']	    = $this->app_model->get_all_halaman();
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
             $d['content']= $this->load->view('admin/halaman/view',$d,true);
             $this->load->view('admin/home_adm',$d);
@@ -39,6 +40,7 @@ class Halaman extends CI_Controller {
             $d['name']      = '';
 
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
             $d['content']= $this->load->view('admin/halaman/form',$d,true);
             $this->load->view('admin/home_adm',$d);
@@ -92,6 +94,7 @@ class Halaman extends CI_Controller {
             }
 
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
             $d['content'] = $this->load->view('admin/halaman/form', $d, true);
             $this->load->view('admin/home_adm',$d);

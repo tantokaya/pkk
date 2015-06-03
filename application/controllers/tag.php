@@ -23,6 +23,7 @@ class Tag extends CI_Controller {
 
             $d['all_tag']	    = $this->app_model->get_all_tag();
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
             $d['content']= $this->load->view('admin/tag/view',$d,true);
             $this->load->view('admin/home_adm',$d);
@@ -44,6 +45,7 @@ class Tag extends CI_Controller {
             $d['name']      = '';
 
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
             $d['content']= $this->load->view('admin/tag/form',$d,true);
             $this->load->view('admin/home_adm',$d);
@@ -99,6 +101,7 @@ class Tag extends CI_Controller {
             }
 
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
             $d['content'] = $this->load->view('admin/tag/form', $d, true);
             $this->load->view('admin/home_adm',$d);

@@ -19,6 +19,7 @@ class Sensor extends CI_Controller {
             $d['all_sensor']	    = $this->app_model->get_all_sensor();
 
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
             $d['content']= $this->load->view('admin/sensor/view',$d,true);
             $this->load->view('admin/home_adm',$d);
@@ -41,6 +42,7 @@ class Sensor extends CI_Controller {
             $d['ganti']     = '';
 
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
             $d['content']= $this->load->view('admin/sensor/form',$d,true);
             $this->load->view('admin/home_adm',$d);
@@ -97,6 +99,7 @@ class Sensor extends CI_Controller {
             }
 
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
             $d['content'] = $this->load->view('admin/sensor/form', $d, true);
             $this->load->view('admin/home_adm',$d);

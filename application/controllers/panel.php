@@ -26,6 +26,7 @@ class Panel extends CI_Controller {
 
             $d['all_panel']	    = $this->widget_model->get_all_panel();
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
             $d['content']= $this->load->view('admin/panel/view',$d,true);
             $this->load->view('admin/home_adm',$d);
@@ -155,6 +156,7 @@ class Panel extends CI_Controller {
             }
 
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
             $d['content'] = $this->load->view('admin/panel/form', $d, true);
             $this->load->view('admin/home_adm',$d);

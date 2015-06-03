@@ -27,6 +27,7 @@ class Kategori extends CI_Controller {
             $d['all_kategori']	    = $this->app_model->get_all_kategori();
 
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
             $d['content']= $this->load->view('admin/kategori/view',$d,true);
             $this->load->view('admin/home_adm',$d);
@@ -51,6 +52,7 @@ class Kategori extends CI_Controller {
             $d['l_widget'] = $this->app_model->manualQuery($text);
 
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
             $d['content']= $this->load->view('admin/kategori/form',$d,true);
             $this->load->view('admin/home_adm',$d);
@@ -107,6 +109,7 @@ class Kategori extends CI_Controller {
             }
 
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
             $text = "SELECT * FROM tbl_widget ORDER BY widget_name ASC";
             $d['l_widget'] = $this->app_model->manualQuery($text);
