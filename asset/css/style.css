@@ -30,13 +30,13 @@ form#w2b-searchform #s{padding: 6px;margin:0;width: 235px;font-size:12px;vertica
 form#w2b-searchform #sbutton{margin:0;padding:0;height:30px;width:30px;vertical-align: top;border:none;background:transparent;}
 
 #line-top{
-background-color:#014686;
+background-color:#B40404;
 margin:0px auto;
 width:100%;
 height:30px;
 position:fixed;
 background-image:url(../images/bg-diagonal.png);
-border-bottom:1px solid #333333;
+border-bottom:1px solid #B40404;
 color:#FFFFFF;
 z-index:2;
  -moz-box-shadow: 0 0 8px #999; 

@@ -1460,6 +1460,17 @@ class Widget_Model extends CI_Model {
         return $query->result_array();
     }
 
+    function get_all_pooling()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_polling');
+        $this->db->order_by('id','DESC');
+
+        $query = $this->db->get();
+
+        return $query->result_array();
+    }
+
     function get_all_post_by_widget()
     {
         $kode = $this->uri->segment(3);
