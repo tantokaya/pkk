@@ -8,15 +8,16 @@
                 <h3 class="box-title">Form Pooling</h3>
             </div><!-- /.box-header -->
             <!-- form start -->
-            <form name="form" id="form" enctype="multipart/form-data" action="<?php echo base_url(); ?>panel/simpan" method="post">
+            <form name="form" id="form" action="<?php echo base_url(); ?>pooling/simpan" method="post">
                 <div class="box-body">
                     <div class="form-group">
                         <label>Pertanyaan</label>
-                        <input type="text" name="pertanyaan" id="pertanyaan"  class="form-control" value="<?php echo $pertanyaan; ?>" >
+                        <input type="hidden" name="kode" id="kode"  class="form-control" value="<?php echo $kode; ?>" >
+                        <input type="text" name="pertanyaan" id="pertanyaan"  class="form-control" value="<?php echo $pertanyaan; ?>" required="true" autofocus="true">
                     </div>
                     <div class="form-group">
                         <label>Jawaban 1</label>
-                        <input type="text" name="jawaban1" id="jawaban1" class="form-control" value="<?php echo $jawaban1; ?>">
+                        <input type="text" name="jawaban1" id="jawaban1" class="form-control" value="<?php echo $jawaban1; ?>" required="true">
                     </div>
                     <div class="form-group">
                         <label>Jawaban 2</label>
@@ -33,6 +34,11 @@
                     <div class="form-group">
                         <label>Jawaban 5</label>
                         <input type="text" name="jawaban5" id="jawaban5" class="form-control" value="<?php echo $jawaban5; ?>">
+                    </div>
+                    <div class="form-group">
+                        <label>Publish &nbsp;</label>
+                            <input type="radio" name="status" <?php if($status=='Y') echo 'checked'; ?> value="Y" class="flat-red"/>Y
+                            <input type="radio" name="status" value="N" <?php if($status=='N') echo 'checked'; ?> class="flat-red"/>N
                     </div>
                 </div><!-- /.box-body -->
 

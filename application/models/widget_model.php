@@ -302,6 +302,20 @@ class Widget_Model extends CI_Model {
         return $hasil;
     }
 
+    public function CariImageLogo(){
+        $t = "SELECT * FROM tbl_panel";
+        $d = $this->app_model->manualQuery($t);
+        $r = $d->num_rows();
+        if($r>0){
+            foreach($d->result() as $h){
+                $hasil = $h->panel_image;
+            }
+        }else{
+            $hasil = '';
+        }
+        return $hasil;
+    }
+
     public function CariJudulIsiWidgetByKiriText1_1(){
         $t = "SELECT * FROM tbl_widget WHERE widget_name = 'kiri_text_1.1'";
         $d = $this->app_model->manualQuery($t);

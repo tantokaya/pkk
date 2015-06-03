@@ -157,6 +157,7 @@
 </div>
 <div class="cleaner_h10"></div>
 
+
 <div id="sub-left-center-content">
     <div id="single-sub-left-center-content">
         <div id="title-sub-small">Jajak Pendapat</div>
@@ -169,6 +170,7 @@
             <input type="radio" name="vote" value="2" /><?= $polling->jawaban2; ?><div class="cleaner_h5"></div>
             <input type="radio" name="vote" value="3" /><?= $polling->jawaban3; ?><div class="cleaner_h5"></div>
             <input type="radio" name="vote" value="4" /><?= $polling->jawaban4; ?><div class="cleaner_h5"></div>
+            <input type="radio" name="vote" value="5" /><?= $polling->jawaban5; ?><div class="cleaner_h5"></div>
             <input type="image" src="<?php echo base_url();?>asset/images/kirim.png" /> <input type="image" src="<?php echo base_url();?>asset/images/lihat.png" />
         </form>
         <div class="cleaner_h10"></div><div>Jumlah voting : <?= $total_vote; ?></div><div class="cleaner_h10"></div>

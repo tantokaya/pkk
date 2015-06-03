@@ -19,7 +19,7 @@
 <div id="line-header">
 <div id="center-header">
     <div id="left-center-header">
-        <img src="<?php echo base_url();?>uploads/panel/thumbs/logo.png" />
+        <img src="<?php echo base_url();?>uploads/panel/thumbs/<?php echo $this->widget_model->CariImageLogo(); ?>" />
     </div>
     <div id="right-center-header">
         <div id="menu-right-center-header">
