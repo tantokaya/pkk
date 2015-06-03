@@ -308,7 +308,7 @@ class Widget_Model extends CI_Model {
         $r = $d->num_rows();
         if($r>0){
             foreach($d->result() as $h){
-                $hasil = $h->widget_judul_isi;
+                $hasil = $h->widget_judul;
             }
         }else{
             $hasil = '';
@@ -409,7 +409,7 @@ class Widget_Model extends CI_Model {
         $r = $d->num_rows();
         if($r>0){
             foreach($d->result() as $h){
-                $hasil = $h->widget_judul_isi;
+                $hasil = $h->widget_judul;
             }
         }else{
             $hasil = '';
