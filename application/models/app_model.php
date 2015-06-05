@@ -476,6 +476,16 @@ class App_Model extends CI_Model {
         return $query->result_array();
     }
 
+    function get_all_puskomkreatif()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_cabang');
+
+        $query = $this->db->get();
+
+        return $query->result_array();
+    }
+
 
     function get_all_post() {
         $pengguna = $this->session->userdata('username');

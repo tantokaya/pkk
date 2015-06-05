@@ -100,7 +100,8 @@
                 <li><a href="<?php echo base_url();?>topik/tambah"><i class="fa fa-angle-double-right"></i> Tambah Topik</a></li>
             </ul>
         </li>
-        <li class="treeview <?php if($judul == 'list_pengguna' || $judul == 'add_pengguna'||$judul == 'add_widget'||$judul == 'list_widget') echo 'active' ?>">
+        <li class="treeview <?php if($judul == 'list_pengguna' || $judul == 'add_pengguna'||$judul == 'add_widget'||$judul == 'list_widget'||$judul == 'add_cabang'||$judul == 'list_cabang')
+            echo 'active' ?>">
             <a href="#">
                 <i class="glyphicon glyphicon-wrench"></i> <span>Setting</span>
                 <i class="fa fa-angle-left pull-right"></i>
@@ -108,6 +109,7 @@
             <ul class="treeview-menu">
                 <li><a href="<?php echo base_url();?>panel"><i class="fa fa-angle-double-right"></i> Panel Aplikasi</a></li>
                 <li><a href="<?php echo base_url();?>widget"><i class="fa fa-angle-double-right"></i> Widget</a></li>
+                <li><a href="<?php echo base_url();?>cabang"><i class="fa fa-angle-double-right"></i> Cabang Puskomkreatif</a></li>
                 <li><a href="<?php echo base_url();?>pengguna"><i class="fa fa-angle-double-right"></i> Pengguna</a></li>
             </ul>
         </li>
