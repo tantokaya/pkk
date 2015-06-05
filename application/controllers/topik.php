@@ -22,11 +22,11 @@ class Topik extends CI_Controller {
         $cek = $this->session->userdata('logged_in');
         if(!empty($cek)){
 
-            $d['judul']             ="list_topik";
-            $d['judul_halaman']     = "Daftar Topik";
-            $d['judul_keterangan']  = "Daftar seluruh Topik";
+            $d['judul']                 ="list_topik";
+            $d['judul_halaman']         = "Daftar Topik";
+            $d['judul_keterangan']      = "Daftar seluruh Topik";
 
-            $d['all_topik']	        = $this->app_model->get_all_topik();
+            $d['all_topik']	            = $this->app_model->get_all_topik();
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
             $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 

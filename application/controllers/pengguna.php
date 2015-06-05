@@ -8,17 +8,34 @@ class Pengguna extends CI_Controller {
      * @keterangan : Controller untuk halaman pengguna
      **/
 
+    function __construct(){
+        parent::__construct();
+        $this->load->helper('permalink_helper');
+    }
+
     public function index()
     {
         $cek = $this->session->userdata('logged_in');
         if(!empty($cek)){
+            $lvl = $this->session->userdata('id_level');
+            $pengguna = $this->session->userdata('username');
 
             $d['judul']="list_pengguna";
             $d['judul_halaman']="Daftar Pengguna";
             $d['judul_keterangan']="Daftar seluruh pengguna aplikasi";
 
-            $text = "SELECT * FROM tbl_admin ORDER BY username ASC";
+            if($lvl == '03' ){
+            $text = "SELECT * FROM tbl_admin  where id_level = $lvl ORDER BY username ASC  ";
             $d['data'] = $this->app_model->manualQuery($text);
+            } elseif($lvl == '02' ){
+                $text = "SELECT * FROM tbl_admin  where username = '$pengguna' OR id_level = '03' ORDER BY username ASC  ";
+                $d['data'] = $this->app_model->manualQuery($text);
+            } else {
+            $text = "SELECT * FROM tbl_admin  ORDER BY username ASC  ";
+            $d['data'] = $this->app_model->manualQuery($text);
+            }
+
+            //$d['all_pengguna']  = $this->app_model->get_all_pengguna();
 
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
 
@@ -105,17 +122,18 @@ class Pengguna extends CI_Controller {
         $cek = $this->session->userdata('logged_in');
         if(!empty($cek)){
 
-            $pwd 	= $this->input->post('pwd');
-            $nama 	= $this->input->post('nama_lengkap');
-            $level	= $this->input->post('level');
-            $user	= mysql_real_escape_string($this->input->post('username'));
+            $pwd 	    = $this->input->post('pwd');
+            $nama 	    = $this->input->post('nama_lengkap');
+            $level	    = $this->input->post('level');
+            $user	    = mysql_real_escape_string($this->input->post('username'));
+            $image_seo  = seo_title($nama);
 
             $up['username']		= $user;
             $up['nama_lengkap']	= $nama;
             $up['password']		= md5($pwd);
-            $up['id_level']	= $level;
-            $up['hp']       = $this->input->post('hp');
-            $up['email']    = $this->input->post('email');
+            $up['id_level']	    = $level;
+            $up['hp']           = $this->input->post('hp');
+            $up['email']        = $this->input->post('email');
 
 
             $id['username']=$this->input->post('username');
@@ -125,6 +143,7 @@ class Pengguna extends CI_Controller {
                 // upload
                 $config['upload_path'] = './uploads/profile/';
                 $config['allowed_types'] = 'gif|jpg|png';
+                $config['file_name']        = $image_seo;
                 //$config['max_size']	= '1024';
                 //$config['max_width']  = '1024';
                 //$config['max_height']  = '768';
@@ -134,11 +153,31 @@ class Pengguna extends CI_Controller {
 
                 if ( ! $this->upload->do_upload())
                 {
-                    $error = array('error' => $this->upload->display_errors());
-                    print_r($error); exit();
+                    /*$error = array('error' => $this->upload->display_errors());
+                    print_r($error); exit();*/
+                    redirect('404');
                 }
                 else
                 {
+                    //Image Resizing
+                    $data_upload = $this->upload->data();
+
+                    $file_name = $data_upload["file_name"];
+
+                    $this->load->library('image_lib');
+                    $config_resize['image_library'] = 'gd2';
+                    $config_resize['create_thumb'] = FALSE;
+                    $config_resize['maintain_ratio'] = FALSE;
+                    $config_resize['new_image'] = './uploads/profile/thumbs';
+                    $config_resize['master_dim'] = 'height';
+                    $config_resize['quality'] = "100%";
+                    $config_resize['source_image'] = './uploads/profile/'. $file_name;
+
+                    $config_resize['width'] = 128;
+                    $config_resize['height'] = 128;
+                    $this->image_lib->initialize($config_resize);
+                    $this->image_lib->resize();
+
                     $pp = array('upload_data' => $this->upload->data());
                 }
 
@@ -202,6 +241,7 @@ class Pengguna extends CI_Controller {
             header('location:'.base_url());
         }
     }
+
 
 }
 

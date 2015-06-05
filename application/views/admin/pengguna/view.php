@@ -19,6 +19,7 @@
                 $no =1;
                 foreach($data->result_array() as $db){
                     $level = $this->app_model->CariLevel($db['id_level']);
+
                     ?>
                     <tr>
                         <td style="text-align: center; width: 30px;"><?php echo $no; ?></td>
@@ -26,7 +27,7 @@
                         <td ><?php echo $db['nama_lengkap']; ?></td>
                         <td ><?php echo $db['id_level'].' - '.$level; ?></td>
                         <td style="text-align: center; width: 130px;">
-                            <?php if($this->session->userdata('id_level')=='01'){ ?>
+<!--                            --><?php //if($this->session->userdata('id_level')=='01'){ ?>
                             <a href="<?php echo base_url();?>index.php/pengguna/edit/<?php echo $db['username'];?>" rel="tooltip" title="Edit">
                                 <button class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Ubah</button>
                             </a>
@@ -34,20 +35,14 @@
                                onClick="return confirm('Anda yakin ingin menghapus data ini?')" rel="tooltip" title="Hapus">
                                 <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Hapus</button>
                             </a>
-                            <?php } ?>
+<!--                            --><?php //} ?>
                         </td>
                     </tr>
                     <?php
-                    $no++;
-                }
-            }else{
+                    $no++; }
+                     }
                 ?>
-                <tr>
-                    <td colspan="4" align="center" >Tidak Ada Data</td>
-                </tr>
-            <?php
-            }
-            ?>
+
             </tbody>
             <tfoot>
             <tr>

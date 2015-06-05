@@ -358,8 +358,16 @@ class App_Model extends CI_Model {
     }
 
     function get_all_topik() {
+        $pengguna = $this->session->userdata('username');
+
         $this->db->select('*');
         $this->db->from('tbl_topik');
+
+        $lvl = $this->session->userdata('id_level');
+        if($lvl == '03'){
+            $this->db->where('username',$pengguna);
+        }
+
         $this->db->order_by('topik_code', 'desc');
 
         $query = $this->db->get();
@@ -455,6 +463,8 @@ class App_Model extends CI_Model {
 
         return $query->result_array();
     }
+
+
 
     function get_all_komentar()
     {
