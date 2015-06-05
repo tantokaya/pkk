@@ -183,13 +183,13 @@
     <img src="<?php echo base_url(); ?>uploads/baner/<?php echo $this->widget_model->CariImageBanerByKiri1_3(); ?>" style="width: 335px; height: 155px;" />
 <?php } ?>
 <div class="cleaner_h5"></div>
-
+<!--
 <div id="sub-left-center-content">
     <div id="single-sub-left-center-content">
         <div id="title-sub-small">Bergabung Dengan Facebook Kami</div>
         <div class="cleaner_h10"></div>
         <!--            <img src="--><?php //echo base_url();?><!--asset/images/fb.png" />-->
-        <div class="fb-page" data-href="https://www.facebook.com/pages/Classic-ROCK/674509606010257?skip_nax_wizard=true&amp;ref_type" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/pages/Classic-ROCK/674509606010257?skip_nax_wizard=true&amp;ref_type"><a href="https://www.facebook.com/pages/Classic-ROCK/674509606010257?skip_nax_wizard=true&amp;ref_type">Classic ROCK</a></blockquote></div></div>
+    <!--    <div class="fb-page" data-href="https://www.facebook.com/pages/Classic-ROCK/674509606010257?skip_nax_wizard=true&amp;ref_type" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/pages/Classic-ROCK/674509606010257?skip_nax_wizard=true&amp;ref_type"><a href="https://www.facebook.com/pages/Classic-ROCK/674509606010257?skip_nax_wizard=true&amp;ref_type">Classic ROCK</a></blockquote></div></div>
         <div id="fb-root"></div>
         <script>(function(d, s, id) {
                 var js, fjs = d.getElementsByTagName(s)[0];
@@ -201,7 +201,7 @@
         </script>
     </div>
 </div>
-<div class="cleaner_h10"></div>
+<div class="cleaner_h10"></div> -->
 
 <div id="sub-left-center-content">
     <div id="single-sub-left-center-content">

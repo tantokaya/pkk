@@ -55,9 +55,15 @@
         <?php
         foreach($all_post_by_wkanan_1_1 as $db):
             $link = set_permalink($db['post_id'],$db['post_judul']);
+            $hasil = $this->app_model->tgl_indo($db['post_tgl']);
+            $hasil2 = $this->app_model->tgl_str($db['post_tgl']);
+            $hari = getday($hasil2,'/');
             ?>
             <div id="title-sub-right-center-content">
-                <a href="<?php echo base_url(); ?>news/detail/<?php echo $link; ?>"><?php echo '- '. $db['post_judul']; ?></a>
+                <a href="<?php echo base_url(); ?>news/detail/<?php echo $link; ?>">
+                    <div id="post-widget-time"><?php echo $hari.', '.$hasil;?> &nbsp;&nbsp;<?php echo $db['post_time'];?></div><br>
+                    <?php echo '- '. $db['post_judul']; ?>
+                </a>
             </div>
         <?php endforeach; ?>
         <div class="index-button">Indexs Berita</div>
@@ -88,9 +94,15 @@
         <?php
         foreach($all_post_by_wkanan_1_2 as $db):
             $link = set_permalink($db['post_id'],$db['post_judul']);
+            $hasil = $this->app_model->tgl_indo($db['post_tgl']);
+            $hasil2 = $this->app_model->tgl_str($db['post_tgl']);
+            $hari = getday($hasil2,'/');
             ?>
             <div id="title-sub-right-center-content">
-                <a href="<?php echo base_url(); ?>news/detail/<?php echo $link; ?>"><?php echo '- '. $db['post_judul']; ?></a>
+                <a href="<?php echo base_url(); ?>news/detail/<?php echo $link; ?>">
+                    <div id="post-widget-time"><?php echo $hari.', '.$hasil;?> &nbsp;&nbsp;<?php echo $db['post_time'];?></div><br/>
+                    <?php echo '- '. $db['post_judul']; ?>
+                </a>
             </div>
         <?php endforeach; ?>
         <div class="index-button">Indexs Berita</div>
@@ -129,9 +141,16 @@
         <?php
         foreach($all_post_by_wkanan_2_1 as $db):
             $link = set_permalink($db['post_id'],$db['post_judul']);
+            $hasil = $this->app_model->tgl_indo($db['post_tgl']);
+            $hasil2 = $this->app_model->tgl_str($db['post_tgl']);
+            $hari = getday($hasil2,'/');
             ?>
             <div id="title-sub-right-center-content">
-                <a href="<?php echo base_url(); ?>news/detail/<?php echo $link; ?>"><?php echo '- '. $db['post_judul']; ?></a>
+
+                <a href="<?php echo base_url(); ?>news/detail/<?php echo $link; ?>">
+                    <div id="post-widget-time"><?php echo $hari.', '.$hasil;?> &nbsp;&nbsp;<?php echo $db['post_time'];?></div><br/>
+                    <?php echo '- '. $db['post_judul']; ?>
+                </a>
             </div>
         <?php endforeach; ?>
         <div class="index-button">Indexs Berita</div>
@@ -163,9 +182,15 @@
         <?php
         foreach($all_post_by_wkanan_2_2 as $db):
             $link = set_permalink($db['post_id'],$db['post_judul']);
+            $hasil = $this->app_model->tgl_indo($db['post_tgl']);
+            $hasil2 = $this->app_model->tgl_str($db['post_tgl']);
+            $hari = getday($hasil2,'/');
             ?>
             <div id="title-sub-right-center-content">
-                <a href="<?php echo base_url(); ?>news/detail/<?php echo $link; ?>"><?php echo '- '. $db['post_judul']; ?></a>
+
+                <a href="<?php echo base_url(); ?>news/detail/<?php echo $link; ?>">
+                    <div id="post-widget-time"><?php echo $hari.', '.$hasil;?> &nbsp;&nbsp;<?php echo $db['post_time'];?></div><br/>
+                    <?php echo '- '. $db['post_judul']; ?></a>
             </div>
         <?php endforeach; ?>
         <div class="index-button">Indexs Berita</div>
@@ -199,9 +224,15 @@
         <?php
         foreach($all_post_by_wkanan_3_1 as $db):
             $link = set_permalink($db['post_id'],$db['post_judul']);
+            $hasil = $this->app_model->tgl_indo($db['post_tgl']);
+            $hasil2 = $this->app_model->tgl_str($db['post_tgl']);
+            $hari = getday($hasil2,'/');
             ?>
             <div id="title-sub-right-center-content">
-                <a href="<?php echo base_url(); ?>news/detail/<?php echo $link; ?>"><?php echo '- '. $db['post_judul']; ?></a>
+
+                <a href="<?php echo base_url(); ?>news/detail/<?php echo $link; ?>">
+                    <div id="post-widget-time"><?php echo $hari.', '.$hasil;?> &nbsp;&nbsp;<?php echo $db['post_time'];?></div><br/>
+                    <?php echo '- '. $db['post_judul']; ?></a>
             </div>
         <?php endforeach; ?>
         <div class="index-button">Indexs Berita</div>
@@ -233,9 +264,15 @@
         <?php
         foreach($all_post_by_wkanan_3_2 as $db):
             $link = set_permalink($db['post_id'],$db['post_judul']);
+            $hasil = $this->app_model->tgl_indo($db['post_tgl']);
+            $hasil2 = $this->app_model->tgl_str($db['post_tgl']);
+            $hari = getday($hasil2,'/');
             ?>
             <div id="title-sub-right-center-content">
-                <a href="<?php echo base_url(); ?>news/detail/<?php echo $link; ?>"><?php echo '- '. $db['post_judul']; ?></a>
+
+                <a href="<?php echo base_url(); ?>news/detail/<?php echo $link; ?>">
+                    <div id="post-widget-time"><?php echo $hari.', '.$hasil;?> &nbsp;&nbsp;<?php echo $db['post_time'];?></div><br/>
+                    <?php echo '- '. $db['post_judul']; ?></a>
             </div>
         <?php endforeach; ?>
         <div class="index-button">Indexs Berita</div>
@@ -273,9 +310,15 @@
         <?php
         foreach($all_post_by_wkanan_4_1 as $db):
             $link = set_permalink($db['post_id'],$db['post_judul']);
+            $hasil = $this->app_model->tgl_indo($db['post_tgl']);
+            $hasil2 = $this->app_model->tgl_str($db['post_tgl']);
+            $hari = getday($hasil2,'/');
             ?>
             <div id="title-sub-right-center-content">
-                <a href="<?php echo base_url(); ?>news/detail/<?php echo $link; ?>"><?php echo '- '. $db['post_judul']; ?></a>
+
+                <a href="<?php echo base_url(); ?>news/detail/<?php echo $link; ?>">
+                    <div id="post-widget-time"><?php echo $hari.', '.$hasil;?> &nbsp;&nbsp;<?php echo $db['post_time'];?></div><br/>
+                    <?php echo '- '. $db['post_judul']; ?></a>
             </div>
         <?php endforeach; ?>
         <div class="index-button">Indexs Berita</div>
@@ -301,18 +344,30 @@
             <?php
             foreach($all_post_by_wkanan_4_2 as $db):
                 $link = set_permalink($db['post_id'],$db['post_judul']);
+                $hasil = $this->app_model->tgl_indo($db['post_tgl']);
+                $hasil2 = $this->app_model->tgl_str($db['post_tgl']);
+                $hari = getday($hasil2,'/');
                 ?>
                 <div id="title-sub-right-center-content">
-                    <a href="<?php echo base_url(); ?>news/detail/<?php echo $link; ?>"><?php echo '- '. $db['post_judul']; ?></a>
+
+                    <a href="<?php echo base_url(); ?>news/detail/<?php echo $link; ?>">
+                        <div id="post-widget-time"><?php echo $hari.', '.$hasil;?> &nbsp;&nbsp;<?php echo $db['post_time'];?></div><br/>
+                        <?php echo '- '. $db['post_judul']; ?></a>
                 </div>
             <?php endforeach; ?>
         </div>
         <?php
         foreach($all_post_by_wkanan_4_2 as $db):
             $link = set_permalink($db['post_id'],$db['post_judul']);
+            $hasil = $this->app_model->tgl_indo($db['post_tgl']);
+            $hasil2 = $this->app_model->tgl_str($db['post_tgl']);
+            $hari = getday($hasil2,'/');
             ?>
             <div id="title-sub-right-center-content">
-                <a href="<?php echo base_url(); ?>news/detail/<?php echo $link; ?>"><?php echo '- '. $db['post_judul']; ?></a>
+
+                <a href="<?php echo base_url(); ?>news/detail/<?php echo $link; ?>">
+                    <div id="post-widget-time"><?php echo $hari.', '.$hasil;?> &nbsp;&nbsp;<?php echo $db['post_time'];?></div><br/>
+                    <?php echo '- '. $db['post_judul']; ?></a>
             </div>
         <?php endforeach; ?>
         <div class="index-button">Indexs Berita</div>

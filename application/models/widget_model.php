@@ -86,6 +86,7 @@ class Widget_Model extends CI_Model {
     function get_all_post_by_wkanan_1_1()
     {
         $this->db->select('tbl_post.post_id,tbl_post.post_judul,tbl_post.post_isi,tbl_post.post_gambar,tbl_post.kategori_id,tbl_post.publish,
+        tbl_post.post_time,tbl_post.post_tgl,
         tbl_kategori.kategori,tbl_widget.widget_name,tbl_widget.widget_judul');
         $this->db->from('tbl_post');
         $this->db->join('tbl_kategori','tbl_post.kategori_id = tbl_kategori.kategori_id','left');
@@ -102,6 +103,7 @@ class Widget_Model extends CI_Model {
     function get_all_post_by_wkanan_1_2()
     {
         $this->db->select('tbl_post.post_id,tbl_post.post_judul,tbl_post.post_isi,tbl_post.post_gambar,tbl_post.kategori_id,tbl_post.publish,
+        tbl_post.post_time,tbl_post.post_tgl,
         tbl_kategori.kategori,tbl_widget.widget_name,tbl_widget.widget_judul');
         $this->db->from('tbl_post');
         $this->db->join('tbl_kategori','tbl_post.kategori_id = tbl_kategori.kategori_id','left');
@@ -119,6 +121,7 @@ class Widget_Model extends CI_Model {
     function get_all_post_by_wkanan_2_1()
     {
         $this->db->select('tbl_post.post_id,tbl_post.post_judul,tbl_post.post_isi,tbl_post.post_gambar,tbl_post.kategori_id,tbl_post.publish,
+        tbl_post.post_time,tbl_post.post_tgl,
         tbl_kategori.kategori,tbl_widget.widget_name,tbl_widget.widget_judul');
         $this->db->from('tbl_post');
         $this->db->join('tbl_kategori','tbl_post.kategori_id = tbl_kategori.kategori_id','left');
@@ -136,6 +139,7 @@ class Widget_Model extends CI_Model {
     function get_all_post_by_wkanan_2_2()
     {
         $this->db->select('tbl_post.post_id,tbl_post.post_judul,tbl_post.post_isi,tbl_post.post_gambar,tbl_post.kategori_id,tbl_post.publish,
+        tbl_post.post_time,tbl_post.post_tgl,
         tbl_kategori.kategori,tbl_widget.widget_name,tbl_widget.widget_judul');
         $this->db->from('tbl_post');
         $this->db->join('tbl_kategori','tbl_post.kategori_id = tbl_kategori.kategori_id','left');
@@ -153,6 +157,7 @@ class Widget_Model extends CI_Model {
     function get_all_post_by_wkanan_3_1()
     {
         $this->db->select('tbl_post.post_id,tbl_post.post_judul,tbl_post.post_isi,tbl_post.post_gambar,tbl_post.kategori_id,tbl_post.publish,
+        tbl_post.post_time,tbl_post.post_tgl,
         tbl_kategori.kategori,tbl_widget.widget_name,tbl_widget.widget_judul');
         $this->db->from('tbl_post');
         $this->db->join('tbl_kategori','tbl_post.kategori_id = tbl_kategori.kategori_id','left');
@@ -170,6 +175,7 @@ class Widget_Model extends CI_Model {
     function get_all_post_by_wkanan_3_2()
     {
         $this->db->select('tbl_post.post_id,tbl_post.post_judul,tbl_post.post_isi,tbl_post.post_gambar,tbl_post.kategori_id,tbl_post.publish,
+        tbl_post.post_time,tbl_post.post_tgl,
         tbl_kategori.kategori,tbl_widget.widget_name,tbl_widget.widget_judul');
         $this->db->from('tbl_post');
         $this->db->join('tbl_kategori','tbl_post.kategori_id = tbl_kategori.kategori_id','left');
@@ -187,6 +193,7 @@ class Widget_Model extends CI_Model {
     function get_all_post_by_wkanan_4_1()
     {
         $this->db->select('tbl_post.post_id,tbl_post.post_judul,tbl_post.post_isi,tbl_post.post_gambar,tbl_post.kategori_id,tbl_post.publish,
+        tbl_post.post_time,tbl_post.post_tgl,
         tbl_kategori.kategori,tbl_widget.widget_name,tbl_widget.widget_judul');
         $this->db->from('tbl_post');
         $this->db->join('tbl_kategori','tbl_post.kategori_id = tbl_kategori.kategori_id','left');
@@ -204,6 +211,7 @@ class Widget_Model extends CI_Model {
     function get_all_post_by_wkanan_4_2()
     {
         $this->db->select('tbl_post.post_id,tbl_post.post_judul,tbl_post.post_isi,tbl_post.post_gambar,tbl_post.kategori_id,tbl_post.publish,
+        tbl_post.post_time,tbl_post.post_tgl,
         tbl_kategori.kategori,tbl_widget.widget_name,tbl_widget.widget_judul');
         $this->db->from('tbl_post');
         $this->db->join('tbl_kategori','tbl_post.kategori_id = tbl_kategori.kategori_id','left');
