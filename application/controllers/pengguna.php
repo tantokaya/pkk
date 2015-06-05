@@ -130,98 +130,104 @@ class Pengguna extends CI_Controller {
 
         $cek = $this->session->userdata('logged_in');
         if(!empty($cek)){
+            $this->load->library('form_validation');
 
-            $pwd 	    = $this->input->post('pwd');
-            $nama 	    = $this->input->post('nama_lengkap');
-            $level 	    = $this->input->post('level');
-            $cabang 	    = $this->input->post('cabang');
-            $user	    = mysql_real_escape_string($this->input->post('username'));
-            $image_seo  = seo_title($nama);
+            $this->form_validation->set_rules('username', 'Username', 'required|callback_username_check');
+            $this->form_validation->set_rules('pwd', 'Password', 'required');
 
-            $up['username']		= $user;
-            $up['nama_lengkap']	= $nama;
-            $up['password']		= md5($pwd);
-            $up['id_level']	    = $level;
-            $up['hp']           = $this->input->post('hp');
-            $up['email']        = $this->input->post('email');
-            $up['cabang_id']	= $cabang;
-
-            $id['username']=$this->input->post('username');
-
-            // cek jika ada file yg diupload
-            if (!empty($_FILES['userfile']['name'])) {
-                // upload
-                $config['upload_path'] = './uploads/profile/';
-                $config['allowed_types'] = 'gif|jpg|png';
-                $config['file_name']        = $image_seo;
-                //$config['max_size']	= '1024';
-                //$config['max_width']  = '1024';
-                //$config['max_height']  = '768';
-
-                $this->load->library('upload');
-                $this->upload->initialize($config);
-
-                if ( ! $this->upload->do_upload())
-                {
-                    /*$error = array('error' => $this->upload->display_errors());
-                    print_r($error); exit();*/
-                    redirect('404');
-                }
-                else
-                {
-                    //Image Resizing
-                    $data_upload = $this->upload->data();
-
-                    $file_name = $data_upload["file_name"];
-
-                    $this->load->library('image_lib');
-                    $config_resize['image_library'] = 'gd2';
-                    $config_resize['create_thumb'] = FALSE;
-                    $config_resize['maintain_ratio'] = FALSE;
-                    $config_resize['new_image'] = './uploads/profile/thumbs';
-                    $config_resize['master_dim'] = 'height';
-                    $config_resize['quality'] = "100%";
-                    $config_resize['source_image'] = './uploads/profile/'. $file_name;
-
-                    $config_resize['width'] = 128;
-                    $config_resize['height'] = 128;
-                    $this->image_lib->initialize($config_resize);
-                    $this->image_lib->resize();
-
-                    $pp = array('upload_data' => $this->upload->data());
-                }
-
-                $up['foto'] = $pp['upload_data']['file_name'];
-
-            }
-
-            //print_r($up); exit();
-
-
-            $data = $this->app_model->getSelectedData("tbl_admin",$id);
-            if($data->num_rows()>0){
-                if(empty($pwd)){
-                    $this->app_model->manualQuery("UPDATE tbl_admin SET nama_lengkap='$nama',id_level='$level',cabang_id='$cabang', foto='$up[foto]' WHERE username='$user'");
-
-                    $result = $data->row_array();
-                    // print_r($result); exit();
-
-                    // hapus image lama
-                    $old_dir = './uploads/profile/';
-                    if(file_exists($old_dir . $result['foto'])){
-
-                        unlink($old_dir . $result['foto']);
-                    }
-                }else{
-                    $this->app_model->updateData("tbl_admin",$up,$id);
-                }
-
+            if ($this->form_validation->run() == FALSE) {
+                $this->tambah();
             }else{
-                $this->app_model->insertData("tbl_admin",$up);
+                $pwd 	    = $this->input->post('pwd');
+                $nama 	    = $this->input->post('nama_lengkap');
+                $level 	    = $this->input->post('level');
+                $cabang 	    = $this->input->post('cabang');
+                $user	    = mysql_real_escape_string($this->input->post('username'));
+                $image_seo  = seo_title($nama);
 
+                $up['username']     = $user;
+                $up['nama_lengkap'] = $nama;
+                $up['password']     = md5($pwd);
+                $up['id_level']	    = $level;
+                $up['hp']           = $this->input->post('hp');
+                $up['email']        = $this->input->post('email');
+                $up['cabang_id']    = $cabang;
+
+                $id['username']=$this->input->post('username');
+
+                // cek jika ada file yg diupload
+                if (!empty($_FILES['userfile']['name'])) {
+                    // upload
+                    $config['upload_path'] = './uploads/profile/';
+                    $config['allowed_types'] = 'gif|jpg|png';
+                    $config['file_name']        = $image_seo;
+                    //$config['max_size']	= '1024';
+                    //$config['max_width']  = '1024';
+                    //$config['max_height']  = '768';
+
+                    $this->load->library('upload');
+                    $this->upload->initialize($config);
+
+                    if ( ! $this->upload->do_upload())
+                    {
+                        /*$error = array('error' => $this->upload->display_errors());
+                        print_r($error); exit();*/
+                        redirect('404');
+                    }
+                    else
+                    {
+                        //Image Resizing
+                        $data_upload = $this->upload->data();
+
+                        $file_name = $data_upload["file_name"];
+
+                        $this->load->library('image_lib');
+                        $config_resize['image_library'] = 'gd2';
+                        $config_resize['create_thumb'] = FALSE;
+                        $config_resize['maintain_ratio'] = FALSE;
+                        $config_resize['new_image'] = './uploads/profile/thumbs';
+                        $config_resize['master_dim'] = 'height';
+                        $config_resize['quality'] = "100%";
+                        $config_resize['source_image'] = './uploads/profile/'. $file_name;
+
+                        $config_resize['width'] = 128;
+                        $config_resize['height'] = 128;
+                        $this->image_lib->initialize($config_resize);
+                        $this->image_lib->resize();
+
+                        $pp = array('upload_data' => $this->upload->data());
+                    }
+
+                    $up['foto'] = $pp['upload_data']['file_name'];
+
+                }
+                //print_r($up); exit();
+
+                $data = $this->app_model->getSelectedData("tbl_admin",$id);
+                if($data->num_rows()>0){
+                    if(empty($pwd)){
+                        $this->app_model->manualQuery("UPDATE tbl_admin SET nama_lengkap='$nama',id_level='$level',cabang_id='$cabang', foto='$up[foto]' WHERE username='$user'");
+
+                        $result = $data->row_array();
+                        // print_r($result); exit();
+
+                        // hapus image lama
+                        $old_dir = './uploads/profile/';
+                        if(file_exists($old_dir . $result['foto'])){
+
+                            unlink($old_dir . $result['foto']);
+                        }
+                    }else{
+                        $this->app_model->updateData("tbl_admin",$up,$id);
+                    }
+
+                }else{
+                    $this->app_model->insertData("tbl_admin",$up);
+
+                }
+		redirect('pengguna');
             }
-            redirect('pengguna');
-
+            
         }else{
             header('location:'.base_url());
         }
@@ -251,8 +257,15 @@ class Pengguna extends CI_Controller {
             header('location:'.base_url());
         }
     }
-
-
+    
+    public function username_check($user) {
+        $cek = $this->app_model->username_check($user);
+        if($cek == FALSE){
+           $this->form_validation->set_message('username_check', 'Username tidak tersedia / sudah digunakan');
+        }
+        
+        return $cek;
+    }
 }
 
 /* End of file profil.php */
