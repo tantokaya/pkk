@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d87b0b32-4ae9-46f4-b6a9-0917ec70bdff" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/content.php" afterPath="$PROJECT_DIR$/application/views/content.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/left-content.php" afterPath="$PROJECT_DIR$/application/views/left-content.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/widget_model.php" afterPath="$PROJECT_DIR$/application/models/widget_model.php" />
+    <list default="true" id="d87b0b32-4ae9-46f4-b6a9-0917ec70bdff" name="Default" comment="fix pengguna">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="pkk.iws" />
@@ -28,133 +25,97 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="home.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/home.php">
+      <file leaf-file-name="topik.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/topik.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="108" selection-start="630" selection-end="630" vertical-scroll-proportion="0.0" vertical-offset="246" max-vertical-offset="1258">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="widget_model.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/widget_model.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="213" column="44" selection-start="8906" selection-end="8906" vertical-scroll-proportion="0.0" vertical-offset="3621" max-vertical-offset="26095">
+            <state line="24" column="40" selection-start="686" selection-end="686" vertical-scroll-proportion="-3.9230769" vertical-offset="306" max-vertical-offset="3978">
               <folding>
-                <marker date="1433349844078" expanded="true" signature="9933:9993" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="10328:10388" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="10724:10784" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="11125:11185" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="11527:11587" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="11914:11937" placeholder="SELECT * FRO..tbl_panel..." />
-                <marker date="1433349844078" expanded="true" signature="12281:12341" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="12680:12740" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="13325:13385" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="13720:13780" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="14116:14176" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="14517:14577" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="14919:14979" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="15324:15384" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="15723:15783" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="16370:16431" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="16767:16828" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="17165:17226" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="17568:17629" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="17972:18033" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="18379:18440" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="18784:18845" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="19433:19494" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="19830:19891" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="20228:20289" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="20631:20692" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="21035:21096" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="21442:21503" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="21847:21908" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="22496:22557" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="22893:22954" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="23291:23352" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="23694:23755" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="24098:24159" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="24505:24566" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="24910:24971" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="25559:25620" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="25956:26017" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="26354:26415" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="26757:26818" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="27161:27222" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="27568:27629" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="27973:28034" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="28622:28683" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="29019:29080" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="29417:29478" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="29820:29881" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="30224:30285" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="30631:30692" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="31036:31097" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="31685:31746" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="32082:32143" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="32480:32541" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="32883:32944" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="33287:33348" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="33694:33755" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="34099:34160" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="34748:34809" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="35145:35206" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="35543:35604" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="35946:36007" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="36350:36411" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="36757:36818" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="37162:37223" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="37811:37872" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="38208:38269" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="38606:38667" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="39009:39070" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="39413:39474" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="39820:39881" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="40225:40286" placeholder="SELECT * FRO..tbl_widget..." />
-                <marker date="1433349844078" expanded="true" signature="40980:41039" placeholder="SELECT * FRO..tbl_baner..." />
-                <marker date="1433349844078" expanded="true" signature="41377:41436" placeholder="SELECT * FRO..tbl_baner..." />
-                <marker date="1433349844078" expanded="true" signature="41768:41827" placeholder="SELECT * FRO..tbl_baner..." />
-                <marker date="1433349844078" expanded="true" signature="42165:42224" placeholder="SELECT * FRO..tbl_baner..." />
-                <marker date="1433349844078" expanded="true" signature="42556:42615" placeholder="SELECT * FRO..tbl_baner..." />
-                <marker date="1433349844078" expanded="true" signature="42953:43012" placeholder="SELECT * FRO..tbl_baner..." />
-                <marker date="1433349844078" expanded="true" signature="43347:43407" placeholder="SELECT * FRO..tbl_baner..." />
-                <marker date="1433349844078" expanded="true" signature="43746:43806" placeholder="SELECT * FRO..tbl_baner..." />
-                <marker date="1433349844078" expanded="true" signature="44139:44199" placeholder="SELECT * FRO..tbl_baner..." />
-                <marker date="1433349844078" expanded="true" signature="44538:44598" placeholder="SELECT * FRO..tbl_baner..." />
-                <marker date="1433349844078" expanded="true" signature="44931:44991" placeholder="SELECT * FRO..tbl_baner..." />
-                <marker date="1433349844078" expanded="true" signature="45330:45390" placeholder="SELECT * FRO..tbl_baner..." />
-                <marker date="1433349844078" expanded="true" signature="45723:45783" placeholder="SELECT * FRO..tbl_baner..." />
-                <marker date="1433349844078" expanded="true" signature="46122:46182" placeholder="SELECT * FRO..tbl_baner..." />
-                <marker date="1433349844078" expanded="true" signature="46509:46534" placeholder="SELECT * FRO..tbl_polling..." />
+                <marker date="1433483517680" expanded="true" signature="4096:4485" placeholder="SELECT tbl_t..tbl_topik..." />
+                <marker date="1433483517680" expanded="true" signature="6182:6236" placeholder="SELECT * FRO..tbl_topik..." />
+                <marker date="1433483517680" expanded="true" signature="7792:7834" placeholder="DELETE FROM ..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="left-content.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/views/left-content.php">
+      <file leaf-file-name="app_model.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/app_model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="191" column="8" selection-start="9735" selection-end="9735" vertical-scroll-proportion="0.45454547" vertical-offset="2997" max-vertical-offset="3757">
-              <folding />
+            <state line="478" column="34" selection-start="13218" selection-end="13218" vertical-scroll-proportion="-10.615385" vertical-offset="7850" max-vertical-offset="16456">
+              <folding>
+                <marker date="1433495661108" expanded="true" signature="1126:1170" placeholder="SELECT * FRO..tbl_level..." />
+                <marker date="1433495661108" expanded="true" signature="1466:1510" placeholder="SELECT * FRO..tbl_admin..." />
+                <marker date="1433495661108" expanded="true" signature="1878:1922" placeholder="SELECT * FRO..tbl_admin..." />
+                <marker date="1433495661108" expanded="true" signature="2212:2256" placeholder="SELECT * FRO..tbl_admin..." />
+                <marker date="1433495661108" expanded="true" signature="5239:5284" placeholder="SELECT max(a..." />
+                <marker date="1433495661108" expanded="true" signature="5764:5807" placeholder="SELECT max(t..." />
+                <marker date="1433495661108" expanded="true" signature="8815:8860" placeholder="DELETE FROM ..." />
+                <marker date="1433495661108" expanded="true" signature="9020:9072" placeholder="DELETE FROM ..." />
+                <marker date="1433495661108" expanded="true" signature="9233:9286" placeholder="DELETE FROM ..." />
+                <marker date="1433495661108" expanded="true" signature="17888:17939" placeholder="SELECT * FRO..tbl_post..." />
+                <marker date="1433495661108" expanded="true" signature="18342:18393" placeholder="SELECT * FRO..tbl_post..." />
+                <marker date="1433495661108" expanded="true" signature="18825:18876" placeholder="SELECT * FRO..tbl_post..." />
+                <marker date="1433495661108" expanded="true" signature="19306:19357" placeholder="SELECT * FRO..tbl_post..." />
+                <marker date="1433495661108" expanded="true" signature="19759:19810" placeholder="SELECT * FRO..tbl_post..." />
+                <marker date="1433495661108" expanded="true" signature="20214:20265" placeholder="SELECT * FRO..tbl_post..." />
+                <marker date="1433495661108" expanded="true" signature="20675:20726" placeholder="SELECT * FRO..tbl_post..." />
+                <marker date="1433495661108" expanded="true" signature="21133:21184" placeholder="SELECT * FRO..tbl_post..." />
+                <marker date="1433495661108" expanded="true" signature="21510:21574" placeholder="SELECT COUNT..tbl_post..." />
+                <marker date="1433495661108" expanded="true" signature="21896:21965" placeholder="SELECT COUNT..tbl_komentar..." />
+                <marker date="1433495661108" expanded="true" signature="22294:22338" placeholder="SELECT COUNT..tbl_post..." />
+                <marker date="1433495661108" expanded="true" signature="22664:22732" placeholder="SELECT COUNT..tbl_admin..." />
+                <marker date="1433495661108" expanded="true" signature="24211:24267" placeholder="SELECT * FRO..tbl_topik..." />
+                <marker date="1433495661108" expanded="true" signature="24391:24447" placeholder="SELECT * FRO..tbl_topik..." />
+                <marker date="1433495661108" expanded="true" signature="24566:24617" placeholder="SELECT * FRO..tbl_topik..." />
+                <marker date="1433495661108" expanded="true" signature="24736:24787" placeholder="SELECT * FRO..tbl_topik..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="content.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/content.php">
+      <file leaf-file-name="cabang.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/controllers/cabang.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="368" column="132" selection-start="19980" selection-end="19980" vertical-scroll-proportion="0.0" vertical-offset="5980" max-vertical-offset="6630">
-              <folding />
+            <state line="116" column="9" selection-start="4041" selection-end="4041" vertical-scroll-proportion="0.6969697" vertical-offset="1581" max-vertical-offset="2159">
+              <folding>
+                <marker date="1433496324702" expanded="true" signature="2780:2826" placeholder="SELECT * FRO..tbl_cabang..." />
+                <marker date="1433496324702" expanded="true" signature="3839:3883" placeholder="DELETE FROM ..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/home.php">
+      <file leaf-file-name="form.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/admin/cabang/form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="12" selection-start="1409" selection-end="1409" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="1717">
+            <state line="14" column="93" selection-start="836" selection-end="836" vertical-scroll-proportion="-7.0" vertical-offset="56" max-vertical-offset="765">
+              <folding>
+                <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="view.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/admin/cabang/view.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="55" selection-start="422" selection-end="422" vertical-scroll-proportion="-3.9230769" vertical-offset="51" max-vertical-offset="1343">
+              <folding>
+                <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#0;n#tr#0;n#tfoot#0;n#table#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#1;n#tr#0;n#tfoot#0;n#table#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#2;n#tr#0;n#tfoot#0;n#table#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sidebar_superadm.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/admin/sidebar_superadm.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="102" column="187" selection-start="6711" selection-end="6711" vertical-scroll-proportion="-9.307693" vertical-offset="1492" max-vertical-offset="2074">
               <folding />
             </state>
           </provider>
@@ -177,16 +138,13 @@
         <option value="$PROJECT_DIR$/application/views/admin/forum/kalender.php" />
         <option value="$PROJECT_DIR$/application/controllers/halaman.php" />
         <option value="$PROJECT_DIR$/application/views/admin/home_adm.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/pengguna/view.php" />
         <option value="$PROJECT_DIR$/application/views/admin/login_adm.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/pengguna/form.php" />
         <option value="$PROJECT_DIR$/application/views/admin/halaman/form.php" />
         <option value="$PROJECT_DIR$/application/views/admin/hot/form.php" />
         <option value="$PROJECT_DIR$/application/views/admin/tag/form.php" />
         <option value="$PROJECT_DIR$/application/views/admin/dashboard_adm.php" />
         <option value="$PROJECT_DIR$/application/controllers/slide.php" />
         <option value="$PROJECT_DIR$/application/views/admin/slide/form.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/sidebar_superadm.php" />
         <option value="$PROJECT_DIR$/application/views/admin/sidebar_adm.php" />
         <option value="$PROJECT_DIR$/application/views/admin/sidebar_user.php" />
         <option value="$PROJECT_DIR$/application/controllers/kategori.php" />
@@ -208,6 +166,16 @@
         <option value="$PROJECT_DIR$/application/models/widget_model.php" />
         <option value="$PROJECT_DIR$/application/views/content.php" />
         <option value="$PROJECT_DIR$/application/views/left-content.php" />
+        <option value="$PROJECT_DIR$/application/controllers/topik.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/topik/view.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/pengguna/view.php" />
+        <option value="$PROJECT_DIR$/application/controllers/pengguna.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/pengguna/form.php" />
+        <option value="$PROJECT_DIR$/application/models/app_model.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/cabang/view.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/sidebar_superadm.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/cabang/form.php" />
+        <option value="$PROJECT_DIR$/application/controllers/cabang.php" />
       </list>
     </option>
   </component>
@@ -309,7 +277,47 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="profile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pkk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="puskomkreatif" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="uploads" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="panel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pkk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="puskomkreatif" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="uploads" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="panel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="thumbs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -390,6 +398,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="widget" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pkk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="puskomkreatif" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="topik" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -545,6 +579,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="pengguna" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pkk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="puskomkreatif" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="panel" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -598,6 +658,58 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="halaman" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pkk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="puskomkreatif" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cabang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pkk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="puskomkreatif" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="agenda" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -671,7 +783,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../puskomkreatif-php" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../wilayah" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -785,31 +897,43 @@
       <created>1433348734372</created>
       <updated>1433348734372</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="fix left-content dan content">
+      <created>1433483045749</created>
+      <updated>1433483045749</updated>
+    </task>
+    <task id="LOCAL-00020" summary="fix form pengguna">
+      <created>1433493708627</created>
+      <updated>1433493708627</updated>
+    </task>
+    <task id="LOCAL-00021" summary="tambah menu cabang">
+      <created>1433496353754</created>
+      <updated>1433496353754</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32789558" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329429" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.260574" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32861635" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32789558" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32861635" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.260574" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32861635" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284553" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32861635" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -843,87 +967,15 @@
     <MESSAGE value="perbaikan link dan panel tampilan front" />
     <MESSAGE value="update style warna hotnews" />
     <MESSAGE value="fix back menu pooling" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix back menu pooling" />
+    <MESSAGE value="fix left-content dan content" />
+    <MESSAGE value="fix form pengguna" />
+    <MESSAGE value="tambah menu cabang" />
+    <option name="LAST_COMMIT_MESSAGE" value="tambah menu cabang" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/views/admin/dashboard_adm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="20" selection-start="1567" selection-end="1567" vertical-scroll-proportion="0.0" vertical-offset="830" max-vertical-offset="6987" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/slide.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="55" selection-start="2447" selection-end="2458" vertical-scroll-proportion="0.0" vertical-offset="1241" max-vertical-offset="3570" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/slide/form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="96" selection-start="1595" selection-end="1595" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="867" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/sidebar_user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="14" selection-start="981" selection-end="981" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="1241" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/sidebar_adm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="14" selection-start="981" selection-end="981" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="1666" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/sidebar_superadm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="14" selection-start="981" selection-end="981" vertical-scroll-proportion="-13.076923" vertical-offset="0" max-vertical-offset="2040" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/halaman.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="25.26923" vertical-offset="657" max-vertical-offset="1207" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/berita.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-6.2665405" vertical-offset="3315" max-vertical-offset="4012" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/kategori.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="156" column="72" selection-start="5329" selection-end="5393" vertical-scroll-proportion="-5.8846154" vertical-offset="2499" max-vertical-offset="3434" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/menu-navigation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="589" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/post_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="182" column="35" selection-start="6142" selection-end="6142" vertical-scroll-proportion="0.68613136" vertical-offset="2718" max-vertical-offset="4998" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/widget.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="194" column="33" selection-start="7037" selection-end="7407" vertical-scroll-proportion="0.6969697" vertical-offset="2907" max-vertical-offset="3587" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/news.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="82" selection-start="528" selection-end="833" vertical-scroll-proportion="0.3030303" vertical-offset="204" max-vertical-offset="2380" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/asset/css/3slider.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="18" selection-start="591" selection-end="591" vertical-scroll-proportion="-3.4" vertical-offset="306" max-vertical-offset="986" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/sub_halaman/form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="41" selection-start="3292" selection-end="3292" vertical-scroll-proportion="-13.076923" vertical-offset="578" max-vertical-offset="1564" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/sub_halaman.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="67" column="64" selection-start="2450" selection-end="2450" vertical-scroll-proportion="0.3030303" vertical-offset="969" max-vertical-offset="2465" />
@@ -956,12 +1008,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/asset/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="31" selection-start="1484" selection-end="1484" vertical-scroll-proportion="0.0" vertical-offset="1632" max-vertical-offset="10489" />
+        <state line="38" column="31" selection-start="1484" selection-end="1484" vertical-scroll-proportion="0.0" vertical-offset="1632" max-vertical-offset="10489">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/asset/css/ticker-style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="53" selection-start="637" selection-end="637" vertical-scroll-proportion="0.6325088" vertical-offset="271" max-vertical-offset="1088" />
+        <state line="37" column="53" selection-start="637" selection-end="637" vertical-scroll-proportion="0.6325088" vertical-offset="271" max-vertical-offset="1088">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/pooling/view.php">
@@ -979,26 +1035,9 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.8181818" vertical-offset="1581" max-vertical-offset="4964" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/halaman.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="9" selection-start="1980" selection-end="2347" vertical-scroll-proportion="0.6611111" vertical-offset="833" max-vertical-offset="2108" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/panel/form.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="26" selection-start="918" selection-end="918" vertical-scroll-proportion="0.031021899" vertical-offset="255" max-vertical-offset="969" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/panel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="49" selection-start="2029" selection-end="2029" vertical-scroll-proportion="-0.83244205" vertical-offset="1487" max-vertical-offset="3009" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="108" selection-start="630" selection-end="630" vertical-scroll-proportion="0.0" vertical-offset="246" max-vertical-offset="1258">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/widget/form.php">
@@ -1009,11 +1048,6 @@
     <entry file="file://$PROJECT_DIR$/application/views/admin/post/form.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="78" column="26" selection-start="3849" selection-end="4561" vertical-scroll-proportion="-16.807692" vertical-offset="889" max-vertical-offset="2244" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/pooling/form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="28" selection-start="2297" selection-end="2297" vertical-scroll-proportion="-14.384615" vertical-offset="289" max-vertical-offset="1105" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/pooling.php">
@@ -1093,100 +1127,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/widget_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="213" column="44" selection-start="8906" selection-end="8906" vertical-scroll-proportion="0.0" vertical-offset="3621" max-vertical-offset="26095">
-          <folding>
-            <marker date="1433349844078" expanded="true" signature="9933:9993" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="10328:10388" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="10724:10784" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="11125:11185" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="11527:11587" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="11914:11937" placeholder="SELECT * FRO..tbl_panel..." />
-            <marker date="1433349844078" expanded="true" signature="12281:12341" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="12680:12740" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="13325:13385" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="13720:13780" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="14116:14176" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="14517:14577" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="14919:14979" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="15324:15384" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="15723:15783" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="16370:16431" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="16767:16828" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="17165:17226" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="17568:17629" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="17972:18033" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="18379:18440" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="18784:18845" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="19433:19494" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="19830:19891" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="20228:20289" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="20631:20692" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="21035:21096" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="21442:21503" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="21847:21908" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="22496:22557" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="22893:22954" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="23291:23352" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="23694:23755" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="24098:24159" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="24505:24566" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="24910:24971" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="25559:25620" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="25956:26017" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="26354:26415" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="26757:26818" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="27161:27222" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="27568:27629" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="27973:28034" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="28622:28683" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="29019:29080" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="29417:29478" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="29820:29881" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="30224:30285" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="30631:30692" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="31036:31097" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="31685:31746" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="32082:32143" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="32480:32541" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="32883:32944" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="33287:33348" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="33694:33755" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="34099:34160" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="34748:34809" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="35145:35206" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="35543:35604" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="35946:36007" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="36350:36411" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="36757:36818" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="37162:37223" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="37811:37872" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="38208:38269" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="38606:38667" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="39009:39070" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="39413:39474" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="39820:39881" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="40225:40286" placeholder="SELECT * FRO..tbl_widget..." />
-            <marker date="1433349844078" expanded="true" signature="40980:41039" placeholder="SELECT * FRO..tbl_baner..." />
-            <marker date="1433349844078" expanded="true" signature="41377:41436" placeholder="SELECT * FRO..tbl_baner..." />
-            <marker date="1433349844078" expanded="true" signature="41768:41827" placeholder="SELECT * FRO..tbl_baner..." />
-            <marker date="1433349844078" expanded="true" signature="42165:42224" placeholder="SELECT * FRO..tbl_baner..." />
-            <marker date="1433349844078" expanded="true" signature="42556:42615" placeholder="SELECT * FRO..tbl_baner..." />
-            <marker date="1433349844078" expanded="true" signature="42953:43012" placeholder="SELECT * FRO..tbl_baner..." />
-            <marker date="1433349844078" expanded="true" signature="43347:43407" placeholder="SELECT * FRO..tbl_baner..." />
-            <marker date="1433349844078" expanded="true" signature="43746:43806" placeholder="SELECT * FRO..tbl_baner..." />
-            <marker date="1433349844078" expanded="true" signature="44139:44199" placeholder="SELECT * FRO..tbl_baner..." />
-            <marker date="1433349844078" expanded="true" signature="44538:44598" placeholder="SELECT * FRO..tbl_baner..." />
-            <marker date="1433349844078" expanded="true" signature="44931:44991" placeholder="SELECT * FRO..tbl_baner..." />
-            <marker date="1433349844078" expanded="true" signature="45330:45390" placeholder="SELECT * FRO..tbl_baner..." />
-            <marker date="1433349844078" expanded="true" signature="45723:45783" placeholder="SELECT * FRO..tbl_baner..." />
-            <marker date="1433349844078" expanded="true" signature="46122:46182" placeholder="SELECT * FRO..tbl_baner..." />
-            <marker date="1433349844078" expanded="true" signature="46509:46534" placeholder="SELECT * FRO..tbl_polling..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/content.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="368" column="132" selection-start="19980" selection-end="19980" vertical-scroll-proportion="0.0" vertical-offset="5980" max-vertical-offset="6630">
@@ -1196,8 +1136,309 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/left-content.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="191" column="8" selection-start="9735" selection-end="9735" vertical-scroll-proportion="0.45454547" vertical-offset="2997" max-vertical-offset="3757">
+        <state line="191" column="8" selection-start="9735" selection-end="9735" vertical-scroll-proportion="0.45620438" vertical-offset="2997" max-vertical-offset="3757">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/widget_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="213" column="44" selection-start="8906" selection-end="8906" vertical-scroll-proportion="0.0" vertical-offset="3621" max-vertical-offset="26095">
+          <folding>
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_panel..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_baner..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_baner..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_baner..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_baner..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_baner..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_baner..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_baner..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_baner..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_baner..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_baner..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_baner..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_baner..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_baner..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_baner..." />
+            <marker date="1433349844078" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_polling..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="108" selection-start="630" selection-end="630" vertical-scroll-proportion="0.20255475" vertical-offset="246" max-vertical-offset="1258">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/topik/form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1088">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/agenda/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.37226278" vertical-offset="204" max-vertical-offset="1411">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/panel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="49" selection-start="2029" selection-end="2029" vertical-scroll-proportion="-0.4688057" vertical-offset="1283" max-vertical-offset="3009">
+          <folding>
+            <marker date="1433304498861" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_panel..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/topik/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="40" selection-start="717" selection-end="765" vertical-scroll-proportion="-3.9230769" vertical-offset="204" max-vertical-offset="1394">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/topik.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="40" selection-start="686" selection-end="686" vertical-scroll-proportion="-3.9230769" vertical-offset="306" max-vertical-offset="3978">
+          <folding>
+            <marker date="1433483517680" expanded="true" signature="4096:4485" placeholder="SELECT tbl_t..tbl_topik..." />
+            <marker date="1433483517680" expanded="true" signature="6182:6236" placeholder="SELECT * FRO..tbl_topik..." />
+            <marker date="1433483517680" expanded="true" signature="7792:7834" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/slide.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="5" selection-start="296" selection-end="405" vertical-scroll-proportion="0.3939394" vertical-offset="0" max-vertical-offset="3570">
+          <folding>
+            <marker date="1433304498880" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_slide..." />
+            <marker date="1433304498880" expanded="true" signature="-1:-1" placeholder="SELECT slide..tbl_slide..." />
+            <marker date="1433304498880" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/pengguna/form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="27" selection-start="562" selection-end="562" vertical-scroll-proportion="0.31751823" vertical-offset="30" max-vertical-offset="1445">
+          <folding>
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#div#0;n#div#2;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#3;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#4;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#5;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/pooling/form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="158" selection-start="2810" selection-end="2948" vertical-scroll-proportion="0.41058394" vertical-offset="557" max-vertical-offset="1105">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/pengguna/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="42" selection-start="1988" selection-end="1988" vertical-scroll-proportion="0.53467155" vertical-offset="302" max-vertical-offset="1547">
+          <folding>
+            <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#4;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/pengguna.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="244" column="0" selection-start="8871" selection-end="8871" vertical-scroll-proportion="3.2025547" vertical-offset="2393" max-vertical-offset="4318">
+          <folding>
+            <marker date="1433492510490" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_admin..." />
+            <marker date="1433492510490" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_admin..." />
+            <marker date="1433492510490" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_admin..." />
+            <marker date="1433492510490" expanded="true" signature="-1:-1" placeholder="SELECT tbl_l..." />
+            <marker date="1433492510490" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_admin..." />
+            <marker date="1433492510490" expanded="true" signature="-1:-1" placeholder="SELECT tbl_l..." />
+            <marker date="1433492510490" expanded="true" signature="-1:-1" placeholder="UPDATE tbl_a..." />
+            <marker date="1433492510490" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/app_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="478" column="34" selection-start="13218" selection-end="13218" vertical-scroll-proportion="-10.615385" vertical-offset="7850" max-vertical-offset="16456">
+          <folding>
+            <marker date="1433495661108" expanded="true" signature="1126:1170" placeholder="SELECT * FRO..tbl_level..." />
+            <marker date="1433495661108" expanded="true" signature="1466:1510" placeholder="SELECT * FRO..tbl_admin..." />
+            <marker date="1433495661108" expanded="true" signature="1878:1922" placeholder="SELECT * FRO..tbl_admin..." />
+            <marker date="1433495661108" expanded="true" signature="2212:2256" placeholder="SELECT * FRO..tbl_admin..." />
+            <marker date="1433495661108" expanded="true" signature="5239:5284" placeholder="SELECT max(a..." />
+            <marker date="1433495661108" expanded="true" signature="5764:5807" placeholder="SELECT max(t..." />
+            <marker date="1433495661108" expanded="true" signature="8815:8860" placeholder="DELETE FROM ..." />
+            <marker date="1433495661108" expanded="true" signature="9020:9072" placeholder="DELETE FROM ..." />
+            <marker date="1433495661108" expanded="true" signature="9233:9286" placeholder="DELETE FROM ..." />
+            <marker date="1433495661108" expanded="true" signature="17888:17939" placeholder="SELECT * FRO..tbl_post..." />
+            <marker date="1433495661108" expanded="true" signature="18342:18393" placeholder="SELECT * FRO..tbl_post..." />
+            <marker date="1433495661108" expanded="true" signature="18825:18876" placeholder="SELECT * FRO..tbl_post..." />
+            <marker date="1433495661108" expanded="true" signature="19306:19357" placeholder="SELECT * FRO..tbl_post..." />
+            <marker date="1433495661108" expanded="true" signature="19759:19810" placeholder="SELECT * FRO..tbl_post..." />
+            <marker date="1433495661108" expanded="true" signature="20214:20265" placeholder="SELECT * FRO..tbl_post..." />
+            <marker date="1433495661108" expanded="true" signature="20675:20726" placeholder="SELECT * FRO..tbl_post..." />
+            <marker date="1433495661108" expanded="true" signature="21133:21184" placeholder="SELECT * FRO..tbl_post..." />
+            <marker date="1433495661108" expanded="true" signature="21510:21574" placeholder="SELECT COUNT..tbl_post..." />
+            <marker date="1433495661108" expanded="true" signature="21896:21965" placeholder="SELECT COUNT..tbl_komentar..." />
+            <marker date="1433495661108" expanded="true" signature="22294:22338" placeholder="SELECT COUNT..tbl_post..." />
+            <marker date="1433495661108" expanded="true" signature="22664:22732" placeholder="SELECT COUNT..tbl_admin..." />
+            <marker date="1433495661108" expanded="true" signature="24211:24267" placeholder="SELECT * FRO..tbl_topik..." />
+            <marker date="1433495661108" expanded="true" signature="24391:24447" placeholder="SELECT * FRO..tbl_topik..." />
+            <marker date="1433495661108" expanded="true" signature="24566:24617" placeholder="SELECT * FRO..tbl_topik..." />
+            <marker date="1433495661108" expanded="true" signature="24736:24787" placeholder="SELECT * FRO..tbl_topik..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/halaman/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="19" selection-start="0" selection-end="3199" vertical-scroll-proportion="0.40328467" vertical-offset="0" max-vertical-offset="1343">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/sidebar_superadm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="102" column="187" selection-start="6711" selection-end="6711" vertical-scroll-proportion="-9.307693" vertical-offset="1492" max-vertical-offset="2074">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/halaman/form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="1919" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/halaman.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="9" selection-start="0" selection-end="3940" vertical-scroll-proportion="0.6666667" vertical-offset="816" max-vertical-offset="2108">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/cabang/form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="93" selection-start="836" selection-end="836" vertical-scroll-proportion="-7.0" vertical-offset="56" max-vertical-offset="765">
+          <folding>
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/cabang/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="55" selection-start="422" selection-end="422" vertical-scroll-proportion="-3.9230769" vertical-offset="51" max-vertical-offset="1343">
+          <folding>
+            <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#0;n#tr#0;n#tfoot#0;n#table#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#1;n#tr#0;n#tfoot#0;n#table#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#2;n#tr#0;n#tfoot#0;n#table#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/cabang.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="116" column="9" selection-start="4041" selection-end="4041" vertical-scroll-proportion="0.6969697" vertical-offset="1581" max-vertical-offset="2159">
+          <folding>
+            <marker date="1433496324702" expanded="true" signature="2780:2826" placeholder="SELECT * FRO..tbl_cabang..." />
+            <marker date="1433496324702" expanded="true" signature="3839:3883" placeholder="DELETE FROM ..." />
+          </folding>
         </state>
       </provider>
     </entry>
