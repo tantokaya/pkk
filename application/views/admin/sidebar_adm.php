@@ -27,6 +27,11 @@
                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
             </a>
         </li>
+        <li>
+            <a href="<?php echo base_url();?>" target="_blank">
+                <i class="fa fa-desktop"></i> <span>Tampilan Depan</span>
+            </a>
+        </li>
         <li class="treeview <?php if($judul == 'add_tag'||$judul == 'list_tag'||$judul == 'add_sensor'||$judul == 'list_sensor'
         ||$judul == 'add_kategori'||$judul == 'list_kategori'||$judul == 'add_komentar'||$judul == 'list_komentar'
         ||$judul == 'add_post'||$judul == 'list_post') echo 'active'; ?>">

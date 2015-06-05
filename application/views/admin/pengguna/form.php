@@ -12,15 +12,15 @@
                 <div class="form-group">
                     <label>Username</label>
                     <?php if($this->uri->segment(2)=='edit') { ?>
-                    <input type="text" name="username" id="username" placeholder="Username.." style="width: 190px;" class="form-control" value="<?php echo $username; ?>" required="true" readonly>
+                    <input type="text" name="username" id="username" placeholder="Username.." style="width: 190px;" class="form-control" value="<?php echo $username; ?>" readonly>
                     <?php } else { ?>
-                    <input type="text" name="username" id="username" placeholder="Username.." style="width: 190px;" class="form-control" value="<?php echo set_value('username'); ?>" required="true">
+                    <input type="text" name="username" id="username" placeholder="Username.." style="width: 190px;" class="form-control" value="<?php echo set_value('username'); ?>" >
                     <?php } ?><?php echo form_error('username','<div class="form-group has-error"><label class="control-label" for="inputError">','</label></div>'); ?>
                 </div>
                 <div class="form-group">
                     <label>Password</label>
                     <input type="password" name="pwd" id="pwd" placeholder="Password..." style="width: 190px;" class="form-control" value="<?php echo $pwd; ?>">
-                    <?php echo form_error('pwd','<div class="form-group has-error"><label class="control-label" for="inputError">','</label></div>'); ?>
+<!--                    --><?php //echo form_error('pwd','<div class="form-group has-error"><label class="control-label" for="inputError">','</label></div>'); ?>
                 </div>
                 <div class="form-group">
                     <label>Level</label>
