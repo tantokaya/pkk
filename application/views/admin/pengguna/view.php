@@ -10,6 +10,7 @@
                 <th style="text-align: center;">Username</th>
                 <th style="text-align: center;">Nama Pengguna</th>
                 <th style="text-align: center;">Level</th>
+                <th style="text-align: center;">Cabang</th>
                 <th style="text-align: center;">Aksi</th>
             </tr>
             </thead>
@@ -19,6 +20,7 @@
                 $no =1;
                 foreach($data->result_array() as $db){
                     $level = $this->app_model->CariLevel($db['id_level']);
+                    $cabang = $this->app_model->CariCabang($db['cabang_id']);
 
                     ?>
                     <tr>
@@ -26,6 +28,7 @@
                         <td style="text-align: center;" ><?php echo $db['username']; ?></td>
                         <td ><?php echo $db['nama_lengkap']; ?></td>
                         <td ><?php echo $db['id_level'].' - '.$level; ?></td>
+                        <td ><?php echo $cabang; ?></td>
                         <td style="text-align: center; width: 130px;">
 <!--                            --><?php //if($this->session->userdata('id_level')=='01'){ ?>
                             <a href="<?php echo base_url();?>index.php/pengguna/edit/<?php echo $db['username'];?>" rel="tooltip" title="Edit">
@@ -50,6 +53,7 @@
                 <th>Username</th>
                 <th>Nama Pengguna</th>
                 <th>Level</th>
+                <th>Cabang</th>
                 <th>Aksi</th>
             </tr>
             </tfoot>

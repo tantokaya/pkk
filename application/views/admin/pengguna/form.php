@@ -41,6 +41,25 @@
                         </select></div>
                 </div>
                 <div class="form-group">
+                    <label>Cabang Puskomkreatif</label>
+                    <div class="input-medium"><select name="cabang" id="cabang" class="form-control" style="width: 190px;">
+                            <?php
+                            if(empty($cabang)){
+                                ?>
+                                <option value="">-PILIH-</option>
+                            <?php
+                            }
+                            foreach($l_cabang->result() as $t){
+                                if($cabang==$t->cabang_id){
+                                    ?>
+                                    <option value="<?php echo $t->cabang_id;?>" selected="selected"><?php echo $t->cabang_name;?></option>
+                                <?php }else{ ?>
+                                    <option value="<?php echo $t->cabang_id;?>"><?php echo $t->cabang_name;?></option>
+                                <?php }
+                            } ?>
+                        </select></div>
+                </div>
+                <div class="form-group">
                     <label>Nama Lengkap</label>
                     <input type="text" name="nama_lengkap" id="nama_lengkap" placeholder="Nama.." style="width: 300px;" class="form-control" value="<?php echo $nama_lengkap; ?>">
                 </div>

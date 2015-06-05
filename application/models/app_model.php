@@ -65,6 +65,20 @@ class App_Model extends CI_Model {
 		}
 		return $hasil;
 	}
+
+    public function CariCabang($id){
+		$t = "SELECT * FROM tbl_cabang WHERE cabang_id='$id'";
+		$d = $this->app_model->manualQuery($t);
+		$r = $d->num_rows();
+		if($r>0){
+			foreach($d->result() as $h){
+				$hasil = $h->cabang_name;
+			}
+		}else{
+			$hasil = '';
+		}
+		return $hasil;
+	}
     public function CariUserPengguna(){
         $id = $this->session->userdata('username');
         $t = "SELECT * FROM tbl_admin WHERE username='$id'";

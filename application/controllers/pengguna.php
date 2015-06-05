@@ -58,12 +58,16 @@ class Pengguna extends CI_Controller {
             $d['nama_lengkap']	= '';
             $d['pwd']			= '';
             $d['level']			= '';
+            $d['cabang']    	= '';
             $d['hp']            = '';
             $d['email']         = '';
             $d['foto']          = '';
 
             $text = "SELECT tbl_level.id_level,tbl_level.`level` FROM tbl_level";
             $d['l_level'] = $this->app_model->manualQuery($text);
+
+            $text = "SELECT * FROM tbl_cabang";
+            $d['l_cabang'] = $this->app_model->manualQuery($text);
 
             $d['content'] = $this->load->view('admin/pengguna/form', $d, true);
             $this->load->view('admin/home_adm',$d);
@@ -90,6 +94,7 @@ class Pengguna extends CI_Controller {
                     $d['nama_lengkap']	=$db->nama_lengkap;
                     $d['pwd']	        ='';
                     $d['level']			=$db->id_level;
+                    $d['cabang']	    =$db->cabang_id;
                     $d['hp']            = $db->hp;
                     $d['email']         = $db->email;
                     $d['foto']          = $db->foto;
@@ -99,6 +104,7 @@ class Pengguna extends CI_Controller {
                 $d['nama_lengkap']	= '';
                 $d['pwd']	        = '';
                 $d['level']			= '';
+                $d['cabang']			= '';
                 $d['hp']            = '';
                 $d['email']         = '';
                 $d['foto']          = '';
@@ -106,6 +112,9 @@ class Pengguna extends CI_Controller {
 
             $text = "SELECT tbl_level.id_level,tbl_level.`level` FROM tbl_level";
             $d['l_level'] = $this->app_model->manualQuery($text);
+
+            $text = "SELECT * FROM tbl_cabang";
+            $d['l_cabang'] = $this->app_model->manualQuery($text);
 
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
 
@@ -124,7 +133,8 @@ class Pengguna extends CI_Controller {
 
             $pwd 	    = $this->input->post('pwd');
             $nama 	    = $this->input->post('nama_lengkap');
-            $level	    = $this->input->post('level');
+            $level 	    = $this->input->post('level');
+            $cabang 	    = $this->input->post('cabang');
             $user	    = mysql_real_escape_string($this->input->post('username'));
             $image_seo  = seo_title($nama);
 
@@ -134,7 +144,7 @@ class Pengguna extends CI_Controller {
             $up['id_level']	    = $level;
             $up['hp']           = $this->input->post('hp');
             $up['email']        = $this->input->post('email');
-
+            $up['cabang_id']	= $cabang;
 
             $id['username']=$this->input->post('username');
 
@@ -191,7 +201,7 @@ class Pengguna extends CI_Controller {
             $data = $this->app_model->getSelectedData("tbl_admin",$id);
             if($data->num_rows()>0){
                 if(empty($pwd)){
-                    $this->app_model->manualQuery("UPDATE tbl_admin SET nama_lengkap='$nama',id_level='$level', foto='$up[foto]' WHERE username='$user'");
+                    $this->app_model->manualQuery("UPDATE tbl_admin SET nama_lengkap='$nama',id_level='$level',cabang_id='$cabang', foto='$up[foto]' WHERE username='$user'");
 
                     $result = $data->row_array();
                     // print_r($result); exit();
