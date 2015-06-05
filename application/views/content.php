@@ -353,6 +353,13 @@
             </a>
             <img src="<?php echo base_url(); ?>uploads/widget/thumbs/<?php echo $this->widget_model->CariImageWidgetByKananText4_2(); ?>" width="280" height="120" />
             <?php
+            $isi = $this->widget_model->CariIsiWidgetByKananText4_2();
+            $isi = character_limiter($isi,150);
+            echo $isi;
+            ?>
+            </div>
+        <div class="cleaner_h10"></div>
+            <?php
             foreach($all_post_by_wkanan_4_2 as $db):
                 $link = set_permalink($db['post_id'],$db['post_judul']);
                 $hasil = $this->app_model->tgl_indo($db['post_tgl']);
@@ -366,21 +373,7 @@
                         <?php echo '- '. $db['post_judul']; ?></a>
                 </div>
             <?php endforeach; ?>
-        </div>
-        <?php
-        foreach($all_post_by_wkanan_4_2 as $db):
-            $link = set_permalink($db['post_id'],$db['post_judul']);
-            $hasil = $this->app_model->tgl_indo($db['post_tgl']);
-            $hasil2 = $this->app_model->tgl_str($db['post_tgl']);
-            $hari = getday($hasil2,'/');
-            ?>
-            <div id="title-sub-right-center-content">
-
-                <a href="<?php echo base_url(); ?>news/detail/<?php echo $link; ?>">
-                    <div id="post-widget-time"><?php echo $hari.', '.$hasil;?> &nbsp;&nbsp;<?php echo $db['post_time'];?></div>
-                    <?php echo '- '. $db['post_judul']; ?></a>
-            </div>
-        <?php endforeach; ?>
+        
         <div class="index-button">Indexs Berita</div>
     </div>
 
