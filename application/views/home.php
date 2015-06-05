@@ -1,7 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="<?php echo base_url(); ?>uploads/puskom_icon.ico" />
     <?php include "incl.php"; ?>
 
 </head>
@@ -19,7 +20,7 @@
 <div id="line-header">
 <div id="center-header">
     <div id="left-center-header">
-        <img src="<?php echo base_url();?>uploads/panel/thumbs/<?php echo $this->widget_model->CariImageLogo(); ?>" />
+        <a href="<?php echo base_url(); ?>"><img src="<?php echo base_url();?>uploads/panel/thumbs/<?php echo $this->widget_model->CariImageLogo(); ?>" style="width: 200; height: 120;" /></a>
     </div>
     <div id="right-center-header">
         <div id="menu-right-center-header">
@@ -51,7 +52,10 @@
 </div>
 
 <div id="footer-menu">
-    <div id="center-footer-menu">Home | Tentang Kami | Hubungi Kami | Forum | Kritik dan Saran | Galeri | Facebook | Twitter</div>
+    <div id="center-footer-menu"><a href="<?php echo base_url(); ?>"> Home </a> |
+        <a href="<?php echo base_url(); ?>pages/detail/2/selayang-pandang"> Tentang Kami</a> |
+        <a href=""> Facebook</a> |
+        <a href=""> Twitter</a> </div>
 </div>
 
 <div id="footer">

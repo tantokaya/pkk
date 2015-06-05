@@ -1,7 +1,7 @@
 <meta charset="UTF-8">
 <title>Puskomkreatif | <?php echo $judul_halaman; ?></title>
 <!-- Favicon -->
-<link rel="shortcut icon" href="<?php echo base_url(); ?>asset/images/favicon.ico" />
+<link rel="shortcut icon" href="<?php echo base_url(); ?>uploads/puskom_icon.ico" />
 <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
 <!-- bootstrap 3.0.2 -->
 <link href="<?php echo base_url();?>asset/admin/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
