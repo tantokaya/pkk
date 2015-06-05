@@ -46,7 +46,7 @@
     </tfoot>
 </table>
     <div class="box-footer">
-        <a href="<?php echo base_url();?>topik/tambah" ><button type="submit" class="btn btn-warning"><i class="fa fa-plus-circle"></i> &nbsp;Tambah</button></a>
+        <a href="<?php echo base_url();?>agenda/tambah" ><button type="submit" class="btn btn-warning"><i class="fa fa-plus-circle"></i> &nbsp;Tambah</button></a>
         <a href="<?php echo base_url();?>kalender" ><button type="submit" class="btn btn-warning"><i class="glyphicon glyphicon-calendar"></i> &nbsp;Lihat Kalender Agenda</button></a>
     </div>
 </div><!-- /.box-body -->
