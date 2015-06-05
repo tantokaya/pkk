@@ -25,7 +25,7 @@
     <div class="cleaner_h10"></div>
     <div id="detail-img-with-article">
         <?php if($this->app_model->CariPostByImage() != '') { ?>
-        <img src="<?php echo base_url(); ?>uploads/post/<?php echo $this->app_model->CariPostByImage(); ?>" width="300" height="200" />
+        <img src="<?php echo base_url(); ?>uploads/post/thumbs/<?php echo $this->app_model->CariPostByImage(); ?>" width="300" height="200" />
         <?php } else { ?>
         <img src="<?php echo base_url(); ?>asset/images/blank.jpg" width="300" height="200" />
         <?php } ?>

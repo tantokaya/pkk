@@ -52,6 +52,7 @@
             echo $isi;
             ?>
         </div>
+        <div class="cleaner_h10"></div>
         <?php
         foreach($all_post_by_wkanan_1_1 as $db):
             $link = set_permalink($db['post_id'],$db['post_judul']);
@@ -61,7 +62,7 @@
             ?>
             <div id="title-sub-right-center-content">
                 <a href="<?php echo base_url(); ?>news/detail/<?php echo $link; ?>">
-                    <div id="post-widget-time"><?php echo $hari.', '.$hasil;?> &nbsp;&nbsp;<?php echo $db['post_time'];?></div><br>
+                    <div id="post-widget-time"><?php echo $hari.', '.$hasil;?> &nbsp;&nbsp;<?php echo $db['post_time'];?></div>
                     <?php echo '- '. $db['post_judul']; ?>
                 </a>
             </div>
@@ -91,6 +92,7 @@
             echo $isi;
             ?>
         </div>
+        <div class="cleaner_h10"></div>
         <?php
         foreach($all_post_by_wkanan_1_2 as $db):
             $link = set_permalink($db['post_id'],$db['post_judul']);
@@ -138,6 +140,8 @@
             echo $isi;
             ?>
         </div>
+        <div class="cleaner_h10"></div>
+
         <?php
         foreach($all_post_by_wkanan_2_1 as $db):
             $link = set_permalink($db['post_id'],$db['post_judul']);
@@ -179,6 +183,8 @@
             echo $isi;
             ?>
         </div>
+        <div class="cleaner_h10"></div>
+
         <?php
         foreach($all_post_by_wkanan_2_2 as $db):
             $link = set_permalink($db['post_id'],$db['post_judul']);
@@ -221,6 +227,8 @@
             echo $isi;
             ?>
         </div>
+        <div class="cleaner_h10"></div>
+
         <?php
         foreach($all_post_by_wkanan_3_1 as $db):
             $link = set_permalink($db['post_id'],$db['post_judul']);
@@ -307,6 +315,8 @@
             echo $isi;
             ?>
         </div>
+        <div class="cleaner_h10"></div>
+
         <?php
         foreach($all_post_by_wkanan_4_1 as $db):
             $link = set_permalink($db['post_id'],$db['post_judul']);

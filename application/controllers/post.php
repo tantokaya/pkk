@@ -104,8 +104,9 @@ class Post extends CI_Controller {
             // cek jika ada file yg diupload
             if (!empty($_FILES['userfile']['name'])) {
                 // upload
-                $config['upload_path'] = './uploads/post/';
+                $config['upload_path']   = './uploads/post/';
                 $config['allowed_types'] = 'gif|jpg|png';
+                $config['file_name']     = $judul_seo;
                 //$config['max_size']	= '1024';
                 //$config['max_width']  = '1024';
                 //$config['max_height']  = '768';
@@ -115,11 +116,31 @@ class Post extends CI_Controller {
 
                 if ( ! $this->upload->do_upload())
                 {
-                    $error = array('error' => $this->upload->display_errors());
-                    print_r($error); exit();
+                    /*$error = array('error' => $this->upload->display_errors());
+                    print_r($error); exit();*/
+                    redirect('404');
                 }
                 else
                 {
+                    //Image Resizing
+                    $data_upload = $this->upload->data();
+
+                    $file_name = $data_upload["file_name"];
+
+                    $this->load->library('image_lib');
+                    $config_resize['image_library'] = 'gd2';
+                    $config_resize['create_thumb'] = FALSE;
+                    $config_resize['maintain_ratio'] = FALSE;
+                    $config_resize['new_image'] = './uploads/post/thumbs';
+                    $config_resize['master_dim'] = 'height';
+                    $config_resize['quality'] = "100%";
+                    $config_resize['source_image'] = './uploads/post/'. $file_name;
+
+                    $config_resize['width'] = 300;
+                    $config_resize['height'] = 200;
+                    $this->image_lib->initialize($config_resize);
+                    $this->image_lib->resize();
+
                     $pp = array('upload_data' => $this->upload->data());
                 }
 

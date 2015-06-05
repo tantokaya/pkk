@@ -40,6 +40,22 @@ class Post_Model extends CI_Model {
         return $hasil;
     }
 
+    public  function CariPageByPosisi(){
+        $kode = $this->uri->segment(3);
+        $p_kode = explode("-",$kode);
+        $t = "SELECT * FROM tbl_sub_halaman WHERE sub_hal_id = '$p_kode[0]'";
+        $d = $this->app_model->manualQuery($t);
+        $r = $d->num_rows();
+        if($r>0){
+            foreach($d->result() as $h){
+                $hasil = $h->position;
+            }
+        }else{
+            $hasil = '';
+        }
+        return $hasil;
+    }
+
     public  function CariWidgetByImage(){
         $kode = $this->uri->segment(3);
         $p_kode = explode("-",$kode);

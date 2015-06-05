@@ -22,20 +22,14 @@
         <div class="cleaner_h0"></div>
     </div>
     <div class="cleaner_h10"></div>
-    <!--<div id="detail-img-with-article">
-        <img src="<?php echo base_url(); ?>asset/images/blank.jpg" width="300" height="200" />
-        <div class="cleaner_h10"></div>
-        <strong>Berita Lainnya</strong>
-        <ul>
-            <?php
-            foreach($all_post_by_detail as $db):
-                $link = set_permalink($db['post_id'],$db['post_judul']);
-                ?>
-                <li><a href="<?php echo base_url(); ?>news/detail/<?php echo $link; ?>"><?php echo $db['post_judul']; ?></a> </li>
-            <?php endforeach; ?>
-        </ul>
-    </div>-->
-    <?php echo $this->post_model->CariPageByIsi(); ?>
+    <table>
+        <tr>
+            <td style="text-align: <?php echo $this->post_model->CariPageByPosisi();?>;">
+                <?php echo $this->post_model->CariPageByIsi(); ?>
+            </td>
+        </tr>
+    </table>
+
 
     <div class="cleaner_h20"></div>
 

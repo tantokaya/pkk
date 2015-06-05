@@ -42,7 +42,12 @@
                         <input type="text" name="link" id="link" value="<?php echo $link; ?>" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label>Ke Tab Baru &nbsp;</label>
+                        <label>Position &nbsp;</label>
+                            <input type="radio" name="posisi" value="center" class="flat-red"/>Center (Rata Tengah)
+                            <input type="radio" name="posisi" value="justify" class="flat-red"checked/>Justify (Rata Kanan Kiri)
+                    </div>
+                    <div class="form-group">
+                        <label>New Tab &nbsp;</label>
                         <?php if($this->uri->segment(2)=='tambah') {?>
                             <input type="radio" name="status" value="_blank" class="flat-red"/>Y
                             <input type="radio" name="status" value="" class="flat-red"checked/>N
