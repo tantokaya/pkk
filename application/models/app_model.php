@@ -94,6 +94,21 @@ class App_Model extends CI_Model {
         return $hasil;
     }
 
+    public function CariUserCabang(){
+        $id = $this->session->userdata('username');
+        $t = "SELECT * FROM tbl_admin WHERE username='$id'";
+        $d = $this->app_model->manualQuery($t);
+        $r = $d->num_rows();
+        if($r>0){
+            foreach($d->result() as $h){
+                $hasil = $h->cabang_id;
+            }
+        }else{
+            $hasil = '';
+        }
+        return $hasil;
+    }
+
 
 
     public function CariNamaPengguna(){
@@ -235,6 +250,7 @@ class App_Model extends CI_Model {
 						$sess_data['nama_lengkap'] = $qad->nama_lengkap;
 						$sess_data['foto'] = $qad->foto;
 						$sess_data['level'] = $qad->level;
+						$sess_data['cabang_id'] = $qad->cabang_id;
 						$this->session->set_userdata($sess_data);
 					}
 					header('location:'.base_url().'adpus/home');

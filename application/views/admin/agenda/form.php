@@ -163,6 +163,7 @@
 
             <div class="box-footer">
                 <button type="submit" id="simpan" class="btn btn-primary">Simpan</button>
+                <button type="button"  class="btn btn-success" onclick=self.history.back()><i class="glyphicon glyphicon-arrow-left"></i> Kembali</button>
             </div>
             </form>
         </div><!-- /.box -->

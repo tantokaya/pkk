@@ -57,6 +57,7 @@ class Agenda extends CI_Controller {
 
             $text = "SELECT * FROM tbl_mitra";
             $d['l_mitra'] = $this->app_model->manualQuery($text);
+
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
             $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
@@ -70,8 +71,11 @@ class Agenda extends CI_Controller {
     public function simpan (){
         $cek = $this->session->userdata('logged_in');
         if(!empty($cek)){
-            $nama = $this->app_model->CariUserPengguna();
+            $nama   = $this->app_model->CariUserPengguna();
+            $cabang = $this->app_model->CariUserCabang();
+
             $up['username']	    = $nama;
+            $up['cabang_id']	= $cabang;
             $up['agenda_code'] = $this->input->post('code');
             $up['agenda_name']	= $this->input->post('name');
             $up['agenda_desc']	= $this->input->post('desc');
