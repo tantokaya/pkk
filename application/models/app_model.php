@@ -986,6 +986,16 @@ class App_Model extends CI_Model {
         return $komen;
 
     }
+    
+    public function username_check($username) {
+        $query = $this->db->get_where('tbl_admin', array('username' => $username));
+        
+        $jml = $query->num_rows();
+        if($jml > 0)
+            return  FALSE;
+        else
+            return TRUE;
+    }
 
 }
 	
