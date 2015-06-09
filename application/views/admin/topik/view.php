@@ -10,7 +10,7 @@
                 <th style="text-align: center;">Last Topik</th>
                 <th style="text-align: center;">Kategori</th>
                 <th style="text-align: center;">Last Stats</th>
-                <th style="text-align: center; width: 90px;">Aksi</th>
+                <th style="text-align: center; ">Aksi</th>
             </tr>
             </thead>
             <tbody>
@@ -24,6 +24,9 @@
                     <td><?php echo $db['kategori_id']; ?></td>
                     <td >Replies : <br/> Views :</td>
                     <td>
+                        <a href="<?php echo base_url();?>topik/edit/<?php echo $db['topik_id'];?>" rel="tooltip" title="Edit">
+                            <button class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Ubah</button>
+                        </a>
                         <a href="<?php echo base_url();?>topik/hapus/<?php echo $db['topik_id'];?>"
                            onClick="return confirm('Anda yakin ingin menghapus data ini?')"  rel="tooltip" title="Hapus">
                             <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Hapus</button></a>
@@ -41,7 +44,7 @@
                 <th style="text-align: center;">Last Topik</th>
                 <th style="text-align: center;">Kategori</th>
                 <th style="text-align: center;">Last Stats</th>
-                <th style="text-align: center; width: 90px;">Aksi</th>
+                <th style="text-align: center;">Aksi</th>
             </tr>
             </tfoot>
         </table>

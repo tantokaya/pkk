@@ -373,7 +373,7 @@
                         <?php echo '- '. $db['post_judul']; ?></a>
                 </div>
             <?php endforeach; ?>
-        
+
         <div class="index-button">Indexs Berita</div>
     </div>
 

@@ -14,11 +14,14 @@ class Agenda extends CI_Controller {
 		$this->load->helper(array('form','url'));
 		$this->load->library('upload');
 		$this->load->library('functions');
+
     }
 
     public function index()
     {
         $cek = $this->session->userdata('logged_in');
+        //$lvl = $this->session->userdata('id_level');
+
         if(!empty($cek)){
 
             $d['judul']         ="list_agenda";
@@ -32,7 +35,7 @@ class Agenda extends CI_Controller {
             $d['content']= $this->load->view('admin/agenda/view',$d,true);
             $this->load->view('admin/home_adm',$d);
         }else{
-            header('location:'.base_url());
+            header('location:'.base_url().'/adpus');
         }
     }
 

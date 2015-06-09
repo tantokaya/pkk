@@ -43,7 +43,7 @@
                 </div>
                 <div class="form-group">
                     <label>Cabang Puskomkreatif</label>
-                    <div class="input-medium"><select name="cabang" id="cabang" class="form-control" style="width: 190px;">
+                    <div class="input-medium"><select name="cabang" id="cabang" class="form-control" style="width: 190px;" required="true">
                             <?php
                             if(empty($cabang)){
                                 ?>

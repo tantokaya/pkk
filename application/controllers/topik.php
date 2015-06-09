@@ -52,6 +52,9 @@ class Topik extends CI_Controller {
             $d['ck']        = '';
             $d['foto']      = '';
 
+            $text = "SELECT * FROM tbl_katpos ORDER BY katpos_name ASC";
+            $d['l_katpos'] = $this->app_model->manualQuery($text);
+
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
             $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
@@ -74,24 +77,64 @@ class Topik extends CI_Controller {
             $up['username']         = $nama;
             $up['post_time']        = $time;
             $up['topik_title']      = $this->input->post('title');
-            $up['kategori_id']      = $this->input->post('kategori');
+            $up['katpos_id']      = $this->input->post('kategori');
             $up['topik_post']       = $this->input->post('topik');
 
-            $id['topik_code']       = $this->input->post('code');
+            $id['topik_id']       = $this->input->post('code');
 
+            $kode = $this->app_model->MaxKodeTopik();
+
+            $up['topik_code'] = $kode;
 
             $data = $this->app_model->getSelectedData("tbl_topik",$id);
-
-                $kode = $this->app_model->MaxKodeTopik();
-
-                $up['topik_code'] = $kode;
+            if($data->num_rows()>0){
+                $this->app_model->updateData("tbl_topik",$up,$id);
+            }else{
                 $this->app_model->insertData("tbl_topik",$up);
-                redirect('topik');
-
+            }
+            redirect('topik');
         }else{
             header('location:'.base_url());
         }
 
+    }
+
+    public function edit(){
+        $cek = $this->session->userdata('logged_in');
+        if(!empty($cek)){
+            $d['judul']='edit_topik';
+            $d['judul_halaman']='Edit TOPIK';
+            $d['judul_keterangan']="Edit data Topik";
+
+            $id = $this->uri->segment(3);
+            $text = "SELECT * FROM tbl_topik WHERE topik_id='$id'";
+            $data = $this->app_model->manualQuery($text);
+
+            if($data->num_rows() > 0){
+                foreach($data->result() as $db){
+                    $d['code']	    = $db->topik_id;
+                    $d['title']     = $db->topik_title;
+                    $d['kategori']  = $db->katpos_id;
+                    $d['topik']     = $db->topik_post;
+
+                }
+            }else{
+                $d['title']		    = '';
+                $d['kategori']      = '';
+                $d['topik']         = '';
+            }
+
+            $text = "SELECT * FROM tbl_katpos ORDER BY katpos_name ASC";
+            $d['l_katpos'] = $this->app_model->manualQuery($text);
+
+            $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
+
+            $d['content']= $this->load->view('admin/topik/form',$d,true);
+            $this->load->view('admin/home_adm',$d);
+        }else{
+            header('location:'.base_url());
+        }
     }
 
     public function detail($offset=0){

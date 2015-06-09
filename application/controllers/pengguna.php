@@ -17,8 +17,10 @@ class Pengguna extends CI_Controller {
     {
         $cek = $this->session->userdata('logged_in');
         if(!empty($cek)){
+
             $lvl = $this->session->userdata('id_level');
             $pengguna = $this->session->userdata('username');
+            $cabang = $this->session->userdata('cabang_id');
 
             $d['judul']="list_pengguna";
             $d['judul_halaman']="Daftar Pengguna";
@@ -28,7 +30,7 @@ class Pengguna extends CI_Controller {
             $text = "SELECT * FROM tbl_admin  where id_level = $lvl ORDER BY username ASC  ";
             $d['data'] = $this->app_model->manualQuery($text);
             } elseif($lvl == '02' ){
-                $text = "SELECT * FROM tbl_admin  where username = '$pengguna' OR id_level = '03' ORDER BY username ASC  ";
+                $text = "SELECT * FROM tbl_admin  where username = '$pengguna' OR id_level = '03' AND cabang_id= '$cabang' ORDER BY username ASC  ";
                 $d['data'] = $this->app_model->manualQuery($text);
             } else {
             $text = "SELECT * FROM tbl_admin  ORDER BY username ASC  ";
@@ -50,6 +52,9 @@ class Pengguna extends CI_Controller {
     {
         $cek = $this->session->userdata('logged_in');
         if(!empty($cek)){
+            $lvl = $this->session->userdata('id_level');
+            $cabang = $this->session->userdata('cabang_id');
+
             $d['judul']="add_pengguna";
             $d['judul_halaman'] = "Tambah Pengguna";
             $d['judul_keterangan']="Tambah seluruh pengguna aplikasi";
@@ -63,11 +68,21 @@ class Pengguna extends CI_Controller {
             $d['email']         = '';
             $d['foto']          = '';
 
-            $text = "SELECT tbl_level.id_level,tbl_level.`level` FROM tbl_level";
-            $d['l_level'] = $this->app_model->manualQuery($text);
+            if($lvl == '02' ){
+                $text = "SELECT * FROM tbl_level WHERE id_level != 01";
+                $d['l_level'] = $this->app_model->manualQuery($text);
+            } else{
+                $text = "SELECT * FROM tbl_level";
+                $d['l_level'] = $this->app_model->manualQuery($text);
+            }
 
-            $text = "SELECT * FROM tbl_cabang";
+            if($lvl != '01') {
+            $text = "SELECT * FROM tbl_cabang WHERE cabang_id ='$cabang'";
             $d['l_cabang'] = $this->app_model->manualQuery($text);
+            }else {
+                $text = "SELECT * FROM tbl_cabang ";
+                $d['l_cabang'] = $this->app_model->manualQuery($text);
+            }
 
             $d['content'] = $this->load->view('admin/pengguna/form', $d, true);
             $this->load->view('admin/home_adm',$d);

@@ -309,14 +309,18 @@ class App_Model extends CI_Model {
 
     function get_all_agenda() {
         $pengguna = $this->session->userdata('username');
+        $cabang = $this->session->userdata('cabang_id');
 
         $this->db->select('tbl_agenda.agenda_id,tbl_agenda.agenda_code,tbl_agenda.agenda_name,tbl_agenda.agenda_desc,tbl_agenda.agenda_mulai,
-            tbl_agenda.agenda_akhir,tbl_agenda.agenda_lokasi,tbl_agenda.mitra_code');
+            tbl_agenda.agenda_akhir,tbl_agenda.agenda_lokasi,tbl_agenda.mitra_code,tbl_agenda.nip,tbl_agenda.username,tbl_agenda.cabang_id,tbl_admin.cabang_id');
         $this->db->from('tbl_agenda');
+        $this->db->join('tbl_admin','tbl_agenda.username = tbl_admin.username');
 
         $lvl = $this->session->userdata('id_level');
-        if($lvl !== '01' ){
-            $this->db->where('username',$pengguna);
+        if($lvl == '03' ){
+            $this->db->where('tbl_agenda.username',$pengguna);
+        }elseif($lvl == '02'){
+            $this->db->where('tbl_admin.cabang_id',$cabang);
         }
 
         $this->db->order_by('agenda_code', 'desc');
@@ -394,7 +398,7 @@ class App_Model extends CI_Model {
         $this->db->from('tbl_topik');
 
         $lvl = $this->session->userdata('id_level');
-        if($lvl == '03'){
+        if($lvl == '03'|| $lvl == '02'){
             $this->db->where('username',$pengguna);
         }
 
@@ -450,8 +454,10 @@ class App_Model extends CI_Model {
         $this->db->from('tbl_agenda a');
         $this->db->join('tbl_mitra m', 'a.mitra_code=m.mitra_code');
         $this->db->join('tbl_admin u', 'a.username=u.username');
+        $lvl = $this->session->userdata('id_level');
+        if($lvl != '01'){
         $this->db->where('a.cabang_id',$cabang);
-
+        }
         $query = $this->db->get();
 
         return $query->result_array();
@@ -523,15 +529,20 @@ class App_Model extends CI_Model {
 
     function get_all_post() {
         $pengguna = $this->session->userdata('username');
+        $cabang = $this->session->userdata('cabang_id');
 
-        $this->db->select('tbl_post.post_id,tbl_post.post_tgl,tbl_post.post_time,tbl_post.post_judul,tbl_post.post_isi,
-                tbl_post.post_gambar,tbl_post.post_tag,tbl_post.kategori_id,tbl_post.username,tbl_post.publish,tbl_kategori.kategori');
+        $this->db->select('tbl_post.post_id,tbl_post.post_tgl,tbl_post.post_time,tbl_post.post_judul,tbl_post.post_judul_seo,
+            tbl_post.post_isi,tbl_post.post_gambar,tbl_post.post_tag,tbl_post.kategori_id,tbl_post.username,tbl_post.seo_title,
+            tbl_post.seo_desc,tbl_post.seo_keywords,tbl_post.publish,tbl_post.dibaca,tbl_kategori.kategori,tbl_admin.cabang_id');
         $this->db->from('tbl_post');
         $this->db->join('tbl_kategori','tbl_post.kategori_id = tbl_kategori.kategori_id');
+        $this->db->join('tbl_admin','tbl_post.username = tbl_admin.username');
 
         $lvl = $this->session->userdata('id_level');
-        if($lvl !== '01' ){
+        if($lvl == '03' ){
             $this->db->where('username',$pengguna);
+        }elseif($lvl == '02'){
+            $this->db->where('tbl_admin.cabang_id',$cabang);
         }
 
         $this->db->order_by('tbl_post.post_id','DESC');
@@ -880,35 +891,35 @@ class App_Model extends CI_Model {
     }
 
     public function JmlTopikPerkenalan(){
-        $query = $this->db->query("SELECT * FROM tbl_topik WHERE kategori_id = 'perkenalan'");
+        $query = $this->db->query("SELECT * FROM tbl_topik WHERE katpos_id = '1'");
 
         return $query->num_rows();
     }
 
     public function JmlTopikPengumuman(){
-        $query = $this->db->query("SELECT * FROM tbl_topik WHERE kategori_id = 'pengumuman'");
+        $query = $this->db->query("SELECT * FROM tbl_topik WHERE katpos_id = '2'");
 
         return $query->num_rows();
     }
 
     public function JmlTopikSaran(){
-        $query = $this->db->query("SELECT * FROM tbl_topik WHERE kategori_id = 'saran'");
+        $query = $this->db->query("SELECT * FROM tbl_topik WHERE katpos_id = '3'");
 
         return $query->num_rows();
     }
 
     public function JmlTopikPojok(){
-        $query = $this->db->query("SELECT * FROM tbl_topik WHERE kategori_id = 'pojok'");
+        $query = $this->db->query("SELECT * FROM tbl_topik WHERE katpos_id = '4'");
 
         return $query->num_rows();
     }
 
     function get_all_forum_perkenalan() {
-        $pengguna = 'perkenalan';
+        $pengguna = '1';
 
         $this->db->select('*');
         $this->db->from('tbl_topik');
-        $this->db->where('kategori_id',$pengguna);
+        $this->db->where('katpos_id',$pengguna);
         $this->db->order_by('topik_code', 'desc');
 
         $query = $this->db->get();
@@ -917,11 +928,11 @@ class App_Model extends CI_Model {
     }
 
     function get_all_forum_pengumuman() {
-        $pengguna = 'pengumuman';
+        $pengguna = '2';
 
         $this->db->select('*');
         $this->db->from('tbl_topik');
-        $this->db->where('kategori_id',$pengguna);
+        $this->db->where('katpos_id',$pengguna);
         $this->db->order_by('topik_code', 'desc');
 
         $query = $this->db->get();
@@ -930,11 +941,11 @@ class App_Model extends CI_Model {
     }
 
     function get_all_forum_saran() {
-        $pengguna = 'saran';
+        $pengguna = '3';
 
         $this->db->select('*');
         $this->db->from('tbl_topik');
-        $this->db->where('kategori_id',$pengguna);
+        $this->db->where('katpos_id',$pengguna);
         $this->db->order_by('topik_code', 'desc');
 
         $query = $this->db->get();
@@ -943,11 +954,11 @@ class App_Model extends CI_Model {
     }
 
     function get_all_forum_pojok() {
-        $pengguna = 'pojok';
+        $pengguna = '4';
 
         $this->db->select('*');
         $this->db->from('tbl_topik');
-        $this->db->where('kategori_id',$pengguna);
+        $this->db->where('katpos_id',$pengguna);
         $this->db->order_by('topik_code', 'desc');
 
         $query = $this->db->get();

@@ -17,22 +17,32 @@
                 <div class="form-group">
                     <label>Kategori</label>
                     <select name="kategori" id="kategori" class="form-control" style="width: 250px;" required="true">
-                        <option value="">-PILIH-</option>
-                        <option value="perkenalan">Selamat datang dan Perkenalan</option>
-                        <option value="pengumuman">Pengumuman</option>
-                        <option value="saran">Saran Untuk Forum</option>
-                        <option value="pojok">Pojok Komunitas</option>
+                        <?php
+                            if(empty($kategori)){
+                                ?>
+                                <option value="">-   PILIH    -</option>
+                            <?php
+                            }
+                            foreach($l_katpos->result() as $t){
+                                if($kategori==$t->katpos_id){
+                                    ?>
+                                    <option value="<?php echo $t->katpos_id;?>" selected="selected"><?php echo $t->katpos_name;?></option>
+                                <?php }else{ ?>
+                                    <option value="<?php echo $t->katpos_id;?>"><?php echo $t->katpos_name;?></option>
+                                <?php }
+                            } ?>
                     </select>
                 </div>
                 <div class="form-group">
                     <label>Topik</label>
-                    <textarea id="editor1" name="topik" rows="10" cols="80"></textarea>
+                    <textarea id="editor1" name="topik" rows="10" cols="80"> <?php echo $topik; ?></textarea>
                 </div>
 
             </div><!-- /.box-body -->
 
             <div class="box-footer">
                 <button type="submit" id="simpan" class="btn btn-primary"><i class="glyphicon glyphicon-floppy-disk"></i> Simpan</button>
+                <button type="button"  class="btn btn-success" onclick=self.history.back()><i class="glyphicon glyphicon-arrow-left"></i> Kembali</button>
             </div>
             </form>
         </div><!-- /.box -->

@@ -66,7 +66,7 @@
                         ?>
                     </div>
                     <?php } ?>
-                    <?php if($this->session->userdata('id_level')=='01'||$this->session->userdata('id_level')=='02') { ?>
+                    <?php if($this->session->userdata('id_level')=='01') { ?>
                     <div class="form-group">
                         <label>Publish &nbsp;</label>
                         <?php if($this->uri->segment(2)=='tambah') {?>

@@ -22,7 +22,7 @@ class Post extends CI_Controller {
             $d['judul_halaman']='Daftar POST';
             $d['judul_keterangan']="Daftar data POST Berita";
 
-            $d['all_post']	    = $this->app_model->get_all_post();
+            $d['all_post']	            = $this->app_model->get_all_post();
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
             $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
@@ -92,7 +92,7 @@ class Post extends CI_Controller {
             $up['seo_keywords']  = $this->input->post('keywords');
             $up['post_tag']      = $tag;
 
-            if($this->session->userdata('id_level')=='01'||$this->session->userdata('id_level')=='02'){
+            if($this->session->userdata('id_level')=='01'){
                 $up['publish']       = $this->input->post('status');
             } else {
                 $up['publish']       = $publish;

@@ -13,7 +13,7 @@
 </a>
 <div class="navbar-right">
 <ul class="nav navbar-nav">
-    <?php if($this->session->userdata('id_level')=='01'||$this->session->userdata('id_level')=='02') { ?>
+    <?php if($this->session->userdata('id_level')=='01') { ?>
         <!-- Notifications: style can be found in dropdown.less -->
         <li class="dropdown notifications-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
