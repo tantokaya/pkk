@@ -43,6 +43,27 @@
     <font style="text-align: justify;"><?php echo $this->app_model->CariPostByIsi(); ?></font>
 
     <div class="cleaner_h20"></div>
+    <?php
+    foreach ($all_slide_post as $db):
+        if($db['slide_post1']!=''){
+            ?>
+   <section>
+        <div id="slide_flip_container" class="shadow">
+            <div id="slide_flip_images" style="transform: translateX(0px); ">
+                <img src="<?php echo base_url(); ?>uploads/post/thumbs/<?php echo $db['slide_post1']; ?>">
+                <img src="<?php echo base_url(); ?>uploads/post/thumbs/<?php echo $db['slide_post2']; ?>">
+                <img src="<?php echo base_url(); ?>uploads/post/thumbs/<?php echo $db['slide_post3']; ?>">
+            </div>
+        </div>
+
+        <p id="slide_flip_controls">
+            <span class="selected"><img src="<?php echo base_url(); ?>uploads/post/thumbs/<?php echo $db['slide_post1']; ?>" width="130px" height="70px"></span>
+            <span><img src="<?php echo base_url(); ?>uploads/post/thumbs/<?php echo $db['slide_post2']; ?>" width="130px" height="70px"></span>
+            <span><img src="<?php echo base_url(); ?>uploads/post/thumbs/<?php echo $db['slide_post3']; ?>" width="130px" height="70px"></span>
+        </p>
+    </section>
+    <?php } endforeach; ?>
+    <div class="cleaner_h5"></div>
 
     <div id="content-attribute">
 	<?php $hari = getday($this->app_model->CariPostByHari(),'/') ?>

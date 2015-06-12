@@ -668,6 +668,18 @@ class App_Model extends CI_Model {
         return $query->result_array();
     }
 
+    function get_all_slide_post()
+    {
+        $berita = $this->uri->segment(3);
+
+        $this->db->select('tbl_post.post_id,tbl_post.slide_post1,tbl_post.slide_post2,tbl_post.slide_post3,tbl_post.publish');
+        $this->db->from('tbl_post');
+        $this->db->where('post_id',$berita);
+
+        $query = $this->db->get();
+
+        return $query->result_array();
+    }
 
 
     public  function CariPostByJudul(){

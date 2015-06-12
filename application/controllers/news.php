@@ -30,6 +30,8 @@ class News extends CI_Controller {
         $d['all_post_by_detail']	= $this->app_model->get_all_post_by_detail();
         $d['all_new_post_baca']	    = $this->app_model->get_all_new_post_baca();
 		$d['all_komen_by_post_id']  = $this->app_model->getKomentarByPostId();
+		$d['all_slide_post']        = $this->app_model->get_all_slide_post();
+
 
 	    $d['jumlah_pengunjung'] = $this->statistik_model->pengunjung();
 		
