@@ -11,7 +11,7 @@
                 <th style="text-align: center;">Penulis</th>
                 <th style="text-align: center;">kategori</th>
                 <th style="text-align: center;">Tgl Post</th>
-                <th style="text-align: center; ">Aksi</th>
+                <th style="text-align: center; width: 130px ">Aksi</th>
             </tr>
             </thead>
             <tbody>

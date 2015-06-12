@@ -47,10 +47,10 @@ class Post extends CI_Controller {
             $d['kategori']      = '';
             $d['isi']           = '';
             $d['foto']          = '';
-            $d['title']     = '';
-            $d['desc']      = '';
-            $d['keywords']  = '';
-            $d['status']   = '';
+            $d['title']         = '';
+            $d['desc']          = '';
+            $d['keywords']      = '';
+            $d['status']        = '';
 
             $text = "SELECT * FROM tbl_kategori ORDER BY kategori ASC";
             $d['l_kategori'] = $this->app_model->manualQuery($text);
@@ -107,18 +107,13 @@ class Post extends CI_Controller {
                 $config['upload_path']   = './uploads/post/';
                 $config['allowed_types'] = 'gif|jpg|png';
                 $config['file_name']     = $judul_seo;
-                //$config['max_size']	= '1024';
-                //$config['max_width']  = '1024';
-                //$config['max_height']  = '768';
 
                 $this->load->library('upload');
                 $this->upload->initialize($config);
 
                 if ( ! $this->upload->do_upload())
                 {
-                    /*$error = array('error' => $this->upload->display_errors());
-                    print_r($error); exit();*/
-                    redirect('404');
+                   redirect('404');
                 }
                 else
                 {
@@ -167,7 +162,11 @@ class Post extends CI_Controller {
                 }
 
             }
+
+
+
             redirect('post');
+
         }else{
             header('location:'.base_url());
         }
@@ -206,7 +205,7 @@ class Post extends CI_Controller {
                     $d['keywords']  = $db->seo_keywords;
                     $d['status']    = $db->publish;
                     $d['tag']       = $datatag;
-                }
+                 }
             }else{
                 $d['judul']	    = '';
                 $d['kategori']	= '';
@@ -271,7 +270,66 @@ class Post extends CI_Controller {
             $data = $this->app_model->manualQuery($text);
         }
     }
+
+    // qqfileuploader
+    public function upload()
+    {
+        $method=$this->input->server('REQUEST_METHOD');
+        if(strtolower($method)=="post"){
+
+            $this->load->library('QQFileUploader');
+
+            // target upload directory
+            $folder="./uploads/temp/";
+
+            //array("jpg","jpeg","gif","exe","mov" and etc...
+            $allowedExtensions = array("jpg", "jpeg", "gif", "png");
+            $sizeLimit = 10 * 1024 * 1024; // maximum file size in bytes
+            $uploader = new QQFileUploader($allowedExtensions, $sizeLimit);
+
+            $result = $uploader->handleUpload($folder);
+
+            $data=array(
+                'lampiran_nama'=>$result['filename'],
+                'lampiran_size'=>$result['size'],
+                'lampiran_ext'=>$result['ext']
+            );
+
+            $id=$this->app_model->insert_lampiran($data);
+            //idlampiran nanti ditaruh di id untuk hidden field
+            $result['idlampiran']=$id;
+            $return = json_encode($result);
+            echo $return;
+        }else{
+            header("HTTP/1.1 403 Forbidden");
+            echo "Not Allowed";
+        }
+    }
+
+    // hapus lampiran
+    function delete_lampiran()
+    {
+        $lampId =  $this->input->post('lampiran_id');
+
+        // get filename
+        $lampiran = $this->app_model->get_lampiran_by_id($lampId);
+        // hapus file existing
+        $dir = './uploads/';
+        if(file_exists($dir . $lampiran->lampiran_nama)){
+            unlink($dir . $lampiran->lampiran_nama);
+        }
+
+        $this->app_model->hapus_lampiran($lampId);
+        $query = $this->app_model->hapus_lampiran_post($lampId);
+
+        $status = "false";
+        if ($this->db->affected_rows() > 0){
+            $status = "true";
+        }
+        echo $status;
+    }
+
 }
 
-/* End of file halaman.php */
-/* Location: ./application/controllers/halaman.php */
+/* End of file post.php */
+/* Location: ./application/controllers/post.php */

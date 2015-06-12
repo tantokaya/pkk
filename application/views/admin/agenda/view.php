@@ -22,7 +22,7 @@
             <td><?php echo $db['agenda_name']; ?></td>
             <td><?php echo $db['agenda_lokasi']; ?></td>
             <td align="center">
-                <?php if($lvl == '01') { ?>
+                <?php if($this->session->userdata('id_level')=='01') { ?>
                 <a href="<?php echo base_url();?>index.php/agenda/edit/<?php echo $db['agenda_code'];?>" title="Edit">
                     <button class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Ubah</button></a>
                 </a>
@@ -49,8 +49,8 @@
     </tfoot>
 </table>
     <div class="box-footer">
-        <?php if($lvl == '01') { ?>
-        <a href="<?php echo base_url();?>agenda/tambah" ><button type="submit" class="btn btn-warning"><i class="fa fa-plus-circle"></i> &nbsp;Tambah</button></a>
+        <?php if($this->session->userdata('id_level') == '01') { ?>
+        <a href="<?php echo base_url();?>agenda/tambah" ><button type="submit" class="btn btn-success"><i class="fa fa-plus-circle"></i> &nbsp;Tambah</button></a>
         <?php } ?>
         <a href="<?php echo base_url();?>kalender" ><button type="submit" class="btn btn-warning"><i class="glyphicon glyphicon-calendar"></i> &nbsp;Lihat Kalender Agenda</button></a>
     </div>
