@@ -70,7 +70,7 @@ class Home extends CI_Controller {
         $cek = $this->session->userdata('logged_in');
         if(!empty($cek)){
             $data = $this->app_model->get_all_event();
-            print_r(json_encode($data));
+           print_r(json_encode($data));
         }
     }
 

@@ -72,10 +72,29 @@
                     <label>E-mail</label>
                     <input type="text" name="email" id="email" placeholder="Email..." style="width: 300px;" class="form-control" value="<?php echo $email; ?>">
                 </div>
-                <div class="form-group">
+                <!--<div class="form-group">
                     <label>Foto</label>
                     <input type="file" name='userfile' value="<?php echo $foto; ?>">
                     <p class="help-block">Upload Foto pengguna disini.</p>
+                </div>-->
+
+                <div class="form-group">
+                    <label>Foto Pengguna </label>
+                    <div class="fileinput fileinput-new" data-provides="fileinput">
+                        <div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
+                            <?php if($this->uri->segment(2)=='edit' AND $foto !=='') {?>
+                                <img data-src="holder.js/100%x100%" src="<?php echo base_url();?>uploads/profile/thumbs/<?php echo $foto; ?>" >
+                            <?php } else {?>
+                                <img data-src="holder.js/100%x100%" src="<?php echo base_url();?>asset/admin/jasny-bootstrap/index.svg" >
+                            <?php } ?>
+                        </div>
+                        <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
+                        <div>
+                                <span class="btn btn-default btn-file"><span class="fileinput-new"><i class="fa fa-fw fa-camera" ></i> Browse Foto </span>
+                                    <span class="fileinput-exists">Ubah</span><input type="file" name="userfile"></span>
+                            <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Hapus</a>
+                        </div>
+                    </div>
                 </div>
 
 

@@ -19,6 +19,9 @@ class Kalender extends CI_Controller {
 
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
             $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
+            $d['all_cabang']	        = $this->app_model->get_all_cabang();
+            $d['kode_cab']              = '';
+
 
             $d['content']= $this->load->view('admin/forum/kalender',$d,true);
             $this->load->view('admin/home_adm',$d);
@@ -27,6 +30,35 @@ class Kalender extends CI_Controller {
         }
     }
 
+    public function cabang(){
+        $cek = $this->session->userdata('logged_in');
+        if(!empty($cek)){
+            $d['judul']             ="kalender";
+            $d['judul_halaman']     = "Daftar Kalender Agenda";
+            $d['judul_keterangan']  = "Tampilan Kalender Agenda";
+
+            $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
+            $d['all_cabang']	        = $this->app_model->get_all_cabang();
+
+
+
+            $d['content']= $this->load->view('admin/forum/kalender',$d,true);
+            $this->load->view('admin/home_adm',$d);
+        }else{
+            header('location:'.base_url().'adpus');
+        }
+    }
+
+    public function generate_event_kalender()
+    {
+        $cek = $this->session->userdata('logged_in');
+        if(!empty($cek)){
+            $data['cabang'] = $this->input->post('kode_cab');
+            $data = $this->app_model->get_all_event();
+            print_r(json_encode($data));
+        }
+    }
 
 }
 

@@ -9,13 +9,23 @@
                 <div class="pull-right box-tools">
                     <!-- button with a dropdown -->
                     <div class="btn-group">
+                        <button class="btn btn-danger btn-sm dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cogs"></i></button>
+                        <ul class="dropdown-menu pull-right" role="menu">
+                            <?php foreach($all_cabang as $db): ?>
+                                <li><a href="<?php echo base_url();?>kalender/cabang/<?php echo $db['cabang_id']; ?>"><?php echo $db['cabang_name']; ?></a></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                    <div class="btn-group">
                         <button class="btn btn-warning btn-sm dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bars"></i></button>
                         <ul class="dropdown-menu pull-right" role="menu">
                             <li><a href="<?php echo base_url();?>agenda/tambah">Jadwal Agenda Baru</a></li>
                             <li class="divider"></li>
                             <li><a href="<?php echo base_url();?>kalender">Kalender Besar</a></li>
+                            <li class="divider"></li>
                         </ul>
                     </div>
+
                 </div><!-- /. tools -->
             </div><!-- /.box-header -->
             <div class="box-body no-padding">
@@ -122,7 +132,7 @@
                 day: 'Hari'
             },
             //Random default events
-            events: '<?php echo base_url('home/generate_event'); ?>',
+            events: '<?php echo base_url('kalender/generate_event_kalender'); ?>',
             editable: false,
             eventClick:  function(event, jsEvent, view) {
                 $('#modalTitle').html(event.title);

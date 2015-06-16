@@ -450,6 +450,8 @@ class App_Model extends CI_Model {
     {
         $cabang = $this->session->userdata('cabang_id');
 
+//        $cabang = $this->uri->segment(3);
+
         $this->db->select('a.agenda_code as id, a.agenda_name as title, a.agenda_mulai as start, a.agenda_akhir as end, a.agenda_desc as description, a.agenda_lokasi as location, m.mitra_name as mitra, u.nama_lengkap as nama, u.hp as tlp');
         $this->db->from('tbl_agenda a');
         $this->db->join('tbl_mitra m', 'a.mitra_code=m.mitra_code');
@@ -462,6 +464,8 @@ class App_Model extends CI_Model {
 
         return $query->result_array();
     }
+
+
 
     function get_all_halaman()
     {
@@ -662,6 +666,32 @@ class App_Model extends CI_Model {
         $this->db->select('*');
         $this->db->from('tbl_slide');
         $this->db->order_by('slide_id','DESC');
+
+        $query = $this->db->get();
+
+        return $query->result_array();
+    }
+
+    function get_all_cabang()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_cabang');
+        $this->db->order_by('cabang_id','DESC');
+
+        $query = $this->db->get();
+
+        return $query->result_array();
+    }
+
+    function get_all_cabang_by_id()
+    {
+        $cabang = $this->uri->segment(3);
+
+        $this->db->select('a.agenda_code as id, a.agenda_name as title, a.agenda_mulai as start, a.agenda_akhir as end, a.agenda_desc as description, a.agenda_lokasi as location, m.mitra_name as mitra, u.nama_lengkap as nama, u.hp as tlp');
+        $this->db->from('tbl_agenda a');
+        $this->db->join('tbl_mitra m', 'a.mitra_code=m.mitra_code');
+        $this->db->join('tbl_admin u', 'a.username=u.username');
+        $this->db->where('a.cabang_id',$cabang);
 
         $query = $this->db->get();
 
