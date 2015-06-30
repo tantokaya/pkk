@@ -68,13 +68,11 @@ class Pengguna extends CI_Controller {
             $d['email']         = '';
             $d['foto']          = '';
 
-            if($lvl == '02' ){
-                $text = "SELECT * FROM tbl_level WHERE id_level != 01";
-                $d['l_level'] = $this->app_model->manualQuery($text);
-            } else{
-                $text = "SELECT * FROM tbl_level";
-                $d['l_level'] = $this->app_model->manualQuery($text);
-            }
+            $text = "SELECT tbl_level.id_level,tbl_level.`level` FROM tbl_level";
+            $d['l_level'] = $this->app_model->manualQuery($text);
+
+            $text = "SELECT * from tbl_level WHERE id_level = 03";
+            $d['l_level_admin']=$this->app_model->manualQuery($text);
 
             if($lvl != '01') {
             $text = "SELECT * FROM tbl_cabang WHERE cabang_id ='$cabang'";
@@ -119,7 +117,7 @@ class Pengguna extends CI_Controller {
                 $d['nama_lengkap']	= '';
                 $d['pwd']	        = '';
                 $d['level']			= '';
-                $d['cabang']			= '';
+                $d['cabang']		= '';
                 $d['hp']            = '';
                 $d['email']         = '';
                 $d['foto']          = '';
@@ -127,6 +125,21 @@ class Pengguna extends CI_Controller {
 
             $text = "SELECT tbl_level.id_level,tbl_level.`level` FROM tbl_level";
             $d['l_level'] = $this->app_model->manualQuery($text);
+
+            if($pengguna == $id) {
+                $text = "SELECT * FROM tbl_level WHERE id_level=02";
+                $d['l_level_admin']=$this->app_model->manualQuery($text);
+
+                $text_user = "SELECT * FROM tbl_level WHERE id_level=03";
+                $d['l_level_user']=$this->app_model->manualQuery($text_user);
+
+            } else {
+                $text = "SELECT * FROM tbl_level WHERE id_level=02";
+                $d['l_level_admin']=$this->app_model->manualQuery($text);
+
+                $text_user = "SELECT * FROM tbl_level WHERE id_level=03";
+                $d['l_level_user']=$this->app_model->manualQuery($text_user);
+            }
 
             $text = "SELECT * FROM tbl_cabang";
             $d['l_cabang'] = $this->app_model->manualQuery($text);
