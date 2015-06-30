@@ -110,6 +110,13 @@
 <!-- Page specific script -->
 <script type="text/javascript">
     $(function() {
+        <?php 
+            if($this->uri->segment(2) == "cabang")
+                $url = base_url('kalender/generate_event_kalender_by_cabang/' . $this->uri->segment(3));
+            else
+                $url = base_url('kalender/generate_event_kalender');
+        ?>
+                
         /* initialize the calendar
          -----------------------------------------------------------------*/
         //Date for the calendar events (dummy data)
@@ -132,7 +139,7 @@
                 day: 'Hari'
             },
             //Random default events
-            events: '<?php echo base_url('kalender/generate_event_kalender'); ?>',
+            events: '<?php echo $url; ?>',
             editable: false,
             eventClick:  function(event, jsEvent, view) {
                 $('#modalTitle').html(event.title);

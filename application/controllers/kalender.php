@@ -21,6 +21,8 @@ class Kalender extends CI_Controller {
             $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
             $d['all_cabang']	        = $this->app_model->get_all_cabang();
             $d['kode_cab']              = '';
+            
+          
 
 
             $d['content']= $this->load->view('admin/forum/kalender',$d,true);
@@ -55,7 +57,18 @@ class Kalender extends CI_Controller {
         $cek = $this->session->userdata('logged_in');
         if(!empty($cek)){
             $data['cabang'] = $this->input->post('kode_cab');
+            
             $data = $this->app_model->get_all_event();
+            print_r(json_encode($data));
+        }
+    }
+    
+    public function generate_event_kalender_by_cabang()
+    {
+        $cek = $this->session->userdata('logged_in');
+        if(!empty($cek)){
+            $data = $this->app_model->get_all_event_by_cabang($this->uri->segment(3));
+            
             print_r(json_encode($data));
         }
     }
