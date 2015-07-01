@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="puskomkreatif" uploadOnCheckin="28505679-963d-4b7b-9b32-6b38f752cdfd">
+  <component name="PublishConfigData" autoUpload="Always" serverName="Puskomkreatif" uploadOnCheckin="28505679-963d-4b7b-9b32-6b38f752cdfd">
     <serverData>
-      <paths name="puskomkreatif">
+      <paths name="Puskomkreatif">
         <serverdata>
           <mappings>
             <mapping deploy="/" local="$PROJECT_DIR$" web="/" />

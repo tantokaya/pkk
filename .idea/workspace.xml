@@ -2,14 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d87b0b32-4ae9-46f4-b6a9-0917ec70bdff" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\xampp\htdocs\puskomkreatif\captcha\1434116060.3423.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\puskomkreatif\captcha\1434116066.1408.jpg" afterPath="" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\puskomkreatif\uploads\profile\heck.PNG" afterPath="$PROJECT_DIR$/uploads/profile/thumbs/heck.PNG" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/app_model.php" afterPath="$PROJECT_DIR$/application/models/app_model.php" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\puskomkreatif\uploads\slide\pelatihan-microsoft-office-bagi-guru.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\puskomkreatif\uploads\slide\pelatihan-pemasaran-produk-ukm-melalui-internet.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\puskomkreatif\uploads\slide\ppi-payakumbuh-dilengkapi-puskom-kreatif-bantuan-kemenkominfo.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\puskomkreatif\uploads\slide\thumbs\pelatihan-microsoft-office-bagi-guru.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\puskomkreatif\uploads\slide\thumbs\pelatihan-pemasaran-produk-ukm-melalui-internet.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\puskomkreatif\uploads\slide\thumbs\ppi-payakumbuh-dilengkapi-puskom-kreatif-bantuan-kemenkominfo.jpg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/database.php" afterPath="$PROJECT_DIR$/application/config/database.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/pengguna/form.php" afterPath="$PROJECT_DIR$/application/views/admin/pengguna/form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/home.php" afterPath="$PROJECT_DIR$/application/controllers/home.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/kalender.php" afterPath="$PROJECT_DIR$/application/controllers/kalender.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/forum/kalender.php" afterPath="$PROJECT_DIR$/application/views/admin/forum/kalender.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/pengguna.php" afterPath="$PROJECT_DIR$/application/controllers/pengguna.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/slide.php" afterPath="$PROJECT_DIR$/application/controllers/slide.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/pengguna/view.php" afterPath="$PROJECT_DIR$/application/views/admin/pengguna/view.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/slide/view.php" afterPath="$PROJECT_DIR$/application/views/admin/slide/view.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="pkk.iws" />
@@ -25,7 +30,9 @@
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="DaemonCodeAnalyzer">
-    <disable_hints />
+    <disable_hints>
+      <file url="file://$PROJECT_DIR$/application/controllers/pengguna.php" />
+    </disable_hints>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -33,85 +40,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="app_model.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/models/app_model.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="451" column="0" selection-start="12677" selection-end="12677" vertical-scroll-proportion="0.16545455" vertical-offset="7576" max-vertical-offset="18105">
-              <folding>
-                <marker date="1434129285185" expanded="true" signature="1126:1170" placeholder="SELECT * FRO..tbl_level..." />
-                <marker date="1434129285185" expanded="true" signature="1406:1452" placeholder="SELECT * FRO..tbl_cabang..." />
-                <marker date="1434129285185" expanded="true" signature="1754:1798" placeholder="SELECT * FRO..tbl_admin..." />
-                <marker date="1434129285185" expanded="true" signature="2174:2218" placeholder="SELECT * FRO..tbl_admin..." />
-                <marker date="1434129285185" expanded="true" signature="2587:2631" placeholder="SELECT * FRO..tbl_admin..." />
-                <marker date="1434129285185" expanded="true" signature="2921:2965" placeholder="SELECT * FRO..tbl_admin..." />
-                <marker date="1434129285185" expanded="true" signature="5997:6042" placeholder="SELECT max(a..." />
-                <marker date="1434129285185" expanded="true" signature="6522:6565" placeholder="SELECT max(t..." />
-                <marker date="1434129285185" expanded="true" signature="9889:9934" placeholder="DELETE FROM ..." />
-                <marker date="1434129285185" expanded="true" signature="10094:10146" placeholder="DELETE FROM ..." />
-                <marker date="1434129285185" expanded="true" signature="10307:10360" placeholder="DELETE FROM ..." />
-                <marker date="1434129285185" expanded="true" signature="20821:20872" placeholder="SELECT * FRO..tbl_post..." />
-                <marker date="1434129285185" expanded="true" signature="21275:21326" placeholder="SELECT * FRO..tbl_post..." />
-                <marker date="1434129285185" expanded="true" signature="21758:21809" placeholder="SELECT * FRO..tbl_post..." />
-                <marker date="1434129285185" expanded="true" signature="22239:22290" placeholder="SELECT * FRO..tbl_post..." />
-                <marker date="1434129285185" expanded="true" signature="22692:22743" placeholder="SELECT * FRO..tbl_post..." />
-                <marker date="1434129285185" expanded="true" signature="23147:23198" placeholder="SELECT * FRO..tbl_post..." />
-                <marker date="1434129285185" expanded="true" signature="23608:23659" placeholder="SELECT * FRO..tbl_post..." />
-                <marker date="1434129285185" expanded="true" signature="24066:24117" placeholder="SELECT * FRO..tbl_post..." />
-                <marker date="1434129285185" expanded="true" signature="24443:24507" placeholder="SELECT COUNT..tbl_post..." />
-                <marker date="1434129285185" expanded="true" signature="24829:24898" placeholder="SELECT COUNT..tbl_komentar..." />
-                <marker date="1434129285185" expanded="true" signature="25227:25271" placeholder="SELECT COUNT..tbl_post..." />
-                <marker date="1434129285185" expanded="true" signature="25597:25665" placeholder="SELECT COUNT..tbl_admin..." />
-                <marker date="1434129285185" expanded="true" signature="27144:27189" placeholder="SELECT * FRO..tbl_topik..." />
-                <marker date="1434129285185" expanded="true" signature="27313:27358" placeholder="SELECT * FRO..tbl_topik..." />
-                <marker date="1434129285185" expanded="true" signature="27477:27522" placeholder="SELECT * FRO..tbl_topik..." />
-                <marker date="1434129285185" expanded="true" signature="27641:27686" placeholder="SELECT * FRO..tbl_topik..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="post.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/post.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="51" selection-start="2046" selection-end="2158" vertical-scroll-proportion="3.9230769" vertical-offset="1139" max-vertical-offset="5780">
-              <folding>
-                <marker date="1434116439348" expanded="true" signature="1736:1784" placeholder="SELECT * FRO..tbl_kategori..." />
-                <marker date="1434116439348" expanded="true" signature="5834:5895" placeholder="UPDATE tbl_t..." />
-                <marker date="1434116439348" expanded="true" signature="6373:6415" placeholder="SELECT * FRO..tbl_post..." />
-                <marker date="1434116439348" expanded="true" signature="6598:6640" placeholder="SELECT * FRO..tbl_post..." />
-                <marker date="1434116439348" expanded="true" signature="7650:7698" placeholder="SELECT * FRO..tbl_kategori..." />
-                <marker date="1434116439348" expanded="true" signature="8326:8389" placeholder="SELECT post_..tbl_post..." />
-                <marker date="1434116439348" expanded="true" signature="8642:8682" placeholder="DELETE FROM ..." />
-                <marker date="1434116439348" expanded="true" signature="8941:8962" placeholder="SELECT * FRO..tbl_tag..." />
-                <marker date="1434116439348" expanded="true" signature="9352:9416" placeholder="UPDATE tbl_p..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="berita.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/berita.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="28" selection-start="2419" selection-end="2419" vertical-scroll-proportion="-6.5384617" vertical-offset="612" max-vertical-offset="4369">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="form.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="form.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/admin/pengguna/form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="119" selection-start="5354" selection-end="5360" vertical-scroll-proportion="-0.0" vertical-offset="1445" max-vertical-offset="2108">
+            <state line="37" column="41" selection-start="2342" selection-end="2342" vertical-scroll-proportion="0.42175573" vertical-offset="408" max-vertical-offset="2907">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="kalender.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/kalender.php">
+      <file leaf-file-name="slide.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/slide.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="5" selection-start="1908" selection-end="1908" vertical-scroll-proportion="-11.192307" vertical-offset="610" max-vertical-offset="1207">
-              <folding />
+            <state line="196" column="62" selection-start="6699" selection-end="7102" vertical-scroll-proportion="-10.461538" vertical-offset="3060" max-vertical-offset="3621">
+              <folding>
+                <marker date="1435718128433" expanded="true" signature="5619:5663" placeholder="SELECT * FRO..tbl_slide..." />
+                <marker date="1435718128433" expanded="true" signature="6708:6774" placeholder="SELECT slide..tbl_slide..." />
+                <marker date="1435718128433" expanded="true" signature="7147:7189" placeholder="DELETE FROM ..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -119,22 +65,16 @@
       <file leaf-file-name="home.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="5" selection-start="2977" selection-end="3206" vertical-scroll-proportion="-11.115385" vertical-offset="969" max-vertical-offset="1717">
-              <folding>
-                <marker date="1434126036047" expanded="true" signature="2200:2248" placeholder="SELECT * FRO..tbl_kategori..." />
-                <marker date="1434126036047" expanded="true" signature="2685:2725" placeholder="SELECT vote{..tbl_polling..." />
-                <marker date="1434126036047" expanded="true" signature="3522:3574" placeholder="UPDATE tbl_p..." />
-                <marker date="1434126036047" expanded="false" signature="3676:3688" placeholder="..." />
-                <marker date="1434126036047" expanded="false" signature="3843:3854" placeholder="..." />
-              </folding>
+            <state line="47" column="84" selection-start="2408" selection-end="2484" vertical-scroll-proportion="-20.923077" vertical-offset="255" max-vertical-offset="1717">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="kalender.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/admin/forum/kalender.php">
+      <file leaf-file-name="app_model.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/app_model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="2771">
+            <state line="853" column="0" selection-start="24391" selection-end="24775" vertical-scroll-proportion="-0.0" vertical-offset="14501" max-vertical-offset="18309">
               <folding />
             </state>
           </provider>
@@ -153,9 +93,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/application/controllers/slide.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/slide/form.php" />
-        <option value="$PROJECT_DIR$/application/controllers/kategori.php" />
         <option value="$PROJECT_DIR$/application/controllers/widget.php" />
         <option value="$PROJECT_DIR$/asset/css/3slider.css" />
         <option value="$PROJECT_DIR$/application/controllers/pages.php" />
@@ -170,7 +107,6 @@
         <option value="$PROJECT_DIR$/application/views/admin/cabang/view.php" />
         <option value="$PROJECT_DIR$/application/views/admin/cabang/form.php" />
         <option value="$PROJECT_DIR$/application/controllers/cabang.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/pengguna/view.php" />
         <option value="$PROJECT_DIR$/application/views/admin/sidebar_superadm.php" />
         <option value="$PROJECT_DIR$/application/views/admin/sidebar_adm.php" />
         <option value="$PROJECT_DIR$/application/controllers/sub_halaman.php" />
@@ -182,7 +118,6 @@
         <option value="$PROJECT_DIR$/application/views/admin/sidebar_user.php" />
         <option value="$PROJECT_DIR$/application/views/admin/agenda/form.php" />
         <option value="$PROJECT_DIR$/application/controllers/agenda.php" />
-        <option value="$PROJECT_DIR$/application/controllers/pengguna.php" />
         <option value="$PROJECT_DIR$/application/views/admin/topik/form.php" />
         <option value="$PROJECT_DIR$/application/views/admin/topik/view.php" />
         <option value="$PROJECT_DIR$/application/controllers/topik.php" />
@@ -199,11 +134,16 @@
         <option value="$PROJECT_DIR$/application/views/admin/post/view.php" />
         <option value="$PROJECT_DIR$/application/controllers/news.php" />
         <option value="$PROJECT_DIR$/application/views/berita.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/pengguna/form.php" />
         <option value="$PROJECT_DIR$/application/controllers/home.php" />
         <option value="$PROJECT_DIR$/application/controllers/kalender.php" />
         <option value="$PROJECT_DIR$/application/views/admin/forum/kalender.php" />
         <option value="$PROJECT_DIR$/application/models/app_model.php" />
+        <option value="$PROJECT_DIR$/application/config/database.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/slide/view.php" />
+        <option value="$PROJECT_DIR$/application/controllers/slide.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/pengguna/form.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/pengguna/view.php" />
+        <option value="$PROJECT_DIR$/application/controllers/pengguna.php" />
       </list>
     </option>
   </component>
@@ -305,6 +245,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="slide" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pkk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="puskomkreatif" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="uploads" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="profile" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -346,28 +304,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="post" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pkk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="puskomkreatif" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uploads" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="post" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="thumbs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1011,42 +947,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pkk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="puskomkreatif" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="errors" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pkk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="puskomkreatif" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1056,7 +956,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="options.lastSelected" value="preferences.pluginManager" />
+    <property name="options.lastSelected" value="appearance" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -1067,7 +967,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../wilayah" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tekno" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -1241,17 +1141,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32520324" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3248731" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329429" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20015106" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24320242" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32861635" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1308,54 +1208,9 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/controllers/pages.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="20" selection-start="472" selection-end="472" vertical-scroll-proportion="-0.3548387" vertical-offset="459" max-vertical-offset="1683" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/sub_halaman.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="114" column="32" selection-start="4189" selection-end="4189" vertical-scroll-proportion="-39.884617" vertical-offset="901" max-vertical-offset="2533" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/sub_halaman/form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="76" selection-start="2798" selection-end="2798" vertical-scroll-proportion="0.32258064" vertical-offset="612" max-vertical-offset="1649" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/post_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="37" selection-start="1245" selection-end="1261" vertical-scroll-proportion="0.46532845" vertical-offset="459" max-vertical-offset="5270" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/halaman.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="81" selection-start="1212" selection-end="1212" vertical-scroll-proportion="0.43430656" vertical-offset="204" max-vertical-offset="1105" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/slide.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="5" selection-start="296" selection-end="405" vertical-scroll-proportion="-2.2424242" vertical-offset="1479" max-vertical-offset="3570" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/home_adm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/widget.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="1377" max-vertical-offset="3587" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/widget_model.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1254" column="40" selection-start="40465" selection-end="40465" vertical-scroll-proportion="0.0" vertical-offset="21042" max-vertical-offset="26095" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/header_adm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="55" selection-start="640" selection-end="640" vertical-scroll-proportion="-1.9886578" vertical-offset="1307" max-vertical-offset="1836" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/sidebar_adm.php">
@@ -1368,29 +1223,14 @@
         <state line="14" column="14" selection-start="370" selection-end="370" vertical-scroll-proportion="-1.7561437" vertical-offset="1167" max-vertical-offset="2550" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/pengguna.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="50" selection-start="3086" selection-end="3086" vertical-scroll-proportion="-11.230769" vertical-offset="1102" max-vertical-offset="4964" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.024668" vertical-offset="540" max-vertical-offset="3587" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="566" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/sidebar_user.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="53" column="16" selection-start="2810" selection-end="2810" vertical-scroll-proportion="-9.153846" vertical-offset="663" max-vertical-offset="1292" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/pengguna/view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="32" selection-start="1638" selection-end="1898" vertical-scroll-proportion="0.6277372" vertical-offset="251" max-vertical-offset="1615" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/topik/form.php">
@@ -1418,11 +1258,6 @@
         <state line="15" column="69" selection-start="511" selection-end="521" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1207" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/forum.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="84" selection-start="906" selection-end="930" vertical-scroll-proportion="0.24156305" vertical-offset="255" max-vertical-offset="1887" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/asset/js/s3Slider.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.2325976" vertical-offset="1315" max-vertical-offset="1904" />
@@ -1448,24 +1283,9 @@
         <state line="24" column="11" selection-start="1293" selection-end="1293" vertical-scroll-proportion="-15.692307" vertical-offset="0" max-vertical-offset="510" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/menu-navigation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="31" selection-start="31" selection-end="31" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="442" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="17" selection-start="2316" selection-end="2316" vertical-scroll-proportion="0.9890909" vertical-offset="408" max-vertical-offset="1326" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/asset/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="288" column="15" selection-start="5149" selection-end="5149" vertical-scroll-proportion="0.0" vertical-offset="4637" max-vertical-offset="10489" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/slide/view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="18" selection-start="661" selection-end="746" vertical-scroll-proportion="-7.8461537" vertical-offset="102" max-vertical-offset="1394" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/asset/js/twd_slideshow.js">
@@ -1493,11 +1313,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="589" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/agenda.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="171" column="74" selection-start="6064" selection-end="6081" vertical-scroll-proportion="-4.6538463" vertical-offset="2786" max-vertical-offset="5083" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/asset/css/slide-style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="1" selection-start="1" selection-end="1" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1734" />
@@ -1508,116 +1323,202 @@
         <state line="52" column="101" selection-start="1869" selection-end="1869" vertical-scroll-proportion="-18.307692" vertical-offset="408" max-vertical-offset="1496" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/post/view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="56" selection-start="654" selection-end="654" vertical-scroll-proportion="0.21715328" vertical-offset="102" max-vertical-offset="1496" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/content.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="108" selection-start="718" selection-end="796" vertical-scroll-proportion="-11.769231" vertical-offset="51" max-vertical-offset="6698" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/news.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="27" selection-start="1550" selection-end="1550" vertical-scroll-proportion="0.5151515" vertical-offset="255" max-vertical-offset="2414" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/post/form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="26" selection-start="2197" selection-end="3634" vertical-scroll-proportion="0.6514599" vertical-offset="612" max-vertical-offset="2550" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/berita.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="28" selection-start="2419" selection-end="2419" vertical-scroll-proportion="-6.5384617" vertical-offset="612" max-vertical-offset="4369">
-          <folding />
-        </state>
+        <state line="46" column="28" selection-start="2419" selection-end="2419" vertical-scroll-proportion="0.3090909" vertical-offset="612" max-vertical-offset="4369" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/kalender.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="5" selection-start="1908" selection-end="1908" vertical-scroll-proportion="0.5168739" vertical-offset="610" max-vertical-offset="1207" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/forum/kalender.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="2771" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/post/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="56" selection-start="654" selection-end="654" vertical-scroll-proportion="-0.25708884" vertical-offset="357" max-vertical-offset="1496" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/post/form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="101" column="75" selection-start="6043" selection-end="6070" vertical-scroll-proportion="0.0" vertical-offset="1717" max-vertical-offset="2550" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/post.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="51" selection-start="2046" selection-end="2158" vertical-scroll-proportion="3.9230769" vertical-offset="1139" max-vertical-offset="5780">
+        <state line="61" column="51" selection-start="2046" selection-end="2158" vertical-scroll-proportion="-3.8046181" vertical-offset="3179" max-vertical-offset="5780" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/content.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="108" selection-start="718" selection-end="796" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="6698" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="17" selection-start="2316" selection-end="2316" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1326" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/menu-navigation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="5" selection-start="0" selection-end="480" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="442" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/pages.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="20" selection-start="472" selection-end="472" vertical-scroll-proportion="0.0" vertical-offset="1071" max-vertical-offset="1683" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="568" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.7246892" vertical-offset="408" max-vertical-offset="6375" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/post_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="37" selection-start="1245" selection-end="1261" vertical-scroll-proportion="0.33333334" vertical-offset="539" max-vertical-offset="5270" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/app_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="853" column="0" selection-start="24391" selection-end="24775" vertical-scroll-proportion="0.0" vertical-offset="14080" max-vertical-offset="18105">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="2" selection-start="78" selection-end="78" vertical-scroll-proportion="0.031657357" vertical-offset="0" max-vertical-offset="537">
           <folding>
-            <marker date="1434116439348" expanded="true" signature="1736:1784" placeholder="SELECT * FRO..tbl_kategori..." />
-            <marker date="1434116439348" expanded="true" signature="5834:5895" placeholder="UPDATE tbl_t..." />
-            <marker date="1434116439348" expanded="true" signature="6373:6415" placeholder="SELECT * FRO..tbl_post..." />
-            <marker date="1434116439348" expanded="true" signature="6598:6640" placeholder="SELECT * FRO..tbl_post..." />
-            <marker date="1434116439348" expanded="true" signature="7650:7698" placeholder="SELECT * FRO..tbl_kategori..." />
-            <marker date="1434116439348" expanded="true" signature="8326:8389" placeholder="SELECT post_..tbl_post..." />
-            <marker date="1434116439348" expanded="true" signature="8642:8682" placeholder="DELETE FROM ..." />
-            <marker date="1434116439348" expanded="true" signature="8941:8962" placeholder="SELECT * FRO..tbl_tag..." />
-            <marker date="1434116439348" expanded="true" signature="9352:9416" placeholder="UPDATE tbl_p..." />
+            <element signature="e#76#2536#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/header_adm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="105" selection-start="2346" selection-end="2397" vertical-scroll-proportion="0.0" vertical-offset="799" max-vertical-offset="1836">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="5" selection-start="2977" selection-end="3206" vertical-scroll-proportion="-11.115385" vertical-offset="969" max-vertical-offset="1717">
+        <state line="47" column="84" selection-start="2408" selection-end="2484" vertical-scroll-proportion="-20.923077" vertical-offset="255" max-vertical-offset="1717">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/slide/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="107" selection-start="950" selection-end="950" vertical-scroll-proportion="0.48664123" vertical-offset="102" max-vertical-offset="1394">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/pengguna/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="61" selection-start="1671" selection-end="1671" vertical-scroll-proportion="-11.923077" vertical-offset="251" max-vertical-offset="1615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/slide.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="196" column="62" selection-start="6699" selection-end="7102" vertical-scroll-proportion="-10.461538" vertical-offset="3060" max-vertical-offset="3621">
           <folding>
-            <marker date="1434126036047" expanded="true" signature="2200:2248" placeholder="SELECT * FRO..tbl_kategori..." />
-            <marker date="1434126036047" expanded="true" signature="2685:2725" placeholder="SELECT vote{..tbl_polling..." />
-            <marker date="1434126036047" expanded="true" signature="3522:3574" placeholder="UPDATE tbl_p..." />
-            <marker date="1434126036047" expanded="false" signature="3676:3688" placeholder="..." />
-            <marker date="1434126036047" expanded="false" signature="3843:3854" placeholder="..." />
+            <marker date="1435718128433" expanded="true" signature="5619:5663" placeholder="SELECT * FRO..tbl_slide..." />
+            <marker date="1435718128433" expanded="true" signature="6708:6774" placeholder="SELECT slide..tbl_slide..." />
+            <marker date="1435718128433" expanded="true" signature="7147:7189" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/pengguna.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="298" column="46" selection-start="11587" selection-end="11587" vertical-scroll-proportion="0.8053435" vertical-offset="4644" max-vertical-offset="5168">
+          <folding>
+            <marker date="1435719666507" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_admin..." />
+            <marker date="1435719666507" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_admin..." />
+            <marker date="1435719666507" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_admin..." />
+            <marker date="1435719666507" expanded="true" signature="-1:-1" placeholder="SELECT tbl_l..." />
+            <marker date="1435719666507" expanded="true" signature="-1:-1" placeholder="SELECT * fro..tbl_level..." />
+            <marker date="1435719666507" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_cabang..." />
+            <marker date="1435719666507" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_cabang..." />
+            <marker date="1435719666507" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_admin..." />
+            <marker date="1435719666507" expanded="true" signature="-1:-1" placeholder="SELECT tbl_l..." />
+            <marker date="1435719666507" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_level..." />
+            <marker date="1435719666507" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_level..." />
+            <marker date="1435719666507" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_level..." />
+            <marker date="1435719666507" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_level..." />
+            <marker date="1435719666507" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_cabang..." />
+            <marker date="1435719666507" expanded="true" signature="-1:-1" placeholder="UPDATE tbl_a..." />
+            <marker date="1435719666507" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_admin..." />
+            <marker date="1435719666507" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/agenda.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="171" column="74" selection-start="6064" selection-end="6081" vertical-scroll-proportion="-1.009311" vertical-offset="3449" max-vertical-offset="5083">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/forum.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="84" selection-start="906" selection-end="930" vertical-scroll-proportion="-1.2160149" vertical-offset="1044" max-vertical-offset="1887">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/baner.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.5195531" vertical-offset="816" max-vertical-offset="2856">
+          <folding>
+            <marker date="1435673400540" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_baner..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/widget.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-5.6797023" vertical-offset="3050" max-vertical-offset="3587">
+          <folding>
+            <marker date="1435673400616" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_widget..." />
+            <marker date="1435673400616" expanded="true" signature="-1:-1" placeholder="SELECT vote{..tbl_polling..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/panel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-4.603352" vertical-offset="2472" max-vertical-offset="3009">
+          <folding>
+            <marker date="1435673400596" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tbl_panel..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/pengguna/form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="119" selection-start="5354" selection-end="5360" vertical-scroll-proportion="-0.0" vertical-offset="1445" max-vertical-offset="2108">
+        <state line="37" column="41" selection-start="2342" selection-end="2342" vertical-scroll-proportion="0.42175573" vertical-offset="408" max-vertical-offset="2907">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/kalender.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="5" selection-start="1908" selection-end="1908" vertical-scroll-proportion="-11.192307" vertical-offset="610" max-vertical-offset="1207">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/forum/kalender.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="2771">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/app_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="451" column="0" selection-start="12677" selection-end="12677" vertical-scroll-proportion="0.16545455" vertical-offset="7576" max-vertical-offset="18105">
-          <folding>
-            <marker date="1434129285185" expanded="true" signature="1126:1170" placeholder="SELECT * FRO..tbl_level..." />
-            <marker date="1434129285185" expanded="true" signature="1406:1452" placeholder="SELECT * FRO..tbl_cabang..." />
-            <marker date="1434129285185" expanded="true" signature="1754:1798" placeholder="SELECT * FRO..tbl_admin..." />
-            <marker date="1434129285185" expanded="true" signature="2174:2218" placeholder="SELECT * FRO..tbl_admin..." />
-            <marker date="1434129285185" expanded="true" signature="2587:2631" placeholder="SELECT * FRO..tbl_admin..." />
-            <marker date="1434129285185" expanded="true" signature="2921:2965" placeholder="SELECT * FRO..tbl_admin..." />
-            <marker date="1434129285185" expanded="true" signature="5997:6042" placeholder="SELECT max(a..." />
-            <marker date="1434129285185" expanded="true" signature="6522:6565" placeholder="SELECT max(t..." />
-            <marker date="1434129285185" expanded="true" signature="9889:9934" placeholder="DELETE FROM ..." />
-            <marker date="1434129285185" expanded="true" signature="10094:10146" placeholder="DELETE FROM ..." />
-            <marker date="1434129285185" expanded="true" signature="10307:10360" placeholder="DELETE FROM ..." />
-            <marker date="1434129285185" expanded="true" signature="20821:20872" placeholder="SELECT * FRO..tbl_post..." />
-            <marker date="1434129285185" expanded="true" signature="21275:21326" placeholder="SELECT * FRO..tbl_post..." />
-            <marker date="1434129285185" expanded="true" signature="21758:21809" placeholder="SELECT * FRO..tbl_post..." />
-            <marker date="1434129285185" expanded="true" signature="22239:22290" placeholder="SELECT * FRO..tbl_post..." />
-            <marker date="1434129285185" expanded="true" signature="22692:22743" placeholder="SELECT * FRO..tbl_post..." />
-            <marker date="1434129285185" expanded="true" signature="23147:23198" placeholder="SELECT * FRO..tbl_post..." />
-            <marker date="1434129285185" expanded="true" signature="23608:23659" placeholder="SELECT * FRO..tbl_post..." />
-            <marker date="1434129285185" expanded="true" signature="24066:24117" placeholder="SELECT * FRO..tbl_post..." />
-            <marker date="1434129285185" expanded="true" signature="24443:24507" placeholder="SELECT COUNT..tbl_post..." />
-            <marker date="1434129285185" expanded="true" signature="24829:24898" placeholder="SELECT COUNT..tbl_komentar..." />
-            <marker date="1434129285185" expanded="true" signature="25227:25271" placeholder="SELECT COUNT..tbl_post..." />
-            <marker date="1434129285185" expanded="true" signature="25597:25665" placeholder="SELECT COUNT..tbl_admin..." />
-            <marker date="1434129285185" expanded="true" signature="27144:27189" placeholder="SELECT * FRO..tbl_topik..." />
-            <marker date="1434129285185" expanded="true" signature="27313:27358" placeholder="SELECT * FRO..tbl_topik..." />
-            <marker date="1434129285185" expanded="true" signature="27477:27522" placeholder="SELECT * FRO..tbl_topik..." />
-            <marker date="1434129285185" expanded="true" signature="27641:27686" placeholder="SELECT * FRO..tbl_topik..." />
-          </folding>
         </state>
       </provider>
     </entry>

@@ -1,3 +1,7 @@
+<?php
+$lvl = $this->session->userdata('id_level');
+
+?>
 <div class="row">
     <!-- left column -->
     <div class="col-md-8">
@@ -14,7 +18,7 @@
                     <?php if($this->uri->segment(2)=='edit') { ?>
                     <input type="text" name="username" id="username" placeholder="Username.." style="width: 190px;" class="form-control" value="<?php echo $username; ?>" readonly>
                     <?php } else { ?>
-                    <input type="text" name="username" id="username" placeholder="Username.." style="width: 190px;" class="form-control" value="<?php echo set_value('username'); ?>" >
+                    <input type="text" name="username" id="username" placeholder="Username.." style="width: 190px;" class="form-control" value="<?php echo set_value('username'); ?>" autofocus="true">
                     <?php } ?><?php echo form_error('username','<div class="form-group has-error"><label class="control-label" for="inputError">','</label></div>'); ?>
                 </div>
                 <div class="form-group">
@@ -22,25 +26,74 @@
                     <input type="password" name="pwd" id="pwd" placeholder="Password..." style="width: 190px;" class="form-control" value="<?php echo $pwd; ?>">
 <!--                    --><?php //echo form_error('pwd','<div class="form-group has-error"><label class="control-label" for="inputError">','</label></div>'); ?>
                 </div>
-                <div class="form-group">
-                    <label>Level</label>
-                    <div class="input-medium"><select name="level" id="level" class="form-control" style="width: 190px;">
-                            <?php
-                            if(empty($level)){
-                                ?>
-                                <option value="">-PILIH-</option>
-                            <?php
-                            }
-                            foreach($l_level->result() as $t){
-                                if($level==$t->id_level){
-                                    ?>
-                                    <option value="<?php echo $t->id_level;?>" selected="selected"><?php echo $t->level;?></option>
-                                <?php }else{ ?>
-                                    <option value="<?php echo $t->id_level;?>"><?php echo $t->level;?></option>
-                                <?php }
-                            } ?>
-                        </select></div>
-                </div>
+                <?php if($lvl == '01'){ ?>
+                    <div class="form-group">
+                        <label for="textfield" class="control-label">Level</label>
+                        <div class="controls">
+                            <div class="input-medium"><select name="level" id="level" class="form-control" style="width: 190px">
+                                    <?php
+                                    if(empty($level)){
+                                        ?>
+                                        <option value="">-PILIH-</option>
+                                    <?php
+                                    }
+                                    foreach($l_level->result() as $t){
+                                        if($level==$t->id_level){
+                                            ?>
+                                            <option value="<?php echo $t->id_level;?>" selected="selected"><?php echo $t->level;?></option>
+                                        <?php }else{ ?>
+                                            <option value="<?php echo $t->id_level;?>"><?php echo $t->level;?></option>
+                                        <?php }
+                                    } ?>
+                                </select></div>
+                        </div>
+                    </div>
+                <?php } elseif ($lvl =='02') { ?>
+                    <div class="form-group">
+                        <label for="textfield" class="control-label">Level</label>
+                        <div class="controls">
+                            <div class="input-medium"><select name="level" id="level" class="form-control" style="width:190px;">
+                                    <?php
+                                    if(empty($level)){
+                                        ?>
+                                        <option value="">-PILIH-</option>
+                                    <?php
+                                    }
+                                    foreach($l_level_admin->result() as $t){
+                                        if($level==$t->id_level){
+                                            ?>
+                                            <option value="<?php echo $t->id_level;?>" selected="selected"><?php echo $t->level;?></option>
+                                        <?php }else{ ?>
+                                            <option value="<?php echo $t->id_level;?>"><?php echo $t->level;?></option>
+                                        <?php }
+                                    } ?>
+                                </select></div>
+                        </div>
+                    </div>
+                <?php } elseif ($lvl =='03') { ?>
+                    <div class="form-group">
+                        <label for="textfield" class="control-label">Level</label>
+                        <div class="controls">
+                            <div class="input-medium"><select name="level" id="level" class="form-control" style="width: 190px;">
+                                    <?php
+                                    if(empty($level)){
+                                        ?>
+                                        <option value="">-PILIH-</option>
+                                    <?php
+                                    }
+                                    foreach($l_level_user->result() as $t){
+                                        if($level==$t->id_level){
+                                            ?>
+                                            <option value="<?php echo $t->id_level;?>" selected="selected"><?php echo $t->level;?></option>
+                                        <?php }else{ ?>
+                                            <option value="<?php echo $t->id_level;?>"><?php echo $t->level;?></option>
+                                        <?php }
+                                    } ?>
+                                </select></div>
+                        </div>
+                    </div>
+                <?php } ?>
+
                 <div class="form-group">
                     <label>Cabang Puskomkreatif</label>
                     <div class="input-medium"><select name="cabang" id="cabang" class="form-control" style="width: 190px;" required="true">
@@ -72,12 +125,6 @@
                     <label>E-mail</label>
                     <input type="text" name="email" id="email" placeholder="Email..." style="width: 300px;" class="form-control" value="<?php echo $email; ?>">
                 </div>
-                <!--<div class="form-group">
-                    <label>Foto</label>
-                    <input type="file" name='userfile' value="<?php echo $foto; ?>">
-                    <p class="help-block">Upload Foto pengguna disini.</p>
-                </div>-->
-
                 <div class="form-group">
                     <label>Foto Pengguna </label>
                     <div class="fileinput fileinput-new" data-provides="fileinput">

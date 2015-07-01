@@ -31,10 +31,10 @@
                         <td ><?php echo $cabang; ?></td>
                         <td style="text-align: center; width: 130px;">
 <!--                            --><?php //if($this->session->userdata('id_level')=='01'){ ?>
-                            <a href="<?php echo base_url();?>index.php/pengguna/edit/<?php echo $db['username'];?>" rel="tooltip" title="Edit">
+                            <a href="<?php echo base_url();?>pengguna/edit/<?php echo $db['username'];?>" rel="tooltip" title="Edit">
                                 <button class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Ubah</button>
                             </a>
-                            <a href="<?php echo base_url();?>index.php/pengguna/hapus/<?php echo $db['username'];?>"
+                            <a href="<?php echo base_url();?>pengguna/hapus/<?php echo $db['username'];?>"
                                onClick="return confirm('Anda yakin ingin menghapus data ini?')" rel="tooltip" title="Hapus">
                                 <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Hapus</button>
                             </a>

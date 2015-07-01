@@ -193,6 +193,9 @@ class Slide extends CI_Controller {
             $old_dir = './uploads/slide/';
             unlink($old_dir . $album_image['slide_image']);
 
+            $old_thumbs = './uploads/slide/thumbs/';
+            unlink($old_thumbs . $album_image['slide_image']);
+
             $this->app_model->manualQuery("DELETE FROM tbl_slide WHERE slide_id='$id'");
             redirect('slide');
         }else{

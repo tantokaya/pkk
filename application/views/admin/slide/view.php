@@ -19,7 +19,7 @@
                 ?>
                 <tr>
                     <td style="text-align: center"><?php echo $no; ?></td>
-                    <td style="text-align: center;"><img src="<?php echo base_url();?>uploads/slide/<?php echo $db['slide_image']; ?>" style="width: 80px; height: 80px;"></td>
+                    <td style="text-align: center;"><img src="<?php echo base_url();?>uploads/slide/thumbs/<?php echo $db['slide_image']; ?>" style="width: 80px; height: 80px;"></td>
                     <td><?php echo $db['slide_judul']; ?></td>
                     <td align="center">
                         <a href="<?php echo base_url();?>slide/edit/<?php echo $db['slide_id'];?>" title="Edit">

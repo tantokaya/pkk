@@ -40,6 +40,7 @@ class Pengguna extends CI_Controller {
             //$d['all_pengguna']  = $this->app_model->get_all_pengguna();
 
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
             $d['content'] = $this->load->view('admin/pengguna/view', $d, true);
             $this->load->view('admin/home_adm',$d);
@@ -68,13 +69,11 @@ class Pengguna extends CI_Controller {
             $d['email']         = '';
             $d['foto']          = '';
 
-            if($lvl == '02' ){
-                $text = "SELECT * FROM tbl_level WHERE id_level != 01";
-                $d['l_level'] = $this->app_model->manualQuery($text);
-            } else{
-                $text = "SELECT * FROM tbl_level";
-                $d['l_level'] = $this->app_model->manualQuery($text);
-            }
+            $text = "SELECT tbl_level.id_level,tbl_level.`level` FROM tbl_level";
+            $d['l_level'] = $this->app_model->manualQuery($text);
+
+            $text = "SELECT * from tbl_level WHERE id_level = 03";
+            $d['l_level_admin']=$this->app_model->manualQuery($text);
 
             if($lvl != '01') {
             $text = "SELECT * FROM tbl_cabang WHERE cabang_id ='$cabang'";
@@ -119,7 +118,7 @@ class Pengguna extends CI_Controller {
                 $d['nama_lengkap']	= '';
                 $d['pwd']	        = '';
                 $d['level']			= '';
-                $d['cabang']			= '';
+                $d['cabang']		= '';
                 $d['hp']            = '';
                 $d['email']         = '';
                 $d['foto']          = '';
@@ -128,10 +127,26 @@ class Pengguna extends CI_Controller {
             $text = "SELECT tbl_level.id_level,tbl_level.`level` FROM tbl_level";
             $d['l_level'] = $this->app_model->manualQuery($text);
 
+            if($pengguna == $id) {
+                $text = "SELECT * FROM tbl_level WHERE id_level=02";
+                $d['l_level_admin']=$this->app_model->manualQuery($text);
+
+                $text_user = "SELECT * FROM tbl_level WHERE id_level=03";
+                $d['l_level_user']=$this->app_model->manualQuery($text_user);
+
+            } else {
+                $text = "SELECT * FROM tbl_level WHERE id_level=02";
+                $d['l_level_admin']=$this->app_model->manualQuery($text);
+
+                $text_user = "SELECT * FROM tbl_level WHERE id_level=03";
+                $d['l_level_user']=$this->app_model->manualQuery($text_user);
+            }
+
             $text = "SELECT * FROM tbl_cabang";
             $d['l_cabang'] = $this->app_model->manualQuery($text);
 
             $d['all_new_post_publish']	= $this->app_model->get_all_new_post_publish();
+            $d['all_new_komen_publish']	= $this->app_model->get_all_new_komen_publish();
 
             $d['content'] = $this->load->view('admin/pengguna/form', $d, true);
             $this->load->view('admin/home_adm',$d);
@@ -240,7 +255,7 @@ class Pengguna extends CI_Controller {
                     $this->app_model->insertData("tbl_admin",$up);
 
                 }
-		redirect('pengguna');
+		redirect('adpus/home');
             }
             
         }else{
@@ -253,20 +268,17 @@ class Pengguna extends CI_Controller {
         $cek = $this->session->userdata('logged_in');
         if(!empty($cek)){
             $id = $this->uri->segment(3);
+            $text = "SELECT * FROM tbl_admin WHERE username = '$id'";
+            $data = $this->app_model->manualQuery($text);
+            $image = $data->row_array();
 
-            //cek file upload
-            $data = $this->app_model->getSelectedData('tbl_admin', array('username' => $id));
-            if($data->num_rows() > 0 )
-            {
-                $result = $data->row_array();
-                // hapus image lama
-                $old_dir = '../../uploads/profile/';
-                if(file_exists($old_dir . $result['foto'])){
-                    unlink($old_dir . $result['foto']);
-                }
-            }
+            $old_dir = './uploads/profile/';
+            unlink($old_dir . $image['foto']);
+
+            $old_thumbs = './uploads/profile/thumbs/';
+            unlink($old_thumbs . $image['foto']);
+
             $this->app_model->manualQuery("DELETE FROM tbl_admin WHERE username='$id'");
-//            echo "<meta http-equiv='refresh' content='0; url=".base_url()."pengguna'>";
             redirect('pengguna');
         }else{
             header('location:'.base_url());
@@ -283,5 +295,5 @@ class Pengguna extends CI_Controller {
     }
 }
 
-/* End of file profil.php */
-/* Location: ./application/controllers/profil.php */
+/* End of file profile.php */
+/* Location: ./application/controllers/profile.php */
