@@ -136,6 +136,8 @@ class Post extends CI_Controller {
                     $config_resize['height'] = 200;
                     $this->image_lib->initialize($config_resize);
                     $this->image_lib->resize();
+                    
+                  
 
                     $pp = array('upload_data' => $this->upload->data());
                 }
