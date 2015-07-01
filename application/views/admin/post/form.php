@@ -56,7 +56,66 @@
                             </div>
                         </div>
                     </div>
-
+                    
+                    <!-- start slide upload -->
+                    <div class="form-group">
+                        <label>Slide Image 1</label>
+                        <div class="fileinput fileinput-new" data-provides="fileinput">
+                            <div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
+                                <?php if($this->uri->segment(2)=='edit' AND $foto !=='') {?>
+                                    <img data-src="holder.js/100%x100%" src="<?php echo base_url();?>uploads/post/thumbs/<?php echo $foto; ?>" >
+                                <?php } else {?>
+                                    <img data-src="holder.js/100%x100%" src="<?php echo base_url();?>asset/admin/jasny-bootstrap/index.svg" >
+                                <?php } ?>
+                            </div>
+                            <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
+                            <div>
+                                <span class="btn btn-default btn-file"><span class="fileinput-new"><i class="fa fa-fw fa-camera" ></i> Browse Foto </span>
+                                    <span class="fileinput-exists">Ubah</span><input type="file" name="slide[]"></span>
+                                <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Hapus</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Slide Image 2 </label>
+                        <div class="fileinput fileinput-new" data-provides="fileinput">
+                            <div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
+                                <?php if($this->uri->segment(2)=='edit' AND $foto !=='') {?>
+                                    <img data-src="holder.js/100%x100%" src="<?php echo base_url();?>uploads/post/thumbs/<?php echo $foto; ?>" >
+                                <?php } else {?>
+                                    <img data-src="holder.js/100%x100%" src="<?php echo base_url();?>asset/admin/jasny-bootstrap/index.svg" >
+                                <?php } ?>
+                            </div>
+                            <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
+                            <div>
+                                <span class="btn btn-default btn-file"><span class="fileinput-new"><i class="fa fa-fw fa-camera" ></i> Browse Foto </span>
+                                    <span class="fileinput-exists">Ubah</span><input type="file" name="slide[]"></span>
+                                <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Hapus</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Slide Image 3 </label>
+                        <div class="fileinput fileinput-new" data-provides="fileinput">
+                            <div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
+                                <?php if($this->uri->segment(2)=='edit' AND $foto !=='') {?>
+                                    <img data-src="holder.js/100%x100%" src="<?php echo base_url();?>uploads/post/thumbs/<?php echo $foto; ?>" >
+                                <?php } else {?>
+                                    <img data-src="holder.js/100%x100%" src="<?php echo base_url();?>asset/admin/jasny-bootstrap/index.svg" >
+                                <?php } ?>
+                            </div>
+                            <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
+                            <div>
+                                <span class="btn btn-default btn-file"><span class="fileinput-new"><i class="fa fa-fw fa-camera" ></i> Browse Foto </span>
+                                    <span class="fileinput-exists">Ubah</span><input type="file" name="slide[]"></span>
+                                <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Hapus</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end slide upload -->
+                    
                     </div>
                     <div class="callout callout-info">
                         <h4>SEO Tools :</h4>

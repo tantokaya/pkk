@@ -101,6 +101,7 @@ class Post extends CI_Controller {
 
             $id['post_id']   =   $this->input->post('kode');
 
+            
             // cek jika ada file yg diupload
             if (!empty($_FILES['userfile']['name'])) {
                 // upload
@@ -126,7 +127,7 @@ class Post extends CI_Controller {
                     $config_resize['image_library'] = 'gd2';
                     $config_resize['create_thumb'] = FALSE;
                     $config_resize['maintain_ratio'] = FALSE;
-                    $config_resize['new_image'] = './uploads/post/thumbs';
+                    $config_resize['new_image'] = './uploads/post/thumbs/'.$file_name;
                     $config_resize['master_dim'] = 'height';
                     $config_resize['quality'] = "100%";
                     $config_resize['source_image'] = './uploads/post/'. $file_name;
@@ -140,11 +141,48 @@ class Post extends CI_Controller {
                 }
 
                 $up['post_gambar'] = $pp['upload_data']['file_name'];
+                
 
             }
-
+            
+            
+            
             //print_r($up); exit();
+            
+            // slider upload
+            $slide_data = $this->do_upload($judul_seo);
+            #echo $slide_data['uploads']['filename']; exit;
+            #echo count($slide_data['uploads']);
+            #echo '<pre>'; print_r($slide_data); exit;
+            
+            $z = 1;
+            foreach ($slide_data['uploads'] as $rs){
+                $up['slide_post'.$z] = $rs['file_name'];
+                
+                // resize image
 
+                    $file_name = $rs["file_name"];
+
+                    $this->load->library('image_lib');
+                    $config_resize['image_library'] = 'gd2';
+                    $config_resize['create_thumb'] = FALSE;
+                    $config_resize['maintain_ratio'] = FALSE;
+                    $config_resize['new_image'] = './uploads/post/thumbs/'.$file_name;
+                    $config_resize['master_dim'] = 'height';
+                    $config_resize['quality'] = "100%";
+                    $config_resize['source_image'] = './uploads/post/'. $file_name;
+
+                    $config_resize['width'] = 600;
+                    $config_resize['height'] = 429;
+                    $this->image_lib->initialize($config_resize);
+                    $this->image_lib->resize();
+                    
+                    unlink($config_resize['source_image']);
+                    
+                $z++;
+            }
+            
+            #echo '<pre>'; print_r($up); exit;
 
             $data = $this->app_model->getSelectedData("tbl_post",$id);
             if($data->num_rows()>0){
@@ -328,6 +366,49 @@ class Post extends CI_Controller {
         }
         echo $status;
     }
+    
+    public function do_upload($title) {
+            if($this->input->post()) {
+                $num_of_files = sizeof($_FILES['slide']['tmp_name']);
+                $files = $_FILES['slide'];
+                $errors = array();
+                
+                for($i=0;$i<$num_of_files;$i++) {
+                    if($_FILES['slide']['error'][$i] != 0) 
+                        $errors[$i][] = 'Tidak dapat upload file '.$_FILES['slide']['name'][$i];
+                }
+                
+                if(sizeof($errors)==0) {
+                    $this->load->library('upload');
+                    $config['upload_path'] = FCPATH . 'uploads/post/';
+                    $config['allowed_types'] = 'gif|jpg|png';
+                    
+                    for ($i = 0; $i < $num_of_files; $i++) {
+                        $_FILES['slide']['name'] = $files['name'][$i];
+                        $_FILES['slide']['type'] = $files['type'][$i];
+                        $_FILES['slide']['tmp_name'] = $files['tmp_name'][$i];
+                        $_FILES['slide']['error'] = $files['error'][$i];
+                        $_FILES['slide']['size'] = $files['size'][$i];
+                        
+                        $config['file_name'] = $title;
+                        
+                        $this->upload->initialize($config);
+                    
+                        if ($this->upload->do_upload('slide')) {
+                            $data['uploads'][$i] = $this->upload->data();
+                        } else {
+                            $data['upload_errors'][$i] = $this->upload->display_errors();
+                        }
+                       
+                    }
+                } else {
+                  print_r($errors);
+                }
+             }
+             //echo '<pre>';             
+             //print_r($data);
+             return $data;
+        }
 
 }
 
