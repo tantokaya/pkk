@@ -16,7 +16,7 @@ $lvl = $this->session->userdata('id_level');
                 <div class="form-group">
                     <label>Username</label>
                     <?php if($this->uri->segment(2)=='edit') { ?>
-                    <input type="text" name="username" id="username" placeholder="Username.." style="width: 190px;" class="form-control" value="<?php echo $username; ?>" readonly>
+                    <input type="text" name="username" id="username"  style="width: 190px;" class="form-control" value="<?php echo $username; ?>" readonly>
                     <?php } else { ?>
                     <input type="text" name="username" id="username" placeholder="Username.." style="width: 190px;" class="form-control" value="<?php echo set_value('username'); ?>" autofocus="true">
                     <?php } ?><?php echo form_error('username','<div class="form-group has-error"><label class="control-label" for="inputError">','</label></div>'); ?>
@@ -162,4 +162,6 @@ $lvl = $this->session->userdata('id_level');
 <script src="<?php echo base_url();?>asset/admin/js/bootstrap.min.js" type="text/javascript"></script>
 <!-- AdminLTE App -->
 <script src="<?php echo base_url();?>asset/admin/js/AdminLTE/app.js" type="text/javascript"></script>
+<!-- Upload Thumbnail -->
+<script src="<?php echo base_url();?>asset/admin/jasny-bootstrap/js/jasny-bootstrap.min.js" type="text/javascript"></script>
 

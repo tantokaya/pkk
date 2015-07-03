@@ -1,3 +1,4 @@
+<script type="text/javascript" src="<?php echo base_url();?>assets/js/highcharts/highcharts-3d.js"></script>
 <script type="text/javascript">
     $(document).ready(function(){
 
@@ -39,6 +40,68 @@
             }
         });
 
+
+    });
+</script>
+<?php
+$tahun = date('Y');
+$topik1 	= $this->graf_model->GrafikTopik1();
+$topik2	    = $this->graf_model->GrafikTopik2();
+$topik3	    = $this->graf_model->GrafikTopik3();
+$topik4	    = $this->graf_model->GrafikTopik4();
+?>
+<script type="text/javascript">
+    $(function () {
+        var chart;
+        $(document).ready(function() {
+            chart = new Highcharts.Chart({
+                chart: {
+                    renderTo: 'container',
+                    type: 'pie',
+                    options3d: {
+                        enabled: true,
+                        alpha: 45,
+                        beta: 0
+                    }
+
+                },
+                title: {
+                    text: 'Presentase Topik Diskusi Tahun <?php echo $tahun;?>'
+                },
+                subtitle: {
+                    text: '<?php echo $nama_program;?>'
+                },
+                tooltip: {
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        depth: 35,
+                        dataLabels: {
+                            enabled: true,
+                            format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                            style: {
+                                color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                            },
+                        },
+                        showInLegend: true
+
+                    }
+                },
+                series: [{
+                    type: 'pie',
+                    name: 'Total Topik Diskusi',
+                    data: [
+                        ['Perkenalan',   	<?php echo $topik1;?>],
+                        ['Pengumuman',   	<?php echo $topik2;?>],
+                        ['Saran',   	<?php echo $topik3;?>],
+                        ['Pojok',   	<?php echo $topik4;?>]
+
+                    ]
+                }]
+            });
+        });
 
     });
 </script>
@@ -254,10 +317,16 @@
             </tbody>
 
         </table>
-    </div><!-- /.box-body -->
+   </div><!-- /.box-body -->
 
 </section><!-- /.Left col -->
 
+<section class="col-lg-6 connectedSortable">
+    <!-- Box (with bar chart) -->
+    <div class="box-body table-striped">
+        <div id="container" style="min-width: 400px; height: 530px; margin: 0 auto"></div>
+    </div>
+</section>
 
 </div><!-- /.row (main row) -->
 

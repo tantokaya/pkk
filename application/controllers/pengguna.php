@@ -163,11 +163,12 @@ class Pengguna extends CI_Controller {
             $this->load->library('form_validation');
 
             $this->form_validation->set_rules('username', 'Username', 'required|callback_username_check');
-//            $this->form_validation->set_rules('pwd', 'Password', 'required');
+
+
 
             if ($this->form_validation->run() == FALSE) {
                 $this->tambah();
-            }else{
+               }else{
                 $pwd 	    = $this->input->post('pwd');
                 $nama 	    = $this->input->post('nama_lengkap');
                 $level 	    = $this->input->post('level');

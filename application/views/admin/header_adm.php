@@ -80,7 +80,7 @@
     <ul class="dropdown-menu">
         <!-- User image -->
         <li class="user-header bg-light-blue">
-            <img src="<?php echo base_url(); ?>uploads/profile/<?php echo $this->app_model->CariFotoPengguna();?>" class="img-circle" alt="User Image" />
+            <img src="<?php echo base_url(); ?>uploads/profile/thumbs/<?php echo $this->app_model->CariFotoPengguna();?>" class="img-circle" alt="User Image" />
             <p>
                 <?php echo $this->app_model->CariUserPengguna();?>
                 <small>Active</small>

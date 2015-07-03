@@ -56,3 +56,8 @@
 <!-- File uploader -->
 <link rel="stylesheet" href="<?php echo base_url(); ?>asset/admin/css/fileuploader.css">
 
+<!--GRAFIK-->
+<script src="<?php echo base_url(); ?>asset/js/1.8.2.jquery.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>asset/js/highcharts/highcharts.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>asset/js/highcharts/modules/exporting.js"></script>
+
